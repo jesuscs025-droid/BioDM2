@@ -145,23 +145,32 @@ h1 { font-family: 'Montserrat', sans-serif; font-size: 4rem; margin-bottom: 20px
 
 /* AJUSTES RESPONSIVE */
 @media (max-width: 768px) {
-    /* ... lo que ya tenías ... */
+    .nav-links { display: none; }
+    .split-section { grid-template-columns: 1fr; }
+    
+    /* Reducción general de títulos para móviles */
+    h1 { font-size: 2rem !important; }
+    h2 { font-size: 1.8rem !important; }
 
-    /* Forzamos que el título del contacto baje de tamaño */
-    .contact-card h2 {
-        font-size: 1.5rem !important; /* Aquí bajamos el tamaño un 40% aprox */
-        letter-spacing: 1px !important;
+    /* Fix específico para la palabra HABLAMOS */
+    #contacto h2, 
+    .contact-area h2 {
+        font-size: 1.5rem !important; /* Reducción del 40% */
+        margin-bottom: 10px !important;
+        white-space: normal;
+        word-wrap: break-word;
     }
 
-    /* Ajustamos el contenedor del formulario para que no asfixie el texto */
+    /* Ajuste del contenedor del formulario */
     .contact-card {
-        padding: 25px 15px !important;
-        margin: 10px !important;
-        width: auto !important;
+        padding: 20px !important;
+        margin: 0 10px !important;
+        max-width: calc(100% - 20px) !important;
     }
 
-    /* Reducimos también el párrafo de abajo para que guarde proporción */
-    .contact-card p {
-        font-size: 0.9rem !important;
+    /* Botón de enviar en móvil */
+    .contact-card .btn {
+        padding: 12px !important;
+        font-size: 0.8rem !important;
     }
 }
