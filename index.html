@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BioDM2 | Salud Digital de Precisión</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,7 +12,9 @@
 
     <nav class="navbar">
         <div class="nav-container">
-            <img src="logo.png" alt="BioDM2" class="nav-logo">
+            <a href="#">
+                <img src="logo.png" alt="BioDM2" class="nav-logo">
+            </a>
             <div class="nav-links">
                 <a href="#que-es" class="nav-item">PROYECTO</a>
                 <a href="#participantes" class="nav-item">PARTICIPANTES</a>
@@ -24,98 +26,96 @@
 
     <header class="hero">
         <div class="hero-content">
-            <span class="badge">BIOMARCADORES DIGITALES</span>
-            <h1>PROYECTO <span class="highlight">BioDM2</span></h1>
-            <p>Desarrollo de soluciones avanzadas para el diagnóstico temprano y monitorización de precisión mediante tecnología digital.</p>
+            <span class="badge" style="background: var(--accent); padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; letter-spacing: 2px;">BIOMARCADORES DIGITALES</span>
+            <h1 style="margin-top: 20px;">PROYECTO <span class="highlight">BioDM2</span></h1>
+            <p style="max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; opacity: 0.9;">Desarrollo de soluciones avanzadas para el diagnóstico temprano y monitorización de precisión mediante tecnología digital de vanguardia.</p>
+            
             <div class="hero-btns">
                 <a href="#participantes" class="btn btn-primary">PARTICIPANTES</a>
                 <a href="#profesionales" class="btn btn-secondary">PROFESIONALES</a>
             </div>
-            <div class="hero-partners">
-                <p>CON EL APOYO DE</p>
-                <div class="logo-row">
-                    <span class="partner-placeholder">UGR</span>
-                    <span class="partner-placeholder">MINISTERIO</span>
-                    <span class="partner-placeholder">UNIÓN EUROPEA</span>
+
+            <div class="hero-partners" style="margin-top: 80px; opacity: 0.6;">
+                <p style="font-size: 0.8rem; letter-spacing: 3px; margin-bottom: 20px;">CON EL APOYO DE</p>
+                <div class="logo-row" style="display: flex; justify-content: center; gap: 40px; font-weight: bold;">
+                    <span>UGR</span>
+                    <span>MINISTERIO</span>
+                    <span>UNIÓN EUROPEA</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="que-es" class="container">
+    <section id="que-es" class="container" style="text-align: center; padding: 100px 20px;">
         <div class="section-title">
-            <h2>¿QUÉ ES BioDM2?</h2>
-            <div class="underline"></div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">¿QUÉ ES BioDM2?</h2>
+            <div class="underline" style="width: 60px; height: 4px; background: var(--accent); margin: 0 auto 30px;"></div>
         </div>
-        <div class="content-text text-center">
-            <p>BioDM2 es una iniciativa de investigación pionera que utiliza datos biométricos y algoritmos de precisión para transformar la salud y el rendimiento humano.</p>
+        <div class="content-text" style="max-width: 800px; margin: auto; font-size: 1.2rem; color: #ccc;">
+            <p>BioDM2 es una iniciativa de investigación pionera que utiliza datos biométricos y algoritmos de precisión para transformar la salud y el rendimiento humano a través de la ciencia de datos.</p>
         </div>
     </section>
 
     <section id="participantes" class="split-section">
         <div class="profile-card athlete">
-            <div class="card-tag">LIFE</div>
+            <span class="card-tag" style="letter-spacing: 3px; font-weight: bold; color: var(--accent);">LIFE & SPORT</span>
             <h2>PARTICIPANTES</h2>
-            <p>Tu actividad física se convierte en datos para la ciencia. Descubre cómo contribuir y los beneficios de conocer tus biomarcadores.</p>
-            <a href="#" class="btn btn-white">SABER MÁS</a>
+            <p>Tu actividad física se convierte en datos para la ciencia. Descubre cómo contribuir y los beneficios de conocer tus biomarcadores personales.</p>
+            <a href="#" class="btn btn-secondary" style="border-color: white; width: fit-content;">SABER MÁS</a>
         </div>
 
         <div id="profesionales" class="profile-card science">
-            <div class="card-tag">TECH</div>
+            <span class="card-tag" style="letter-spacing: 3px; font-weight: bold; color: var(--accent);">TECH & HEALTH</span>
             <h2>PROFESIONALES</h2>
-            <p>Portal técnico para científicos y profesionales de la salud. Acceso a protocolos clínicos y documentación oficial de BioDM2.</p>
-            <a href="#" class="btn btn-outline-white">ACCESO TÉCNICO</a>
+            <p>Portal técnico para científicos y profesionales de la salud. Acceso a protocolos clínicos, APIs y documentación oficial de BioDM2.</p>
+            <a href="#" class="btn btn-primary" style="width: fit-content;">ACCESO TÉCNICO</a>
         </div>
     </section>
 
-    <section id="consorcio" class="container">
-        <div class="dual-grid">
-            <div class="info-box">
-                <h3>CONSORCIO & PARTNERS</h3>
-                <div class="partners-grid">
-                    <div class="logo-box">UGR</div>
-                    <div class="logo-box">PARTNERS</div>
+    <section id="recursos" class="container" style="padding: 100px 20px;">
+        <h3 style="text-align: center; margin-bottom: 50px; font-size: 2rem;">RECURSOS Y DOCUMENTACIÓN</h3>
+        <div style="max-width: 800px; margin: auto;">
+            <a href="#" class="resource-btn">
+                <i data-lucide="file-text"></i>
+                <div style="flex-grow: 1;">
+                    <strong style="display: block;">DOSSIER DEL PROYECTO</strong>
+                    <small style="opacity: 0.6;">PDF | 2.4 MB</small>
                 </div>
-            </div>
-            <div id="recursos" class="info-box">
-                <h3>RECURSOS DESCARGABLES</h3>
-                <a href="#" class="resource-btn"><i data-lucide="download"></i> DOSSIER PROYECTO</a>
-                <a href="#" class="resource-btn"><i data-lucide="download"></i> GUÍA PARTICIPANTE</a>
-            </div>
+                <i data-lucide="download"></i>
+            </a>
+            <a href="#" class="resource-btn">
+                <i data-lucide="user-check"></i>
+                <div style="flex-grow: 1;">
+                    <strong style="display: block;">GUÍA DEL PARTICIPANTE</strong>
+                    <small style="opacity: 0.6;">PDF | 1.8 MB</small>
+                </div>
+                <i data-lucide="download"></i>
+            </a>
         </div>
     </section>
 
-    <section id="faq" class="container">
-        <h3>PREGUNTAS FRECUENTES (FAQ)</h3>
-        <div class="accordion">
-            <details>
-                <summary>¿Quién puede participar en el proyecto?</summary>
-                <p>Cualquier persona interesada en la monitorización de su salud digital bajo los criterios del estudio clínico.</p>
-            </details>
+    <section id="contacto" class="contact-area" style="padding: 100px 20px;">
+        <div class="contact-card" style="max-width: 900px; margin: auto;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 15px;">¿HABLÁMOS?</h2>
+            <p style="margin-bottom: 40px; opacity: 0.8;">¿Tienes dudas técnicas o quieres colaborar en el estudio? Nuestro equipo de investigación está disponible.</p>
+            <a href="mailto:info@biodm2.es" class="btn btn-primary" style="padding: 20px 50px; font-size: 1rem;">ENVIAR CORREO ELECTRÓNICO</a>
         </div>
     </section>
 
-    <section id="contacto" class="contact-area">
-        <div class="contact-card">
-            <h2>CONTACTO</h2>
-            <p>¿Tienes dudas técnicas o quieres colaborar? Escríbenos directamente.</p>
-            <a href="mailto:info@biodm2.es" class="btn btn-primary">ENVIAR EMAIL</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-grid container">
-            <div class="footer-legal">
-                <a href="#">AVISO LEGAL</a>
-                <a href="#">PRIVACIDAD</a>
-                <a href="#">COOKIES</a>
-                <a href="#">ACCESIBILIDAD</a>
-                <a href="#">CRÉDITOS</a>
+    <footer style="padding: 60px 20px; border-top: 1px solid var(--glass); background: #000;">
+        <div class="footer-container" style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div class="footer-legal" style="display: flex; gap: 20px; font-size: 0.8rem; opacity: 0.6;">
+                <a href="#" style="color: white; text-decoration: none;">AVISO LEGAL</a>
+                <a href="#" style="color: white; text-decoration: none;">PRIVACIDAD</a>
+                <a href="#" style="color: white; text-decoration: none;">COOKIES</a>
             </div>
-            <p class="credits">© 2026 BioDM2 | Universidad de Granada</p>
+            <p class="credits" style="font-size: 0.8rem; opacity: 0.4;">© 2026 BioDM2 | Universidad de Granada</p>
         </div>
     </footer>
 
-    <script>lucide.createIcons();</script>
+    <script>
+        // Inicializar iconos de Lucide
+        lucide.createIcons();
+    </script>
 </body>
 </html>
