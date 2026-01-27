@@ -3,35 +3,149 @@
     --accent: #48a5a5;  
     --dark-bg: #0a0c0d;
     --text-main: #ffffff;
+    --glass: rgba(255, 255, 255, 0.05);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background: var(--dark-bg); color: var(--text-main); }
-
-/* LOGO GIGANTE Y DESTACADO */
-.navbar { background: rgba(10,12,13,0.98); padding: 35px 0; position: fixed; width: 100%; z-index: 1000; border-bottom: 2px solid var(--accent); }
-.nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: auto; padding: 0 50px; }
-.nav-logo { height: 90px; width: auto; } /* Subido a 90px para que destaque sí o sí */
-
-/* ESPACIADO MASIVO EN PERFILES */
-.split-section { display: grid; grid-template-columns: 1fr 1fr; margin-top: 100px; margin-bottom: 100px; }
-.profile-card { 
-    padding: 200px 100px !important; /* Espacio extremo para Participantes y Profesionales */
-    text-align: left;
+body { 
+    font-family: 'Inter', sans-serif; 
+    background: var(--dark-bg); 
+    color: var(--text-main); 
+    line-height: 1.6;
 }
-.athlete { background: var(--primary); }
-.science { background: #1a2022; }
 
-/* CONTACTO DESPEGADO */
-.contact-area { padding: 150px 10% !important; background: #000; }
-.contact-card { 
-    background: #14181a; 
-    padding: 100px 50px; 
-    border-radius: 50px; 
+/* NAVBAR MODERNA */
+.navbar { 
+    background: rgba(10, 12, 13, 0.85); 
+    backdrop-filter: blur(10px);
+    padding: 20px 0; 
+    position: fixed; 
+    width: 100%; 
+    z-index: 1000; 
+    border-bottom: 1px solid rgba(72, 165, 165, 0.2); 
+}
+
+.nav-container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1400px; 
+    margin: auto; 
+    padding: 0 40px; 
+}
+
+.nav-logo { height: 60px; width: auto; transition: var(--transition); }
+
+/* BOTONES DE NAVEGACIÓN (ESTILO CÁPSULA) */
+.nav-links { display: flex; gap: 15px; align-items: center; }
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.nav-item:hover {
+    background: var(--glass);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn-nav {
+    text-decoration: none;
+    background: var(--accent);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(72, 165, 165, 0.3);
+}
+
+.btn-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(72, 165, 165, 0.5);
+    filter: brightness(1.1);
+}
+
+/* BOTONES GENERALES (HERO Y SECCIONES) */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 16px 35px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary { background: var(--accent); color: white; }
+.btn-secondary { 
+    background: transparent; 
+    border: 2px solid var(--accent); 
+    color: white; 
+    margin-left: 15px;
+}
+
+.btn:hover { transform: scale(1.05); filter: brightness(1.2); }
+
+/* SECCIONES Y LAYOUT */
+.hero { 
+    padding: 250px 20px 150px; 
     text-align: center;
-    border: 2px solid var(--accent);
+    background: radial-gradient(circle at top center, #1a2e31 0%, #0a0c0d 100%);
 }
 
-/* OTROS MARGENES */
-.container { padding: 150px 20px !important; max-width: 1200px; margin: auto; }
-.hero { padding-top: 200px; height: auto; min-height: 100vh; }
+h1 { font-family: 'Montserrat', sans-serif; font-size: 4rem; margin-bottom: 20px; }
+.highlight { color: var(--accent); }
+
+.split-section { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; }
+.profile-card { 
+    padding: 100px 10%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    gap: 20px;
+}
+
+.athlete { background: linear-gradient(45deg, #2b5b62, #1a2022); }
+.science { background: #14181a; border-left: 1px solid var(--glass); }
+
+/* RECURSOS */
+.resource-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--glass);
+    padding: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: var(--transition);
+}
+
+.resource-btn:hover {
+    background: rgba(72, 165, 165, 0.1);
+    border-color: var(--accent);
+}
+
+/* AJUSTES RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Deberías añadir un menú hamburguesa luego */
+    .split-section { grid-template-columns: 1fr; }
+    h1 { font-size: 2.5rem; }
+}
