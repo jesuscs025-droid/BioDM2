@@ -1,56 +1,37 @@
-/* VARIABLES */
 :root {
     --primary: #2b5b62; 
     --accent: #48a5a5;  
     --dark-bg: #0a0c0d;
-    --card-bg: #14181a;
     --text-main: #ffffff;
-    --text-muted: #8a9ba0;
-    --font-title: 'Montserrat', sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; background: var(--dark-bg); color: var(--text-main); line-height: 1.6; }
-a { text-decoration: none; color: inherit; transition: 0.3s; }
+body { font-family: 'Inter', sans-serif; background: var(--dark-bg); color: var(--text-main); }
 
-/* NAVBAR Y LOGO */
-.navbar { background: rgba(10,12,13,0.95); padding: 25px 0; position: fixed; width: 100%; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); }
-.nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1300px; margin: auto; padding: 0 40px; }
-.nav-logo { height: 65px; width: auto; transition: 0.3s; }
-.nav-item { font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px; color: var(--text-muted); margin-left: 30px; }
-.nav-item:hover { color: var(--accent); }
-.btn-nav { background: var(--accent); color: white !important; padding: 12px 25px; border-radius: 4px; font-weight: 800; font-size: 0.75rem; margin-left: 30px; }
+/* LOGO GIGANTE Y DESTACADO */
+.navbar { background: rgba(10,12,13,0.98); padding: 35px 0; position: fixed; width: 100%; z-index: 1000; border-bottom: 2px solid var(--accent); }
+.nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: auto; padding: 0 50px; }
+.nav-logo { height: 90px; width: auto; } /* Subido a 90px para que destaque sí o sí */
 
-/* HERO */
-.hero { height: 100vh; display: flex; align-items: center; text-align: center; background: radial-gradient(circle at center, #1a2426 0%, #0a0c0d 100%); }
-.hero-content { width: 100%; padding: 0 20px; margin-top: 80px; }
-.hero h1 { font-family: var(--font-title); font-size: clamp(3rem, 10vw, 5rem); font-weight: 900; margin-bottom: 30px; line-height: 1; }
-.highlight { color: var(--accent); }
-
-/* ESPACIADO GENERAL SECCIONES */
-.container { max-width: 1100px; margin: auto; padding: 120px 20px; }
-
-/* SECCIÓN SPLIT */
-.split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+/* ESPACIADO MASIVO EN PERFILES */
+.split-section { display: grid; grid-template-columns: 1fr 1fr; margin-top: 100px; margin-bottom: 100px; }
 .profile-card { 
-    padding: 150px 80px; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    position: relative;
-    overflow: hidden;
+    padding: 200px 100px !important; /* Espacio extremo para Participantes y Profesionales */
+    text-align: left;
 }
-
-/* SEPARACIÓN DE TÍTULOS (Participantes / Profesionales) */
-.profile-card h2 {
-    margin-top: 40px; /* Ajusta este valor si quieres más o menos separación */
-    font-family: var(--font-title);
-    font-weight: 800;
-}
-
 .athlete { background: var(--primary); }
 .science { background: #1a2022; }
 
-/* CONTACTO */
-.contact
+/* CONTACTO DESPEGADO */
+.contact-area { padding: 150px 10% !important; background: #000; }
+.contact-card { 
+    background: #14181a; 
+    padding: 100px 50px; 
+    border-radius: 50px; 
+    text-align: center;
+    border: 2px solid var(--accent);
+}
+
+/* OTROS MARGENES */
+.container { padding: 150px 20px !important; max-width: 1200px; margin: auto; }
+.hero { padding-top: 200px; height: auto; min-height: 100vh; }
