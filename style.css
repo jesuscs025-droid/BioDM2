@@ -145,7 +145,21 @@ h1 { font-family: 'Montserrat', sans-serif; font-size: 4rem; margin-bottom: 20px
 
 /* AJUSTES RESPONSIVE */
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Deberías añadir un menú hamburguesa luego */
-    .split-section { grid-template-columns: 1fr; }
-    h1 { font-size: 2.5rem; }
+    .nav-links { display: none; } 
+    .split-section { grid-template-columns: 1fr; } /* Aquí haces que las columnas se pongan una sobre otra */
+    
+    h1 { 
+        font-size: 2.2rem; /* Achicamos el título para que no se corte */
+    }
+
+    .profile-card {
+        padding: 40px 20px; /* Reducimos el espacio lateral (el 10% era mucho para móvil) */
+        text-align: center;
+    }
+
+    .btn-secondary {
+        margin-left: 0; /* Quitamos el margen izquierdo que en móvil descentra el botón */
+        margin-top: 15px;
+        display: block; /* Hacemos que los botones ocupen su propia línea */
+    }
 }
