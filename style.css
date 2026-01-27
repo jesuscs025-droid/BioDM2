@@ -14,10 +14,10 @@ html { scroll-behavior: smooth; }
 body { font-family: 'Inter', sans-serif; background: var(--dark-bg); color: var(--text-main); line-height: 1.6; }
 a { text-decoration: none; color: inherit; transition: 0.3s; }
 
-/* NAVBAR Y LOGO (MÁS GRANDE) */
+/* NAVBAR Y LOGO */
 .navbar { background: rgba(10,12,13,0.95); padding: 25px 0; position: fixed; width: 100%; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); }
 .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1300px; margin: auto; padding: 0 40px; }
-.nav-logo { height: 65px; width: auto; transition: 0.3s; } /* Logo más grande y destacable */
+.nav-logo { height: 65px; width: auto; transition: 0.3s; }
 .nav-item { font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px; color: var(--text-muted); margin-left: 30px; }
 .nav-item:hover { color: var(--accent); }
 .btn-nav { background: var(--accent); color: white !important; padding: 12px 25px; border-radius: 4px; font-weight: 800; font-size: 0.75rem; margin-left: 30px; }
@@ -29,52 +29,28 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 .highlight { color: var(--accent); }
 
 /* ESPACIADO GENERAL SECCIONES */
-.container { max-width: 1100px; margin: auto; padding: 120px 20px; } /* Más espacio arriba y abajo */
+.container { max-width: 1100px; margin: auto; padding: 120px 20px; }
 
-/* SECCIÓN SPLIT (MÁS AIRE) */
+/* SECCIÓN SPLIT */
 .split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
 .profile-card { 
-    padding: 150px 80px; /* Mucho más espacio interno para Participantes/Profesionales */
+    padding: 150px 80px; 
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
+    position: relative;
+    overflow: hidden;
 }
+
+/* SEPARACIÓN DE TÍTULOS (Participantes / Profesionales) */
+.profile-card h2 {
+    margin-top: 40px; /* Ajusta este valor si quieres más o menos separación */
+    font-family: var(--font-title);
+    font-weight: 800;
+}
+
 .athlete { background: var(--primary); }
 .science { background: #1a2022; }
-.card-tag { position: absolute; top: 20px; right: 40px; font-size: 8rem; font-weight: 900; opacity: 0.05; }
 
-/* CONTACTO (DESPEGADO DE LOS BORDES) */
-.contact-area { 
-    padding: 100px 40px; /* Margen externo para que no toque bordes del navegador */
-    background: #070809; 
-}
-.contact-wrapper { 
-    max-width: 900px; 
-    margin: 0 auto; 
-    padding: 20px; /* Asegura separación lateral */
-}
-.contact-card { 
-    background: var(--card-bg); 
-    padding: 80px 40px; 
-    border-radius: 30px; 
-    text-align: center; 
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-/* BOTONES */
-.btn { padding: 20px 45px; border-radius: 8px; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; display: inline-block; }
-.btn-primary { background: var(--accent); color: white; box-shadow: 0 10px 20px rgba(72,165,165,0.2); }
-.btn-secondary { border: 1px solid rgba(255,255,255,0.1); color: white; margin-left: 15px; }
-.btn-white { background: white; color: var(--primary); margin-top: 30px; }
-.btn-outline-white { border: 2px solid white; color: white; margin-top: 30px; }
-
-/* FOOTER */
-footer { padding: 60px 20px; border-top: 1px solid rgba(255,255,255,0.05); }
-.footer-grid { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-.footer-legal a { font-size: 0.75rem; font-weight: 700; color: var(--text-muted); margin-right: 25px; }
-
-@media (max-width: 768px) {
-    .split-section { grid-template-columns: 1fr; }
-    .profile-card { padding: 100px 40px; }
-    .nav-links { display: none; }
-}
+/* CONTACTO */
+.contact
