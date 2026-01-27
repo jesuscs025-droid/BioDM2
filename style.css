@@ -11,12 +11,12 @@ body { font-family: 'Inter', sans-serif; background: var(--dark-bg); color: var(
 /* LOGO GIGANTE Y DESTACADO */
 .navbar { background: rgba(10,12,13,0.98); padding: 35px 0; position: fixed; width: 100%; z-index: 1000; border-bottom: 2px solid var(--accent); }
 .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: auto; padding: 0 50px; }
-.nav-logo { height: 90px; width: auto; } /* Subido a 90px para que destaque sí o sí */
+.nav-logo { height: 90px; width: auto; } 
 
 /* ESPACIADO MASIVO EN PERFILES */
 .split-section { display: grid; grid-template-columns: 1fr 1fr; margin-top: 100px; margin-bottom: 100px; }
 .profile-card { 
-    padding: 200px 100px !important; /* Espacio extremo para Participantes y Profesionales */
+    padding: 200px 100px !important; 
     text-align: left;
 }
 .athlete { background: var(--primary); }
@@ -35,3 +35,22 @@ body { font-family: 'Inter', sans-serif; background: var(--dark-bg); color: var(
 /* OTROS MARGENES */
 .container { padding: 150px 20px !important; max-width: 1200px; margin: auto; }
 .hero { padding-top: 200px; height: auto; min-height: 100vh; }
+
+/* OPTIMIZACIÓN MÓVIL */
+@media (max-width: 768px) {
+    .nav-container { padding: 0 20px; }
+    .nav-logo { height: 60px; }
+    
+    .split-section { grid-template-columns: 1fr; }
+    .profile-card { padding: 80px 30px !important; }
+    
+    .contact-area { 
+        padding: 80px 5% !important; /* Mantiene el contacto centrado y despegado de los bordes */
+    }
+    .contact-card { 
+        padding: 50px 25px; 
+        border-radius: 30px; 
+    }
+    
+    .container { padding: 80px 20px !important; }
+}
