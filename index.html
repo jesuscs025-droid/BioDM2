@@ -93,11 +93,41 @@
         </div>
     </section>
 
-    <section id="contacto" class="contact-area" style="padding: 100px 20px;">
-        <div class="contact-card" style="max-width: 900px; margin: auto;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 15px;">¿HABLAMOS?</h2>
-            <p style="margin-bottom: 40px; opacity: 0.8;">¿Tienes dudas técnicas o quieres colaborar en el estudio? Nuestro equipo de investigación está disponible.</p>
-            <a href="mailto:info@biodm2.es" class="btn btn-primary" style="padding: 20px 50px; font-size: 1rem;">ENVIAR CORREO ELECTRÓNICO</a>
+<section id="contacto" class="contact-area" style="padding: 100px 20px;">
+        <div class="contact-card" style="max-width: 600px; margin: auto; background: var(--glass); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
+            <h2 style="font-size: 2.5rem; margin-bottom: 15px; text-align: center;">¿HABLAMOS?</h2>
+            <p style="margin-bottom: 30px; opacity: 0.8; text-align: center;">Nuestro equipo de investigación está disponible para resolver tus dudas.</p>
+            
+            <form action="https://formspree.io/f/TU_ID_AQUÍ" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                
+                <div style="text-align: left;">
+                    <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">NOMBRE (OPCIONAL)</label>
+                    <input type="text" name="nombre" placeholder="Tu nombre" style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;">
+                </div>
+
+                <div style="text-align: left;">
+                    <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">EMAIL O TELÉFONO</label>
+                    <input type="text" name="contacto" required placeholder="Email o número de teléfono" style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;">
+                </div>
+
+                <div style="text-align: left;">
+                    <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">MENSAJE</label>
+                    <textarea name="mensaje" rows="4" style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;"></textarea>
+                </div>
+
+                <div style="background: rgba(255, 100, 100, 0.1); border-left: 4px solid #ff4d4d; padding: 10px; font-size: 0.85rem;">
+                    <strong style="color: #ff4d4d;">Aviso:</strong> No incluir datos de salud en este formulario.
+                </div>
+
+                <div style="display: flex; align-items: flex-start; gap: 10px; text-align: left;">
+                    <input type="checkbox" required id="privacy" style="margin-top: 5px;">
+                    <label for="privacy" style="font-size: 0.8rem; opacity: 0.8;">
+                        He leído y acepto la <a href="#" style="color: var(--accent);">política de privacidad</a> y el tratamiento de mis datos.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer; border: none;">ENVIAR MENSAJE</button>
+            </form>
         </div>
     </section>
 
