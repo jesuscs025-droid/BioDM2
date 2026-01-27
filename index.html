@@ -3,27 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BioDM2 - Proyecto de Investigación</title>
+    <title>BioDM2 | Salud y Deporte de Precisión</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>BioDM2</h1>
-        <p>Título oficial del proyecto y subtítulo divulgativo</p>
-        <div class="ctas">
-            <a href="#participantes">Participantes</a>
-            <a href="#profesionales">Profesionales</a>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">BIO<span>DM2</span></a>
+            <div class="nav-links">
+                <a href="#que-es">El Proyecto</a>
+                <a href="#participantes">Participar</a>
+                <a href="#profesionales">Científicos</a>
+                <a href="#contacto" class="btn-nav">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">PROYECTO CIENTÍFICO</span>
+            <h1>TU RENDIMIENTO <br><span class="highlight">ES CIENCIA</span></h1>
+            <p>BioDM2 analiza tus biomarcadores digitales para llevar la salud deportiva al siguiente nivel mediante monitorización de precisión.</p>
+            <div class="hero-btns">
+                <a href="#participantes" class="btn btn-main">UNIRME AL ESTUDIO</a>
+                <a href="#profesionales" class="btn btn-outline">ÁREA TÉCNICA</a>
+            </div>
         </div>
     </header>
 
-    <section id="que-es"><h2>¿Qué es BioDM2?</h2><p>Contenido provisional...</p></section>
-    <section id="participantes"><h2>Participantes</h2><p>Información específica...</p></section>
-    <section id="profesionales"><h2>Profesionales y Científicos</h2><p>Información técnica...</p></section>
-    <section id="consorcio"><h2>Consorcio y Partners</h2><p>Logos aquí...</p></section>
-    <section id="recursos"><h2>Recursos</h2><p>Descargables...</p></section>
-    <section id="faq"><h2>FAQ</h2><p>Preguntas frecuentes...</p></section>
-    <section id="contacto"><h2>Contacto</h2><p>Formulario aquí...</p></section>
+    <section id="que-es" class="container">
+        <div class="section-title">
+            <h2>CIENCIA EN MOVIMIENTO</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i data-lucide="activity"></i>
+                <h3>Monitorización Real</h3>
+                <p>Analizamos datos de actividad física real para detectar patrones de salud antes que nadie.</p>
+            </div>
+            <div class="feature-card">
+                <i data-lucide="smartphone"></i>
+                <h3>Biomarcadores Digitales</h3>
+                <p>Tu smartphone y tus dispositivos wearables se convierten en herramientas de diagnóstico médico.</p>
+            </div>
+            <div class="feature-card">
+                <i data-lucide="zap"></i>
+                <h3>Impacto Directo</h3>
+                <p>Resultados que ayudan a mejorar la prevención de enfermedades mediante el deporte de precisión.</p>
+            </div>
+        </div>
+    </section>
 
-    <footer><p>&copy; 2026 BioDM2 - Aviso Legal | Privacidad</p></footer>
+    <section class="profiles-section">
+        <div class="profile-container">
+            <div id="participantes" class="profile-card athlete">
+                <div class="card-tag">PARA TI</div>
+                <h2>Participantes y Deportistas</h2>
+                <p>Si eres una persona activa y quieres contribuir a la ciencia mientras conoces mejor tus datos de salud, este es tu lugar.</p>
+                <ul class="check-list">
+                    <li><i data-lucide="check-circle"></i> Participación voluntaria</li>
+                    <li><i data-lucide="check-circle"></i> Privacidad total de datos</li>
+                    <li><i data-lucide="check-circle"></i> Apoyo a la investigación UGR</li>
+                </ul>
+                <a href="#" class="btn btn-white">QUIERO PARTICIPAR</a>
+            </div>
+
+            <div id="profesionales" class="profile-card science">
+                <div class="card-tag">PRO</div>
+                <h2>Profesionales y Científicos</h2>
+                <p>Accede a los protocolos clínicos, metodología de recolección de datos y alianzas estratégicas del consorcio BioDM2.</p>
+                <ul class="check-list">
+                    <li><i data-lucide="check-circle"></i> Documentación técnica</li>
+                    <li><i data-lucide="check-circle"></i> Red de colaboración</li>
+                    <li><i data-lucide="check-circle"></i> Publicaciones</li>
+                </ul>
+                <a href="#" class="btn btn-outline-white">ACCESO PROFESIONAL</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="recursos" class="container">
+        <div class="dual-grid">
+            <div class="faq-area">
+                <h3>Preguntas Frecuentes</h3>
+                <details>
+                    <summary>¿Necesito material especial para participar?</summary>
+                    <p>En la mayoría de casos, solo tu smartphone o tu reloj deportivo habitual.</p>
+                </details>
+                <details>
+                    <summary>¿Qué ganan los investigadores con mis datos?</summary>
+                    <p>Identificar señales tempranas de patologías mediante el análisis de la movilidad.</p>
+                </details>
+            </div>
+            <div class="downloads-area">
+                <h3>Documentación</h3>
+                <a href="#" class="download-link"><i data-lucide="file-text"></i> Folleto del proyecto (PDF)</a>
+                <a href="#" class="download-link"><i data-lucide="file-text"></i> Consentimiento informado</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+        <div class="contact-card">
+            <h2>¿Listo para empezar?</h2>
+            <p>Escríbenos para resolver cualquier duda sobre el estudio o el despliegue técnico.</p>
+            <a href="mailto:info@biodm2.es" class="btn btn-main">CONTACTAR EQUIPO</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>BIO<span>DM2</span></h3>
+                    <p>Liderando la salud digital desde la Universidad de Granada.</p>
+                </div>
+                <div class="footer-logos">
+                    <span class="logo-box">UGR</span>
+                    <span class="logo-box">Ministerio</span>
+                    <span class="logo-box">Unión Europea</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BioDM2 | <a href="#">Aviso Legal</a> | <a href="#">Privacidad</a> | <a href="#">Cookies</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
