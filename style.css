@@ -8,29 +8,32 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Inter', sans-serif; background: var(--dark-bg); color: var(--text-main); }
 
-/* LIMPIEZA DE ENLACES GENERALES */
-a { text-decoration: none; color: inherit; }
+/* ELIMINAR ESTILO AZUL Y SUBRAYADO */
+a { 
+    text-decoration: none !important; 
+    color: inherit; 
+}
 
 /* BOTONES ELEGANTES */
 .btn {
     display: inline-block;
-    padding: 15px 35px;
-    border-radius: 50px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    padding: 14px 30px;
     border: 2px solid var(--accent);
-    background: transparent;
     color: var(--text-main);
-    margin-top: 20px;
+    border-radius: 8px; /* Bordes ligeramente redondeados para elegancia */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.4s ease;
+    background: rgba(72, 165, 165, 0.05);
+    margin-top: 15px;
 }
 
 .btn:hover {
     background: var(--accent);
-    box-shadow: 0 0 20px rgba(72, 165, 165, 0.4);
-    transform: translateY(-3px);
+    color: #000;
+    box-shadow: 0 0 20px rgba(72, 165, 165, 0.6);
+    transform: translateY(-2px);
 }
 
 /* LOGO GIGANTE Y DESTACADO */
@@ -47,7 +50,7 @@ a { text-decoration: none; color: inherit; }
 .athlete { background: var(--primary); }
 .science { background: #1a2022; }
 
-/* CONTACTO DESPEGADO */
+/* CONTACTO DESPEGADO Y CENTRADO */
 .contact-area { padding: 150px 10% !important; background: #000; }
 .contact-card { 
     background: #14181a; 
@@ -64,9 +67,11 @@ a { text-decoration: none; color: inherit; }
 /* AJUSTE MÓVIL */
 @media (max-width: 768px) {
     .split-section { grid-template-columns: 1fr; }
-    .profile-card { padding: 100px 40px !important; }
-    .contact-area { padding: 80px 20px !important; } 
-    .contact-card { padding: 60px 30px; }
+    .profile-card { padding: 80px 30px !important; }
+    .contact-area { 
+        padding: 60px 20px !important; /* Mantiene el contacto centrado sin pegar al borde */
+    }
+    .contact-card { padding: 50px 20px; border-radius: 30px; }
     .nav-logo { height: 60px; }
     .nav-container { padding: 0 20px; }
 }
