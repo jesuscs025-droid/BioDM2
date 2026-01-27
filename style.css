@@ -145,31 +145,23 @@ h1 { font-family: 'Montserrat', sans-serif; font-size: 4rem; margin-bottom: 20px
 
 /* AJUSTES RESPONSIVE */
 @media (max-width: 768px) {
-    .nav-links { display: none; } 
-    
-    .split-section { 
-        display: flex; 
-        flex-direction: column; 
+    /* ... lo que ya tenías ... */
+
+    /* Forzamos que el título del contacto baje de tamaño */
+    .contact-card h2 {
+        font-size: 1.5rem !important; /* Aquí bajamos el tamaño un 40% aprox */
+        letter-spacing: 1px !important;
     }
 
-    .profile-card {
-        padding: 30px 15px !important; /* Liberamos espacio lateral */
+    /* Ajustamos el contenedor del formulario para que no asfixie el texto */
+    .contact-card {
+        padding: 25px 15px !important;
+        margin: 10px !important;
+        width: auto !important;
     }
 
-    /* Forzamos el tamaño al 25% del original (de 4rem a 1.5rem) */
-    h1, .profile-card h2, .profile-card h1 { 
-        font-size: 1.5rem !important; 
-        letter-spacing: 0px !important;
-        line-height: 1.2 !important;
-        width: 100% !important;
-        display: block !important;
-    }
-
-    /* Si "hablamos" es un botón */
-    .btn, .btn-primary, .btn-secondary {
-        font-size: 0.7rem !important;
-        padding: 10px 15px !important;
-        width: 100%;
-        text-transform: none; /* A veces las mayúsculas ocupan demasiado */
+    /* Reducimos también el párrafo de abajo para que guarde proporción */
+    .contact-card p {
+        font-size: 0.9rem !important;
     }
 }
