@@ -49,4 +49,117 @@ a {
 .nav-item { 
     font-size: 0.75rem; 
     font-weight: 700; 
-    letter-spacing: 1.5px
+    letter-spacing: 1.5px; 
+    color: var(--text-muted); 
+    margin-left: 25px; 
+}
+.nav-item:hover { color: var(--accent); }
+.btn-nav { 
+    background: var(--accent); 
+    color: white !important; 
+    padding: 10px 20px; 
+    border-radius: 4px; 
+    font-weight: 800; 
+    font-size: 0.7rem; 
+    margin-left: 25px; 
+}
+
+/* HERO SECTION */
+.hero { 
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    text-align: center; 
+    background: radial-gradient(circle at center, #1a2426 0%, #0a0c0d 100%); 
+}
+.hero-content { width: 100%; padding: 0 20px; }
+.badge { color: var(--accent); font-weight: 800; letter-spacing: 5px; font-size: 0.7rem; display: block; margin-bottom: 20px; }
+.hero h1 { 
+    font-family: var(--font-title); 
+    font-size: clamp(2.5rem, 8vw, 4rem); 
+    font-weight: 900; 
+    margin-bottom: 30px; 
+    text-transform: uppercase;
+}
+.highlight { color: var(--accent); }
+
+/* BOTONES COMO COMPONENTES ELEGANTES */
+.btn { 
+    padding: 18px 40px; 
+    border-radius: 8px; 
+    font-weight: 800; 
+    font-size: 0.8rem; 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+    border: none;
+    cursor: pointer;
+}
+.btn-primary { background: var(--accent); color: white; margin-right: 15px; box-shadow: 0 10px 20px rgba(72, 165, 165, 0.2); }
+.btn-secondary { border: 1px solid rgba(255, 255, 255, 0.1); color: white; }
+.btn:hover { transform: translateY(-3px); filter: brightness(1.1); }
+
+/* SECCIONES Y MÁRGENES */
+.container { max-width: 1100px; margin: auto; padding: 100px 20px; }
+.section-title h2 { font-family: var(--font-title); font-size: 2.2rem; font-weight: 900; text-align: center; }
+.underline { width: 50px; height: 5px; background: var(--accent); margin: 20px auto 60px; }
+
+/* DISEÑO DE TARJETAS (SPLIT SECTION) */
+.split-section { display: grid; grid-template-columns: 1fr 1fr; min-height: 450px; }
+.profile-card { 
+    padding: 80px 50px; 
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; 
+}
+.athlete { background: var(--primary); }
+.science { background: #1a2022; }
+.card-tag { 
+    position: absolute; 
+    top: 0; 
+    right: 20px; 
+    font-size: 6rem; 
+    font-weight: 900; 
+    opacity: 0.05; 
+}
+.btn-white { background: white; color: var(--primary); }
+.btn-outline-white { border: 2px solid white; color: white; }
+
+/* RECURSOS Y FAQ */
+.dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.resource-btn { 
+    background: var(--card-bg); 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin-bottom: 15px; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    font-weight: 700; 
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+}
+.resource-btn:hover { background: var(--accent); color: white; }
+
+details { background: var(--card-bg); padding: 20px; border-radius: 8px; margin-bottom: 10px; cursor: pointer; }
+summary { font-weight: 700; color: var(--accent); }
+
+/* FOOTER LEGAL */
+footer { background: #070809; padding: 60px 20px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+.footer-grid { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.footer-legal a { 
+    font-size: 0.7rem; 
+    font-weight: 700; 
+    color: var(--text-muted); 
+    margin-right: 20px; 
+    letter-spacing: 1px; 
+}
+.footer-legal a:hover { color: white; }
+.credits { font-size: 0.7rem; color: #444; font-weight: 700; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .split-section, .dual-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .hero h1 { font-size: 2.8rem; }
+}
