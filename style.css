@@ -149,27 +149,30 @@ h1 { font-family: 'Montserrat', sans-serif; font-size: 4rem; margin-bottom: 20px
     
     .split-section { 
         display: flex; 
-        flex-direction: column; /* Apila las secciones verticalmente */
+        flex-direction: column; 
     }
 
     .profile-card {
-        padding: 60px 20px; /* Espacio suficiente pero sin asfixiar el texto */
-        width: 100%;        /* Forzamos que ocupe todo el ancho disponible */
-        min-height: auto;   /* Quitamos restricciones de altura */
+        padding: 40px 15px; /* Reducción de espacio para dar aire al texto */
+        width: 100%;
         text-align: center;
     }
 
-    h1, h2, .highlight {
-        font-size: 1.8rem !important; /* Reducimos el tamaño para que quepa la palabra */
-        line-height: 1.2;
-        word-wrap: break-word;        /* Si la palabra es muy larga, la rompe para que no se salga */
-        overflow-wrap: break-word;
+    h1 { 
+        /* Reducción del 25% respecto al diseño original de móvil */
+        font-size: 1.8rem !important; 
+        line-height: 1.1;
+        word-wrap: break-word;
+        hyphens: auto; /* Permite dividir la palabra si es necesario */
     }
 
+    /* Si "hablamos" está en un botón o enlace específico */
     .btn, .btn-secondary {
-        display: block;    /* Un botón debajo del otro */
-        width: 100%;       /* Ancho completo para que sea fácil de tocar */
+        font-size: 0.75rem !important; /* Reducción del tamaño de fuente en botones */
+        padding: 12px 20px;
+        display: block;
+        width: 100%;
         margin-left: 0 !important;
-        margin-top: 15px;
+        margin-top: 10px;
     }
 }
