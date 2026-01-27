@@ -8,6 +8,31 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Inter', sans-serif; background: var(--dark-bg); color: var(--text-main); }
 
+/* LIMPIEZA DE ENLACES GENERALES */
+a { text-decoration: none; color: inherit; }
+
+/* BOTONES ELEGANTES */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid var(--accent);
+    background: transparent;
+    color: var(--text-main);
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: var(--accent);
+    box-shadow: 0 0 20px rgba(72, 165, 165, 0.4);
+    transform: translateY(-3px);
+}
+
 /* LOGO GIGANTE Y DESTACADO */
 .navbar { background: rgba(10,12,13,0.98); padding: 35px 0; position: fixed; width: 100%; z-index: 1000; border-bottom: 2px solid var(--accent); }
 .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: auto; padding: 0 50px; }
@@ -36,21 +61,12 @@ body { font-family: 'Inter', sans-serif; background: var(--dark-bg); color: var(
 .container { padding: 150px 20px !important; max-width: 1200px; margin: auto; }
 .hero { padding-top: 200px; height: auto; min-height: 100vh; }
 
-/* OPTIMIZACIÓN MÓVIL */
+/* AJUSTE MÓVIL */
 @media (max-width: 768px) {
-    .nav-container { padding: 0 20px; }
-    .nav-logo { height: 60px; }
-    
     .split-section { grid-template-columns: 1fr; }
-    .profile-card { padding: 80px 30px !important; }
-    
-    .contact-area { 
-        padding: 80px 5% !important; /* Mantiene el contacto centrado y despegado de los bordes */
-    }
-    .contact-card { 
-        padding: 50px 25px; 
-        border-radius: 30px; 
-    }
-    
-    .container { padding: 80px 20px !important; }
+    .profile-card { padding: 100px 40px !important; }
+    .contact-area { padding: 80px 20px !important; } 
+    .contact-card { padding: 60px 30px; }
+    .nav-logo { height: 60px; }
+    .nav-container { padding: 0 20px; }
 }
