@@ -146,20 +146,30 @@ h1 { font-family: 'Montserrat', sans-serif; font-size: 4rem; margin-bottom: 20px
 /* AJUSTES RESPONSIVE */
 @media (max-width: 768px) {
     .nav-links { display: none; } 
-    .split-section { grid-template-columns: 1fr; } /* Aquí haces que las columnas se pongan una sobre otra */
     
-    h1 { 
-        font-size: 2.2rem; /* Achicamos el título para que no se corte */
+    .split-section { 
+        display: flex; 
+        flex-direction: column; /* Apila las secciones verticalmente */
     }
 
     .profile-card {
-        padding: 40px 20px; /* Reducimos el espacio lateral (el 10% era mucho para móvil) */
+        padding: 60px 20px; /* Espacio suficiente pero sin asfixiar el texto */
+        width: 100%;        /* Forzamos que ocupe todo el ancho disponible */
+        min-height: auto;   /* Quitamos restricciones de altura */
         text-align: center;
     }
 
-    .btn-secondary {
-        margin-left: 0; /* Quitamos el margen izquierdo que en móvil descentra el botón */
+    h1, h2, .highlight {
+        font-size: 1.8rem !important; /* Reducimos el tamaño para que quepa la palabra */
+        line-height: 1.2;
+        word-wrap: break-word;        /* Si la palabra es muy larga, la rompe para que no se salga */
+        overflow-wrap: break-word;
+    }
+
+    .btn, .btn-secondary {
+        display: block;    /* Un botón debajo del otro */
+        width: 100%;       /* Ancho completo para que sea fácil de tocar */
+        margin-left: 0 !important;
         margin-top: 15px;
-        display: block; /* Hacemos que los botones ocupen su propia línea */
     }
 }
