@@ -153,26 +153,23 @@ h1 { font-family: 'Montserrat', sans-serif; font-size: 4rem; margin-bottom: 20px
     }
 
     .profile-card {
-        padding: 40px 15px; /* Reducción de espacio para dar aire al texto */
-        width: 100%;
-        text-align: center;
+        padding: 30px 15px !important; /* Liberamos espacio lateral */
     }
 
-    h1 { 
-        /* Reducción del 25% respecto al diseño original de móvil */
-        font-size: 1.8rem !important; 
-        line-height: 1.1;
-        word-wrap: break-word;
-        hyphens: auto; /* Permite dividir la palabra si es necesario */
+    /* Forzamos el tamaño al 25% del original (de 4rem a 1.5rem) */
+    h1, .profile-card h2, .profile-card h1 { 
+        font-size: 1.5rem !important; 
+        letter-spacing: 0px !important;
+        line-height: 1.2 !important;
+        width: 100% !important;
+        display: block !important;
     }
 
-    /* Si "hablamos" está en un botón o enlace específico */
-    .btn, .btn-secondary {
-        font-size: 0.75rem !important; /* Reducción del tamaño de fuente en botones */
-        padding: 12px 20px;
-        display: block;
+    /* Si "hablamos" es un botón */
+    .btn, .btn-primary, .btn-secondary {
+        font-size: 0.7rem !important;
+        padding: 10px 15px !important;
         width: 100%;
-        margin-left: 0 !important;
-        margin-top: 10px;
+        text-transform: none; /* A veces las mayúsculas ocupan demasiado */
     }
 }
