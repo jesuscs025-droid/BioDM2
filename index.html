@@ -3,14 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BioDM2 | Salud Digital de Precision</title>
+    <title>BioDM2 | Salud Digital de Precisión</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Estilos específicos para la sección FAQ */
-        .faq-section { padding: 100px 20px; max-width: 900px; margin: auto; }
-        .faq-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-top: 40px; }
+        .faq-section { padding: 80px 20px; max-width: 900px; margin: auto; text-align: center; }
+        
+        /* Botón disparador del bloque FAQ */
+        .faq-trigger-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: transparent;
+            color: white;
+            border: 2px solid var(--accent);
+            padding: 18px 35px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .faq-trigger-btn:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Contenedor que oculta/muestra todo el bloque */
+        #faq-main-container {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: left;
+        }
+        #faq-main-container.show {
+            max-height: 2500px; /* Suficiente para todo el contenido */
+            margin-top: 40px;
+        }
+
+        .faq-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
         .faq-group h3 { 
             color: var(--accent); 
             text-transform: uppercase; 
@@ -36,22 +73,30 @@
             align-items: center; 
             font-weight: 600;
             font-size: 1rem;
+            user-select: none;
         }
         .faq-question:hover { background: rgba(255,255,255,0.05); }
+        
         .faq-answer { 
             padding: 0 20px; 
             max-height: 0; 
             overflow: hidden; 
-            transition: all 0.3s ease; 
+            transition: all 0.4s ease; 
             opacity: 0;
             color: #ccc;
             line-height: 1.6;
             font-size: 0.95rem;
         }
-        .faq-item.active .faq-answer { padding: 0 20px 20px; max-height: 300px; opacity: 1; }
+        
+        .faq-item.active .faq-answer { 
+            padding: 0 20px 20px 20px; 
+            max-height: 500px; 
+            opacity: 1; 
+        }
+        
         .faq-item.active { border-color: var(--accent); background: rgba(255,255,255,0.06); }
-        .faq-icon { transition: transform 0.3s ease; opacity: 0.5; }
-        .faq-item.active .faq-icon { transform: rotate(180deg); opacity: 1; color: var(--accent); }
+        .faq-icon-arrow { transition: transform 0.3s ease; opacity: 0.5; }
+        .faq-item.active .faq-icon-arrow { transform: rotate(180deg); opacity: 1; color: var(--accent); }
     </style>
 </head>
 <body>
@@ -142,62 +187,59 @@
     </section>
 
     <section id="faq" class="faq-section">
-        <div class="section-title" style="text-align: center;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Preguntas frecuentes</h2>
-            <div class="underline" style="width: 60px; height: 4px; background: var(--accent); margin: 0 auto 30px;"></div>
-        </div>
+        <button class="faq-trigger-btn" id="main-faq-btn">
+            PREGUNTAS FRECUENTES <i data-lucide="help-circle"></i>
+        </button>
 
-        <div class="faq-grid">
-            <div class="faq-group">
-                <h3>Para participantes</h3>
-                
-                <div class="faq-item">
-                    <div class="faq-question">¿Quién puede participar en el proyecto BioDM2? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                    <div class="faq-answer">El proyecto está dirigido a personas adultas con un mayor riesgo de desarrollar diabetes mellitus tipo 2. La participación está sujeta a criterios clínicos y de inclusión definidos en el estudio y será valorada por los profesionales responsables. Mostrar interés en participar no implica inclusión automática.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">¿Tiene algún coste participar en el proyecto? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                    <div class="faq-answer">No. La participación en BioDM2 no tiene ningún coste para las personas participantes, ya que se trata de un proyecto de investigación.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">¿Cuánto tiempo dura la participación? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                    <div class="faq-answer">La duración y el tipo de seguimiento pueden variar en función del diseño del estudio y del perfil de cada participante. Esta información se facilitará de forma detallada a las personas seleccionadas antes de su incorporación al proyecto.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">¿Qué tipo de datos se recogen durante el estudio? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                    <div class="faq-answer">En el marco del proyecto se recogen datos necesarios para la investigación, como información clínica, datos relacionados con hábitos de vida y variables de seguimiento. En ningún caso se solicitarán datos innecesarios ni se utilizarán con fines distintos a los establecidos en el estudio.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">¿Cómo se protege mi privacidad y mis datos personales? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                    <div class="faq-answer">Todos los datos personales se tratan de forma confidencial y conforme a la normativa vigente en materia de protección de datos. La participación es voluntaria y requiere la firma de un consentimiento informado, en el que se explican con detalle los derechos de las personas participantes.</div>
-                </div>
+        <div id="faq-main-container">
+            <div class="section-title" style="text-align: center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Preguntas frecuentes</h2>
+                <div class="underline" style="width: 60px; height: 4px; background: var(--accent); margin: 0 auto 30px;"></div>
             </div>
 
-            <div class="faq-group">
-                <h3>Para profesionales y científicos</h3>
-
-                <div class="faq-item">
-                    <div class="faq-question">¿Qué tipo de colaboración contempla el proyecto BioDM2? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                    <div class="faq-answer">BioDM2 está abierto a colaboraciones en ámbitos clínicos, científicos y de transferencia, siempre alineadas con los objetivos del proyecto y el marco ético y metodológico establecido.</div>
+            <div class="faq-grid">
+                <div class="faq-group">
+                    <h3>Para participantes</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Quién puede participar en el proyecto BioDM2? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">El proyecto está dirigido a personas adultas con un mayor riesgo de desarrollar diabetes mellitus tipo 2. La participación está sujeta a criterios clínicos y de inclusión definidos en el estudio y será valorada por los profesionales responsables. Mostrar interés en participar no implica inclusión automática.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Tiene algún coste participar en el proyecto? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">No. La participación en BioDM2 no tiene ningún coste para las personas participantes, ya que se trata de un proyecto de investigación.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Cuánto tiempo dura la participación? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">La duración y el tipo de seguimiento pueden variar en función del diseño del estudio y del perfil de cada participante. Esta información se facilitará de forma detallada a las personas seleccionadas antes de su incorporación al proyecto.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Qué tipo de datos se recogen durante el estudio? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">En el marco del proyecto se recogen datos necesarios para la investigación, como información clínica, datos relacionados con hábitos de vida y variables de seguimiento. En ningún caso se solicitarán datos innecesarios ni se utilizarán con fines distintos a los establecidos en el estudio.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Cómo se protege mi privacidad y mis datos personales? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">Todos los datos personales se tratan de forma confidencial y conforme a la normativa vigente en materia de protección de datos. La participación es voluntaria y requiere la firma de un consentimiento informado, en el que se explican con detalle los derechos de las personas participantes.</div>
+                    </div>
                 </div>
 
-                <div class="faq-item">
-                    <div class="faq-question">¿Se publicarán los resultados del proyecto? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                    <div class="faq-answer">Sí. El proyecto contempla la difusión de resultados a través de publicaciones científicas, comunicaciones y otros formatos de transferencia, de acuerdo con los tiempos y procedimientos habituales en proyectos de investigación.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">¿Es posible acceder a los datos del proyecto? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                    <div class="faq-answer">El acceso a los datos está sujeto a criterios éticos, legales y metodológicos. Cualquier posible uso secundario o colaboración se valorará caso a caso conforme a la normativa aplicable y a los acuerdos del consorcio.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">¿Dónde se publican las novedades y resultados del proyecto? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                    <div class="faq-answer">Las principales publicaciones, comunicaciones y noticias relacionadas con BioDM2 se recogen en el apartado de recursos de esta web y se actualizarán progresivamente conforme avance el proyecto.</div>
+                <div class="faq-group">
+                    <h3>Para profesionales y científicos</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Qué tipo de colaboración contempla el proyecto BioDM2? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">BioDM2 está abierto a colaboraciones en ámbitos clínicos, científicos y de transferencia, siempre alineadas con los objetivos del proyecto y el marco ético y metodológico establecido.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Se publicarán los resultados del proyecto? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">Sí. El proyecto contempla la difusión de resultados a través de publicaciones científicas, comunicaciones y otros formatos de transferencia, de acuerdo con los tiempos y procedimientos habituales en proyectos de investigación.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Es posible acceder a los datos del proyecto? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">El acceso a los datos está sujeto a criterios éticos, legales y metodológicos. Cualquier posible uso secundario o colaboración se valorará caso a caso conforme a la normativa aplicable y a los acuerdos del consorcio.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Dónde se publican las novedades y resultados del proyecto? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">Las principales publicaciones, comunicaciones y noticias relacionadas con BioDM2 se recogen en el apartado de recursos de esta web y se actualizarán progresivamente conforme avance el proyecto.</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -213,40 +255,75 @@
                     <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">NOMBRE</label>
                     <input type="text" name="nombre" placeholder="Tu nombre" required style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;">
                 </div>
-
                 <div style="text-align: left;">
                     <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">EMAIL O TELÉFONO</label>
                     <input type="text" name="contacto" required placeholder="Email o número de teléfono" style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;">
                 </div>
-
                 <div style="text-align: left;">
                     <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">MENSAJE</label>
                     <textarea name="mensaje" rows="4" required style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;"></textarea>
                 </div>
-
                 <div style="background: rgba(255, 100, 100, 0.1); border-left: 4px solid #ff4d4d; padding: 10px; font-size: 0.85rem;">
                     <strong style="color: #ff4d4d;">Aviso:</strong> No incluir datos de salud en este formulario.
                 </div>
-
                 <div style="display: flex; align-items: flex-start; gap: 12px; text-align: left;">
                     <input type="checkbox" required id="privacy" style="width: 18px; height: 18px; cursor: pointer; flex-shrink: 0;">
                     <label for="privacy" style="font-size: 0.9rem; opacity: 0.8; line-height: 1.4; cursor: pointer;">
                         He leído y acepto la <a href="#" style="color: var(--accent); text-decoration: underline;">política de privacidad</a>.
                     </label>
                 </div>
-
                 <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer; border: none; padding: 15px; font-weight: bold;">ENVIAR MENSAJE</button>
             </form>
         </div>
     </section>
 
-    <style>
-        .main-footer { width: 100%; background: #000; margin-top: 50px; }
-        .footer-banner-wrapper { width: 100%; padding: 40px 0; display: flex; justify-content: center; }
-        .footer-banner-img { width: 50%; height: auto; display: block; object-fit: contain; }
-        .footer-content { padding: 30px 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
-        .footer-inner { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-        .footer-legal a { color: white; text-decoration: none; font-size: 0.8rem; opacity: 0.6; margin-right: 20px; }
-        .footer-credits { font-size: 0.8rem; opacity: 0.4; color: white; margin: 0; }
+    <footer class="main-footer">
+        <div class="footer-banner-wrapper">
+            <img src="https://raw.githubusercontent.com/jesuscs025-droid/BioDM2/main/logo-footer.png" alt="Logos colaboradores" class="footer-banner-img" style="width: 50%; height: auto; display: block; object-fit: contain; margin: 40px auto;">
+        </div>
+        <div class="footer-content" style="padding: 30px 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); background: #000;">
+            <div class="footer-inner" style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div class="footer-legal">
+                    <a href="#" style="color: white; text-decoration: none; font-size: 0.8rem; opacity: 0.6; margin-right: 20px;">AVISO LEGAL</a>
+                    <a href="#" style="color: white; text-decoration: none; font-size: 0.8rem; opacity: 0.6; margin-right: 20px;">PRIVACIDAD</a>
+                    <a href="#" style="color: white; text-decoration: none; font-size: 0.8rem; opacity: 0.6;">COOKIES</a>
+                </div>
+                <p class="footer-credits" style="font-size: 0.8rem; opacity: 0.4; color: white; margin: 0;">© 2026 BioDM2 | Universidad de Granada</p>
+            </div>
+        </div>
+    </footer>
 
-        @media (max-width:
+    <script>
+        lucide.createIcons();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainBtn = document.getElementById('main-faq-btn');
+            const faqContainer = document.getElementById('faq-main-container');
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            // 1. Mostrar/Ocultar todo el bloque FAQ
+            mainBtn.addEventListener('click', () => {
+                faqContainer.classList.toggle('show');
+                // Si lo cerramos, opcionalmente cerramos todas las preguntas abiertas
+                if(!faqContainer.classList.contains('show')) {
+                    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+                }
+            });
+
+            // 2. Acordeón interno de preguntas
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.closest('.faq-item');
+                    const isActive = item.classList.contains('active');
+                    
+                    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+                    
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
