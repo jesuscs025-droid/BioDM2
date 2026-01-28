@@ -295,24 +295,36 @@
     </section>
 
 <footer class="main-footer">
-    <div class="footer-banner-wrapper">
-        <img src="https://raw.githubusercontent.com/jesuscs025-droid/BioDM2/main/logo-footer.png" alt="Logos colaboradores" class="footer-banner-img" style="width: 50%; height: auto; display: block; object-fit: contain; margin: 40px auto;">
-    </div>
-    <div class="footer-content" style="padding: 30px 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); background: #1eb9af;">
-        <div class="footer-inner" style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-            <div class="footer-legal">
-                <a href="#" style="color: white; text-decoration: none; font-size: 0.8rem; opacity: 0.9; margin-right: 20px;">AVISO LEGAL</a>
-                <a href="#" style="color: white; text-decoration: none; font-size: 0.8rem; opacity: 0.9; margin-right: 20px;">PRIVACIDAD</a>
-                <a href="#" style="color: white; text-decoration: none; font-size: 0.8rem; opacity: 0.9;">COOKIES</a>
-            </div>
-            <p class="footer-credits" style="font-size: 0.8rem; opacity: 0.8; color: white; margin: 0;">© 2026 BioDM2 | Universidad de Granada</p>
+        <div class="footer-banner-wrapper">
+            <img src="https://raw.githubusercontent.com/jesuscs025-droid/BioDM2/main/logo-footer.png" alt="Logos colaboradores" style="width: 50%; height: auto; display: block; margin: 40px auto;">
         </div>
-    </div>
-</footer>
+        <div class="footer-content" style="padding: 30px 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); background: #1eb9af;">
+            <div class="footer-inner" style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div class="footer-legal">
+                    <a href="#" style="color: white; text-decoration: none; font-size: 0.8rem; opacity: 0.9; margin-right: 20px;">AVISO LEGAL</a>
+                    <a href="#" style="color: white; text-decoration: none; font-size: 0.8rem; opacity: 0.9; margin-right: 20px;">PRIVACIDAD</a>
+                    <a href="#" style="color: white; text-decoration: none; font-size: 0.8rem; opacity: 0.9;">COOKIES</a>
+                </div>
+                <p style="font-size: 0.8rem; opacity: 0.8; color: white; margin: 0;">© 2026 BioDM2 | Universidad de Granada</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         lucide.createIcons();
         document.addEventListener('DOMContentLoaded', () => {
+            // LÓGICA PARA PARTICIPANTES
+            const partHeaders = document.querySelectorAll('.participante-header');
+            partHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const item = header.closest('.participante-item');
+                    const isActive = item.classList.contains('active');
+                    document.querySelectorAll('.participante-item').forEach(el => el.classList.remove('active'));
+                    if (!isActive) item.classList.add('active');
+                });
+            });
+
+            // LÓGICA PARA FAQ
             const mainBtn = document.getElementById('main-faq-btn');
             const faqContainer = document.getElementById('faq-main-container');
             const faqQuestions = document.querySelectorAll('.faq-question');
@@ -322,15 +334,14 @@
                 faqContainer.classList.toggle('show');
                 mainBtn.innerHTML = isOpening ? `CERRAR PREGUNTAS <i data-lucide="x-circle"></i>` : `PREGUNTAS FRECUENTES <i data-lucide="help-circle"></i>`;
                 lucide.createIcons();
-                if(!isOpening) { document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active')); }
             });
 
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', () => {
-                    const item = question.closest('.faq-item');
+            faqQuestions.forEach(q => {
+                q.addEventListener('click', () => {
+                    const item = q.closest('.faq-item');
                     const isActive = item.classList.contains('active');
                     document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-                    if (!isActive) { item.classList.add('active'); }
+                    if (!isActive) item.classList.add('active');
                 });
             });
         });
