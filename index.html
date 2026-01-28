@@ -88,22 +88,23 @@
 <style>
         /* Imagen fondo "Proyecto BioDM2" */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('hero-bg.png') no-repeat center center/cover;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 100px 20px;
-        }
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), 
+                    url('hero-bg.png') no-repeat center center;
+        background-size: cover; /* Asegura que la imagen cubra todo el espacio */
+        background-attachment: scroll; /* Cambiar a 'fixed' si quieres efecto parallax */
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 100px 20px;
+    }
 
-        /* Tus estilos anteriores se mantienen debajo */
-        .consorcio-section { padding: 100px 20px; background: rgba(255, 255, 255, 0.02); }
-        .consorcio-intro { max-width: 800px; margin: 0 auto 50px; text-align: center; color: #777; line-height: 1.6; font-size: 1.1rem; }
-        /* ... resto del código CSS ... */
-    </style>
+    /* El resto de tus estilos se mantienen intactos */
+    .consorcio-section { padding: 100px 20px; background: rgba(255, 255, 255, 0.02); }
+    .consorcio-intro { max-width: 800px; margin: 0 auto 50px; text-align: center; color: #777; line-height: 1.6; font-size: 1.1rem; }
+</style>
 </head>
 <body>
 
