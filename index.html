@@ -307,6 +307,19 @@
                 <div style="text-align: left;">
                     <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">EMAIL O TELÉFONO</label>
                     <input type="text" name="contacto" required placeholder="Email o número de teléfono" style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;">
+                    <div style="text-align: left;">
+    <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">PERFIL DE INTERÉS</label>
+    <select name="perfil_interes" required style="width: 100%; padding: 12px; background: #1a1a1a; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white; margin-bottom: 15px;">
+        <option value="" disabled selected>Selecciona una opción...</option>
+        <option value="participante">Persona interesada en participar</option>
+        <option value="profesional_investigador">Profesional / investigador</option>
+        <option value="entidad_institucion">Entidad / institución</option>
+        <option value="otro">Otro</option>
+    </select>
+    
+    <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">DETALLES DEL PERFIL (MEMO)</label>
+    <textarea name="detalles_perfil" placeholder="Proporciona más detalles sobre tu perfil..." rows="3" required style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;"></textarea>
+</div>
                 </div>
                 <div style="text-align: left;">
                     <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">MENSAJE</label>
