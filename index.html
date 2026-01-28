@@ -129,16 +129,85 @@
                 <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer; border: none;">ENVIAR MENSAJE</button>
             </form>
         </div>
-    </section>
+</section>
 
-    <footer style="padding: 60px 20px; border-top: 1px solid var(--glass); background: #000;">
-        <div class="footer-container" style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-            <div class="footer-legal" style="display: flex; gap: 20px; font-size: 0.8rem; opacity: 0.6;">
-                <a href="#" style="color: white; text-decoration: none;">AVISO LEGAL</a>
-                <a href="#" style="color: white; text-decoration: none;">PRIVACIDAD</a>
-                <a href="#" style="color: white; text-decoration: none;">COOKIES</a>
+    <style>
+        .main-footer {
+            width: 100%;
+            background: #000;
+            margin-top: 50px;
+        }
+        .footer-banner-wrapper {
+            width: 100%;
+            line-height: 0;
+            overflow: hidden;
+        }
+        .footer-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* 'contain' mantiene la proporción sin recortar los logos */
+            object-fit: contain; 
+        }
+        .footer-content {
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .footer-legal {
+            display: flex;
+            gap: 20px;
+        }
+        .footer-legal a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.8rem;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+        .footer-legal a:hover {
+            opacity: 1;
+        }
+        .footer-credits {
+            font-size: 0.8rem;
+            opacity: 0.4;
+            color: white;
+            margin: 0;
+        }
+        @media (max-width: 600px) {
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-legal {
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <footer class="main-footer">
+        <div class="footer-banner-wrapper">
+            <img src="https://raw.githubusercontent.com/jesuscs025-droid/BioDM2/main/logo-footer.png" 
+                 alt="Logos colaboradores BioDM2" 
+                 class="footer-banner-img">
+        </div>
+        <div class="footer-content">
+            <div class="footer-inner">
+                <div class="footer-legal">
+                    <a href="#">AVISO LEGAL</a>
+                    <a href="#">PRIVACIDAD</a>
+                    <a href="#">COOKIES</a>
+                </div>
+                <p class="footer-credits">© 2026 BioDM2 | Universidad de Granada</p>
             </div>
-            <p class="credits" style="font-size: 0.8rem; opacity: 0.4;">© 2026 BioDM2 | Universidad de Granada</p>
         </div>
     </footer>
 
