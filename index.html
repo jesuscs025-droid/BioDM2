@@ -18,20 +18,22 @@
             animation: fadeInUp 1.2s ease-out forwards;
         }
 
-        /* AJUSTE SECCIÓN HERO CON IMAGEN DE FONDO */
+        /* AJUSTE SECCIÓN HERO - IMAGEN REAL SIN FONDO GRIS */
         .hero { 
             position: relative;
-            padding: 150px 20px;
+            padding: 160px 20px;
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 90vh;
-            /* Corregido: extensión .png y overlay ajustado */
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-bg.png');
+            min-height: 85vh;
+            /* Filtro degradado mucho más suave para que se vea la imagen clara */
+            background: linear-gradient(rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.7)), url('hero-bg.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: #0a0a0a; /* Fondo de seguridad oscuro */
         }
 
         /* Estilos Consorcio */
@@ -54,7 +56,7 @@
         }
         .partner-card:hover { transform: translateY(-5px); border-color: #1eb9af; background: rgba(255, 255, 255, 0.05); }
 
-        /* Estilos FAQ y Bloque Profesional */
+        /* Estilos Bloque Profesional */
         #profesional-content-area { 
             max-height: 0; 
             overflow: hidden; 
@@ -168,7 +170,6 @@
 
             <div style="max-width: 850px; margin: 0 auto; color: #ccc; line-height: 1.8; font-size: 1.05rem;">
                 <p>BioDM2 es un proyecto de investigación aplicada orientado al desarrollo y validación de un prototipo basado en inteligencia artificial para la detección precoz del riesgo de diabetes mellitus tipo 2 y la personalización de estrategias preventivas.</p>
-                <p>El proyecto integra información clínica, biomarcadores y datos de seguimiento en un entorno digital supervisado.</p>
             </div>
 
             <div class="profesional-grid">
@@ -181,7 +182,6 @@
 
             <div class="recursos-box">
                 <h3 style="color: #1eb9af; margin-bottom: 20px;">Recursos del proyecto</h3>
-                <p style="font-size: 0.9rem; opacity: 0.8;">Documentación científica y técnica vinculada al proyecto.</p>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 30px;">
                     <div>
                         <h4 style="font-size: 0.8rem; color: white; margin-bottom: 15px;">DOCUMENTACIÓN</h4>
@@ -196,9 +196,8 @@
                     </div>
                 </div>
             </div>
-
+            
             <div style="text-align: center; margin-top: 60px; padding: 40px; border-top: 1px solid rgba(255,255,255,0.05);">
-                <p style="font-size: 0.9rem; margin-bottom: 20px; color: #888;">Interesados en colaboración o transferencia técnica.</p>
                 <a href="#contacto" class="btn btn-primary">CONTACTO PROFESIONAL</a>
             </div>
         </div>
@@ -215,12 +214,6 @@
             <div class="partner-card"><div class="partner-logo-placeholder">FUNDACIÓN VITHAS</div><p>Ámbito sanitario.</p></div>
             <div class="partner-card"><div class="partner-logo-placeholder">UGR (iMUDS)</div><p>Soporte científico.</p></div>
         </div>
-    </section>
-
-    <section id="faq" class="faq-section">
-        <button class="faq-trigger-btn" id="main-faq-btn">PREGUNTAS FRECUENTES <i data-lucide="help-circle"></i></button>
-        <div id="faq-main-container">
-            </div>
     </section>
 
     <footer class="main-footer">
@@ -250,10 +243,12 @@
 
             const mainBtn = document.getElementById('main-faq-btn');
             const faqContainer = document.getElementById('faq-main-container');
-            mainBtn.addEventListener('click', () => {
-                faqContainer.classList.toggle('show');
-                lucide.createIcons();
-            });
+            if(mainBtn) {
+                mainBtn.addEventListener('click', () => {
+                    faqContainer.classList.toggle('show');
+                    lucide.createIcons();
+                });
+            }
         });
     </script>
 </body>
