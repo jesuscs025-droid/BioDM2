@@ -85,6 +85,24 @@
         .faq-item.active { border-color: #1eb9af; background: rgba(255,255,255,0.06); }
         .faq-icon-arrow { transition: transform 0.3s ease; opacity: 0.6; }
         .faq-item.active .faq-icon-arrow { transform: rotate(180deg); opacity: 1; color: #1eb9af; }
+<style>
+        /* NUEVO: Estilos para el fondo de la sección principal */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('hero-bg.png') no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 100px 20px;
+        }
+
+        /* Tus estilos anteriores se mantienen debajo */
+        .consorcio-section { padding: 100px 20px; background: rgba(255, 255, 255, 0.02); }
+        .consorcio-intro { max-width: 800px; margin: 0 auto 50px; text-align: center; color: #ccc; line-height: 1.6; font-size: 1.1rem; }
+        /* ... resto del código CSS ... */
     </style>
 </head>
 <body>
@@ -124,21 +142,6 @@
         </div>
         <div class="content-text" style="max-width: 800px; margin: auto; font-size: 1.2rem; color: #ccc;">
             <p>BioDM2 es un prototipo de Inteligencia Artificial diseñado para prevenir la diabetes tipo 2. Analiza riesgos individuales para ofrecer planes personalizados de alimentación y ejercicio que optimizan la salud y frenan la enfermedad.</p>
-        </div>
-    </section>
-
-    <section id="participantes" class="split-section">
-        <div class="profile-card athlete">
-            <span class="card-tag" style="letter-spacing: 3px; font-weight: bold; color: #1eb9af;">LIFE & SPORT</span>
-            <h2>PARTICIPANTES</h2>
-            <p>Convierte tu ejercicio en ciencia: descubre tus biomarcadores y colabora con la investigación.</p>
-            <a href="#" class="btn btn-secondary" style="border-color: white; width: fit-content;">SABER MÁS</a>
-        </div>
-        <div id="profesionales" class="profile-card science">
-            <span class="card-tag" style="letter-spacing: 3px; font-weight: bold; color: #1eb9af;">TECH & HEALTH</span>
-            <h2>PROFESIONALES</h2>
-            <p>Portal técnico para científicos y profesionales de la salud. Acceso a protocolos clínicos y documentación oficial.</p>
-            <a href="#" class="btn btn-primary" style="width: fit-content;">ACCESO TÉCNICO</a>
         </div>
     </section>
 
