@@ -11,13 +11,11 @@
         /* Estilos específicos para la sección FAQ */
         .faq-section { padding: 80px 20px; max-width: 900px; margin: auto; text-align: center; }
         
-        /* BOTÓN FINAL: Color coordinado con 65% de opacidad */
         .faq-trigger-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 15px;
-            /* Color de marca con opacidad del 65% */
             background: rgba(30, 185, 175, 0.65); 
             color: white;
             border: 2px solid #1eb9af;
@@ -35,12 +33,11 @@
         }
 
         .faq-trigger-btn:hover {
-            background: rgba(30, 185, 175, 1); /* 100% de opacidad en hover */
+            background: rgba(30, 185, 175, 1);
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(30, 185, 175, 0.4);
         }
 
-        /* Contenedor principal de las FAQ */
         #faq-main-container {
             max-height: 0;
             overflow: hidden;
@@ -89,15 +86,17 @@
 
         .faq-question:hover { background: rgba(255,255,255,0.07); }
         
+        /* RESPUESTAS: Color gris un 30% más oscuro (#888) para mejor legibilidad */
         .faq-answer { 
             padding: 0 22px; 
             max-height: 0; 
             overflow: hidden; 
             transition: all 0.4s ease; 
             opacity: 0;
-            color: #ccc;
+            color: #888; /* Gris más oscuro */
             line-height: 1.7;
             font-size: 0.95rem;
+            font-weight: 500;
         }
         
         .faq-item.active .faq-answer { 
