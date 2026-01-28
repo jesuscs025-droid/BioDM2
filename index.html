@@ -18,7 +18,7 @@
             animation: fadeInUp 1.2s ease-out forwards;
         }
 
-        /* AJUSTE SECCIÓN HERO - IMAGEN REAL SIN FONDO GRIS */
+        /* SECCIÓN HERO - IMAGEN DE FONDO REAL */
         .hero { 
             position: relative;
             padding: 160px 20px;
@@ -27,13 +27,12 @@
             align-items: center;
             justify-content: center;
             min-height: 85vh;
-            /* Filtro degradado mucho más suave para que se vea la imagen clara */
             background: linear-gradient(rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.7)), url('hero-bg.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            background-color: #0a0a0a; /* Fondo de seguridad oscuro */
+            background-color: #0a0a0a;
         }
 
         /* Estilos Consorcio */
@@ -76,10 +75,15 @@
 
         .profesional-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            grid-template-columns: 1fr 1fr; /* Forzado a 2 columnas para alinear diseño y transferencia */
             gap: 25px; 
             margin: 40px 0;
         }
+        
+        @media (max-width: 768px) {
+            .profesional-grid { grid-template-columns: 1fr; } /* En móvil vuelve a 1 columna */
+        }
+
         .tech-card {
             background: rgba(255,255,255,0.03);
             padding: 25px;
@@ -87,8 +91,6 @@
             border: 1px solid rgba(255,255,255,0.05);
         }
         .tech-card h3 { color: #1eb9af; margin-bottom: 15px; font-size: 1.1rem; text-transform: uppercase; }
-
-        .recursos-box { background: rgba(0,0,0,0.2); padding: 30px; border-radius: 12px; margin-top: 40px; }
 
         .faq-section { padding: 80px 20px; max-width: 900px; margin: auto; text-align: center; }
         .faq-trigger-btn {
@@ -169,36 +171,21 @@
             </div>
 
             <div style="max-width: 850px; margin: 0 auto; color: #ccc; line-height: 1.8; font-size: 1.05rem;">
-                <p>BioDM2 es un proyecto de investigación aplicada orientado al desarrollo y validación de un prototipo basado en inteligencia artificial para la detección precoz del riesgo de diabetes mellitus tipo 2 y la personalización de estrategias preventivas.</p>
+                <p>BioDM2 es un proyecto de investigación aplicada orientado al desarrollo y validación de un prototipo basado en inteligencia artificial para la detección precoz del riesgo de diabetes mellitus tipo 2 y la personalización de estrategias preventivas de ejercicio físico y nutrición en poblaciones de riesgo.</p>
+                <p>El proyecto integra información clínica, biomarcadores y datos de seguimiento en un entorno digital, con el objetivo de apoyar la toma de decisiones preventivas dentro de un marco de investigación supervisado.</p>
             </div>
 
             <div class="profesional-grid">
-                <div class="tech-card"><h3>Metodología</h3><p>Enfoque multidisciplinar basado en la integración de datos clínicos y biomarcadores.</p></div>
-                <div class="tech-card"><h3>Biomarcadores</h3><p>Evaluación del riesgo metabólico mediante criterios de evidencia científica.</p></div>
-                <div class="tech-card"><h3>Inteligencia artificial</h3><p>Modelos orientados al análisis de datos heterogéneos y soporte de decisiones.</p></div>
-                <div class="tech-card"><h3>Diseño del estudio</h3><p>Proyecto estructurado en fases con análisis retrospectivo y piloto prospectivo.</p></div>
-                <div class="tech-card" style="grid-column: 1 / -1;"><h3>Transferencia y aplicabilidad</h3><p>BioDM2 está orientado a la transferencia de resultados a contextos clínicos y comunitarios.</p></div>
+                <div class="tech-card"><h3>Metodología</h3><p>Enfoque multidisciplinar basado en la integración de datos clínicos, biomarcadores y variables relacionadas con el estilo de vida.</p></div>
+                <div class="tech-card"><h3>Biomarcadores</h3><p>Utilización de biomarcadores relevantes para la evaluación del riesgo metabólico, seleccionados conforme a criterios clínicos.</p></div>
+                <div class="tech-card"><h3>Inteligencia artificial</h3><p>Desarrollo y validación de modelos orientados al análisis de datos heterogéneos y al soporte de decisiones.</p></div>
+                <div class="tech-card"><h3>Diseño del estudio</h3><p>Proyecto estructurado en fases, que incluye análisis retrospectivo de datos y evaluación en un estudio piloto prospectivo.</p></div>
+                <div class="tech-card"><h3>Transferencia y aplicabilidad</h3><p>BioDM2 está orientado a la transferencia de resultados a contextos clínicos, comunitarios y de promoción de la salud.</p></div>
             </div>
 
-            <div class="recursos-box">
-                <h3 style="color: #1eb9af; margin-bottom: 20px;">Recursos del proyecto</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 30px;">
-                    <div>
-                        <h4 style="font-size: 0.8rem; color: white; margin-bottom: 15px;">DOCUMENTACIÓN</h4>
-                        <ul style="list-style: none; padding: 0; font-size: 0.9rem; color: #ccc;">
-                            <li>• Dossier institucional (PDF)</li>
-                            <li>• Infografía general BioDM2</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 style="font-size: 0.8rem; color: white; margin-bottom: 15px;">PUBLICACIONES</h4>
-                        <p style="font-size: 0.8rem; color: #666; font-style: italic;">Disponible próximamente</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 60px; padding: 40px; border-top: 1px solid rgba(255,255,255,0.05);">
-                <a href="#contacto" class="btn btn-primary">CONTACTO PROFESIONAL</a>
+            <div style="text-align: center; margin-top: 40px; padding: 40px; border-top: 1px solid rgba(255,255,255,0.05);">
+                <p style="font-size: 0.9rem; margin-bottom: 20px; color: #888;">Para profesionales, entidades sanitarias y grupos de investigación interesados.</p>
+                <a href="#contacto" class="btn btn-primary">CONTACTO PARA COLABORACIÓN O TRANSFERENCIA</a>
             </div>
         </div>
     </div>
@@ -240,15 +227,6 @@
                     }, 100);
                 }
             });
-
-            const mainBtn = document.getElementById('main-faq-btn');
-            const faqContainer = document.getElementById('faq-main-container');
-            if(mainBtn) {
-                mainBtn.addEventListener('click', () => {
-                    faqContainer.classList.toggle('show');
-                    lucide.createIcons();
-                });
-            }
         });
     </script>
 </body>
