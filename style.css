@@ -22,7 +22,6 @@ body {
 }
 
 /* --- CORRECCIÓN FORMULARIO --- */
-/* Forzamos el color negro/gris oscuro en todos los estados del input */
 input, 
 textarea, 
 select,
@@ -36,15 +35,14 @@ input[type="tel"],
     margin-bottom: 15px;
     border: 1px solid var(--ui-gray);
     border-radius: 8px;
-    background-color: #FFFFFF !important; /* Fondo blanco */
-    color: #1F2933 !important;           /* Texto NEGRO/GRIS forzado */
+    background-color: #FFFFFF !important; 
+    color: #1F2933 !important;           
     font-family: inherit;
     font-size: 1rem;
-    -webkit-text-fill-color: #1F2933 !important; /* Para navegadores basados en Safari/Chrome */
+    -webkit-text-fill-color: #1F2933 !important; 
     opacity: 1 !important;
 }
 
-/* Asegurar que al escribir no cambie el color */
 input:focus, 
 textarea:focus {
     color: #1F2933 !important;
@@ -81,7 +79,6 @@ textarea::placeholder {
 }
 
 .nav-logo { height: 60px; width: auto; transition: var(--transition); }
-
 .nav-links { display: flex; gap: 15px; align-items: center; }
 
 .nav-item {
@@ -166,7 +163,6 @@ h1 { font-family: 'Montserrat', sans-serif; font-size: 4rem; margin-bottom: 20px
 
 .athlete { background: var(--primary); color: white; }
 .athlete .btn-secondary { border-color: var(--accent); color: white; }
-
 .science { background: #FFFFFF; border-left: 1px solid var(--glass); }
 
 .resource-btn {
@@ -196,6 +192,24 @@ h1 { font-family: 'Montserrat', sans-serif; font-size: 4rem; margin-bottom: 20px
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     color: var(--text-main);
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    background: var(--primary);
+    color: #FFFFFF;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 60px;
+    border-top: 4px solid var(--accent);
+}
+
+.footer-container p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
 }
 
 /* --- RESPONSIVE --- */
