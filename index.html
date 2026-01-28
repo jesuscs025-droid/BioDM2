@@ -139,18 +139,18 @@
         }
         .footer-banner-wrapper {
             width: 100%;
-            line-height: 0;
-            overflow: hidden;
+            padding: 40px 0; /* Espacio arriba y abajo de la imagen */
+            display: flex;
+            justify-content: center; /* Centra la imagen horizontalmente */
         }
         .footer-banner-img {
-            width: 100%;
+            width: 50%; /* AQUÍ AJUSTAS EL TAMAÑO: la mitad de ancho */
             height: auto;
             display: block;
-            /* 'contain' mantiene la proporción sin recortar los logos */
-            object-fit: contain; 
+            object-fit: contain;
         }
         .footer-content {
-            padding: 40px 20px;
+            padding: 30px 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         .footer-inner {
@@ -162,19 +162,12 @@
             flex-wrap: wrap;
             gap: 20px;
         }
-        .footer-legal {
-            display: flex;
-            gap: 20px;
-        }
         .footer-legal a {
             color: white;
             text-decoration: none;
             font-size: 0.8rem;
             opacity: 0.6;
-            transition: opacity 0.3s;
-        }
-        .footer-legal a:hover {
-            opacity: 1;
+            margin-right: 20px;
         }
         .footer-credits {
             font-size: 0.8rem;
@@ -182,13 +175,15 @@
             color: white;
             margin: 0;
         }
-        @media (max-width: 600px) {
+
+        /* Ajuste para móviles: que la imagen sea más grande para que se lea */
+        @media (max-width: 768px) {
+            .footer-banner-img {
+                width: 80%; 
+            }
             .footer-inner {
                 flex-direction: column;
                 text-align: center;
-            }
-            .footer-legal {
-                justify-content: center;
             }
         }
     </style>
@@ -212,7 +207,6 @@
     </footer>
 
     <script>
-        // Inicializar iconos de Lucide
         lucide.createIcons();
     </script>
 </body>
