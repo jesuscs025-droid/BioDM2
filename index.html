@@ -283,41 +283,64 @@ El proyecto BioDM2 se desarrolla conforme a la normativa vigente en materia de i
         </div>
     </div>
 </section>
-   <section id="faq" style="padding: 40px 20px; background: transparent; color: white; font-family: sans-serif;">
-    <div style="max-width: 900px; margin: auto;">
-        
-        <h2 style="text-align: center; font-size: 2.2rem; color: #1eb9af; margin-bottom: 30px;">Preguntas frecuentes</h2>
+    <section id="faq" class="faq-section">
+        <button class="faq-trigger-btn" id="main-faq-btn">
+            PREGUNTAS FRECUENTES <i data-lucide="help-circle" style="width: 20px; height: 20px;"></i>
+        </button>
 
-        <div style="margin-bottom: 30px;">
-            <h3 style="color: #1eb9af; border-bottom: 1px solid rgba(30, 185, 175, 0.3); padding-bottom: 10px; font-size: 1.3rem;">Para participantes</h3>
-            
-            <details style="margin: 15px 0; cursor: pointer; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px;">
-                <summary style="font-weight: 600;">¿Quién puede participar en el proyecto BioDM2?</summary>
-                <p style="margin-top: 10px; opacity: 0.8; font-size: 0.95rem;">Está dirigido a personas adultas con un mayor riesgo de desarrollar diabetes mellitus tipo 2. La participación está sujeta a criterios clínicos y no implica inclusión automática. [cite: 339, 341, 342]</p>
-            </details>
+        <div id="faq-main-container">
+            <div class="section-title" style="text-align: center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Preguntas frecuentes</h2>
+                <div class="underline" style="width: 60px; height: 4px; background: #1eb9af; margin: 0 auto 30px;"></div>
+            </div>
 
-            <details style="margin: 15px 0; cursor: pointer; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px;">
-                <summary style="font-weight: 600;">¿Tiene algún coste participar en el proyecto?</summary>
-                <p style="margin-top: 10px; opacity: 0.8; font-size: 0.95rem;">No. La participación no tiene ningún coste para las personas participantes, ya que es un proyecto de investigación. [cite: 344, 345]</p>
-            </details>
+            <div class="faq-grid">
+                <div class="faq-group">
+                    <h3>Para participantes</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Quién puede participar en el proyecto BioDM2? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">El proyecto está dirigido a personas adultas con un mayor riesgo de desarrollar diabetes mellitus tipo 2. La participación está sujeta a criterios clínicos y de inclusión definidos en el estudio y será valorada por los profesionales responsables. Mostrar interés en participar no implica inclusión automática.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Tiene algún coste participar en el proyecto? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">No. La participación en BioDM2 no tiene ningún coste para las personas participantes, ya que se trata de un proyecto de investigación.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Cuánto tiempo dura la participación? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">La duración y el tipo de seguimiento pueden variar en función del diseño del estudio y del perfil de cada participante. Esta información se facilitará de forma detallada a las personas seleccionadas antes de su incorporación al proyecto.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Qué tipo de datos se recogen durante el estudio? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">En el marco del proyecto se recogen datos necesarios para la investigación, como información clínica, datos relacionados con hábitos de vida y variables de seguimiento. En ningún caso se solicitarán datos innecesarios ni se utilizarán con fines distintos a los establecidos en el estudio.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Cómo se protege mi privacidad y mis datos personales? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">Todos los datos personales se tratan de forma confidencial y conforme a la normativa vigente en materia de protección de datos. La participación es voluntaria y requiere la firma de un consentimiento informado, en el que se explican con detalle los derechos de las personas participantes.</div>
+                    </div>
+                </div>
+
+                <div class="faq-group">
+                    <h3>Para profesionales y científicos</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Qué tipo de colaboración contempla el proyecto BioDM2? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">BioDM2 está abierto a colaboraciones en ámbitos clínicos, científicos y de transferencia, siempre alineadas con los objetivos del proyecto y el marco ético y metodológico establecido.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Se publicarán los resultados del proyecto? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">Sí. El proyecto contempla la difusión de resultados a través de publicaciones científicas, comunicaciones y otros formatos de transferencia, de acuerdo con los tiempos y procedimientos habituales en proyectos de investigación.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Es posible acceder a los datos del proyecto? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">El acceso a los datos está sujeto a criterios éticos, legales y metodológicos. Cualquier posible uso secundario o colaboración se valorará caso a caso conforme a la normativa aplicable y a los acuerdos del consorcio.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">¿Dónde se publican las novedades y resultados del proyecto? <i data-lucide="chevron-down" class="faq-icon-arrow"></i></div>
+                        <div class="faq-answer">Las principales publicaciones, comunicaciones y noticias relacionadas con BioDM2 se recogen en el apartado de recursos de esta web y se actualizarán progresivamente conforme avance el proyecto.</div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div>
-            <h3 style="color: #1eb9af; border-bottom: 1px solid rgba(30, 185, 175, 0.3); padding-bottom: 10px; font-size: 1.3rem;">Para profesionales y científicos</h3>
-            
-            <details style="margin: 15px 0; cursor: pointer; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px;">
-                <summary style="font-weight: 600;">¿Qué tipo de colaboración contempla el proyecto BioDM2?</summary>
-                <p style="margin-top: 10px; opacity: 0.8; font-size: 0.95rem;">Está abierto a colaboraciones en ámbitos clínicos, científicos y de transferencia, alineadas con los objetivos éticos y metodológicos. [cite: 360, 361]</p>
-            </details>
-
-            <details style="margin: 15px 0; cursor: pointer; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px;">
-                <summary style="font-weight: 600;">¿Se publicarán los resultados del proyecto?</summary>
-                <p style="margin-top: 10px; opacity: 0.8; font-size: 0.95rem;">Sí, se contempla la difusión a través de publicaciones científicas y otros formatos de transferencia. [cite: 363, 365]</p>
-            </details>
-        </div>
-
-    </div>
-</section>
+    </section>
 
     <section id="contacto" class="contact-area" style="padding: 100px 20px;">
         <div class="contact-card" style="max-width: 600px; margin: auto; background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
