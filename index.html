@@ -46,8 +46,45 @@
         
         .partner-card p { font-size: 0.9rem; color: #888; line-height: 1.6; margin: 0; }
 
-        /* Estilos FAQ */
-        .faq-section { padding: 80px 20px; max-width: 900px; margin: auto; text-align: center; }
+        /* Estilos FAQ y Bloque Profesional */
+        .faq-section, .profesional-detail-section { padding: 80px 20px; max-width: 900px; margin: auto; text-align: center; }
+        
+        #profesional-content-area { 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.8s ease-in-out, opacity 0.5s ease; 
+            text-align: left; 
+            opacity: 0;
+            background: rgba(255,255,255,0.01);
+            border-radius: 20px;
+        }
+        #profesional-content-area.show { 
+            max-height: 5000px; 
+            opacity: 1; 
+            margin-top: 40px;
+            padding: 40px;
+            border: 1px solid rgba(30, 185, 175, 0.2);
+        }
+
+        .profesional-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin: 40px 0;
+        }
+        .tech-card {
+            background: rgba(255,255,255,0.03);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .tech-card h3 { color: #1eb9af; margin-bottom: 15px; font-size: 1.1rem; text-transform: uppercase; }
+        .tech-card p { font-size: 0.9rem; color: #ccc; line-height: 1.5; }
+
+        .recursos-box { background: rgba(0,0,0,0.2); padding: 30px; border-radius: 12px; margin-top: 40px; }
+        .recursos-list { list-style: none; padding: 0; margin: 20px 0; }
+        .recursos-list li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
+
         .faq-trigger-btn {
             display: inline-flex;
             align-items: center;
@@ -138,9 +175,71 @@
             <span class="card-tag" style="letter-spacing: 3px; font-weight: bold; color: #1eb9af;">TECH & HEALTH</span>
             <h2>PROFESIONALES</h2>
             <p>Portal técnico para científicos y profesionales de la salud. Acceso a protocolos clínicos y documentación oficial.</p>
-            <a href="#" class="btn btn-primary" style="width: fit-content;">ACCESO TÉCNICO</a>
+            <button id="btn-acceso-tecnico" class="btn btn-primary" style="width: fit-content; cursor: pointer; border: none;">ACCESO TÉCNICO</button>
         </div>
     </section>
+
+    <div class="container">
+        <div id="profesional-content-area">
+            <div class="section-title" style="text-align: center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Para profesionales y científicos</h2>
+                <div class="underline" style="width: 60px; height: 4px; background: #1eb9af; margin: 0 auto 30px;"></div>
+            </div>
+
+            <div style="max-width: 850px; margin: 0 auto; color: #ccc; line-height: 1.8; font-size: 1.05rem;">
+                <p>BioDM2 es un proyecto de investigación aplicada orientado al desarrollo y validación de un prototipo basado en inteligencia artificial para la detección precoz del riesgo de diabetes mellitus tipo 2 y la personalización de estrategias preventivas de ejercicio físico y nutrición en poblaciones de riesgo.</p>
+                <p>El proyecto integra información clínica, biomarcadores y datos de seguimiento en un entorno digital, con el objetivo de apoyar la toma de decisiones preventivas y mejorar la adherencia a intervenciones no farmacológicas, dentro de un marco de investigación supervisado.</p>
+            </div>
+
+            <div class="profesional-grid">
+                <div class="tech-card">
+                    <h3>Metodología</h3>
+                    <p>Enfoque multidisciplinar basado en la integración de datos clínicos, biomarcadores y variables relacionadas con el estilo de vida, analizados mediante modelos de inteligencia artificial para la identificación temprana del riesgo y la personalización de recomendaciones preventivas.</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Biomarcadores</h3>
+                    <p>Utilización de biomarcadores relevantes para la evaluación del riesgo metabólico, seleccionados conforme a criterios clínicos y de evidencia científica, e integrados en modelos analíticos de apoyo a la toma de decisiones preventivas.</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Inteligencia artificial</h3>
+                    <p>Desarrollo y validación de modelos de inteligencia artificial orientados al análisis de datos heterogéneos y al soporte de decisiones en contextos preventivos, priorizando la interpretabilidad, la escalabilidad y la aplicabilidad en entornos reales.</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Diseño del estudio</h3>
+                    <p>Proyecto estructurado en fases, que incluye análisis retrospectivo de datos, desarrollo del prototipo y evaluación en un estudio piloto prospectivo con personas adultas en situación de riesgo, en colaboración con entidades sanitarias.</p>
+                </div>
+                <div class="tech-card">
+                    <h3 style="grid-column: span 2;">Transferencia y aplicabilidad</h3>
+                    <p>BioDM2 está orientado a la transferencia de resultados a contextos clínicos, comunitarios y de promoción de la salud, favoreciendo la escalabilidad de soluciones preventivas basadas en evidencia científica.</p>
+                </div>
+            </div>
+
+            <div class="recursos-box">
+                <h3 style="color: #1eb9af; margin-bottom: 20px;">Recursos del proyecto</h3>
+                <p style="font-size: 0.9rem; opacity: 0.8;">En este apartado se recoge documentación, publicaciones y comunicaciones relacionadas con el desarrollo y los resultados del proyecto BioDM2.</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px;">
+                    <div>
+                        <h4 style="font-size: 0.8rem; letter-spacing: 1px; color: white; margin-bottom: 15px;">DOCUMENTACIÓN</h4>
+                        <ul class="recursos-list">
+                            <li><i data-lucide="file-text" style="width: 16px; color: #1eb9af;"></i> Dossier institucional del proyecto (PDF)</li>
+                            <li><i data-lucide="image" style="width: 16px; color: #1eb9af;"></i> Infografía general del enfoque BioDM2</li>
+                            <li><i data-lucide="file-check" style="width: 16px; color: #1eb9af;"></i> Documentación pública del proyecto</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.8rem; letter-spacing: 1px; color: white; margin-bottom: 15px;">PUBLICACIONES Y NOTICIAS</h4>
+                        <p style="font-size: 0.9rem; color: #777; font-style: italic;">Disponible próximamente</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px; padding: 40px; border-top: 1px solid rgba(255,255,255,0.05);">
+                <p style="font-size: 0.9rem; margin-bottom: 20px; color: #888;">Para profesionales, entidades sanitarias y grupos de investigación interesados.</p>
+                <a href="#contacto" class="btn btn-primary" style="display: inline-block;">CONTACTO PARA COLABORACIÓN O TRANSFERENCIA</a>
+            </div>
+        </div>
+    </div>
 
     <section id="consorcio" class="consorcio-section">
         <div class="section-title" style="text-align: center;">
@@ -311,6 +410,18 @@
     <script>
         lucide.createIcons();
         document.addEventListener('DOMContentLoaded', () => {
+            // Manejo Sección Profesional
+            const btnAcceso = document.getElementById('btn-acceso-tecnico');
+            const proContent = document.getElementById('profesional-content-area');
+
+            btnAcceso.addEventListener('click', () => {
+                proContent.classList.toggle('show');
+                if(proContent.classList.contains('show')) {
+                    proContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+
+            // Manejo FAQ
             const mainBtn = document.getElementById('main-faq-btn');
             const faqContainer = document.getElementById('faq-main-container');
             const faqQuestions = document.querySelectorAll('.faq-question');
@@ -335,4 +446,3 @@
     </script>
 </body>
 </html>
-
