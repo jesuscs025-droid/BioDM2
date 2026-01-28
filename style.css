@@ -194,55 +194,23 @@ h1 { font-family: 'Montserrat', sans-serif; font-size: 4rem; margin-bottom: 20px
     color: var(--text-main);
 }
 
-/* --- FOOTER (Actualizado para el Logo) --- */
+/* --- FOOTER --- */
 .main-footer {
-    background: #000; /* Fondo negro */
-    color: #FFFFFF !important;
-    padding: 80px 20px; /* Más ancho verticalmente */
+    background: var(--primary);
+    color: #FFFFFF !important; /* Letra blanca forzada */
+    padding: 40px 20px;
     text-align: center;
     width: 100%;
     margin-top: 60px;
     border-top: 4px solid var(--accent);
 }
 
-.footer-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-direction: column; /* Apila elementos verticalmente */
-    align-items: center;
-    gap: 25px; /* Espacio entre el logo y los textos */
-}
-
-.footer-logo {
-    height: 50px; /* Ajusta este valor si quieres el logo más grande */
-    width: auto;
-}
-
-.footer-legal {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.footer-legal a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.8rem;
-    opacity: 0.6;
-    transition: var(--transition);
-}
-
-.footer-legal a:hover {
-    opacity: 1;
-    color: var(--accent);
-}
-
-.credits {
-    font-size: 0.8rem;
-    opacity: 0.4;
+.footer-container p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
     margin: 0;
+    color: #FFFFFF !important;
 }
 
 /* --- RESPONSIVE --- */
@@ -267,3 +235,4 @@ h1 { font-family: 'Montserrat', sans-serif; font-size: 4rem; margin-bottom: 20px
         max-width: calc(100% - 20px) !important;
     }
 }
+
