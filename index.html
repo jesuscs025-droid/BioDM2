@@ -11,13 +11,13 @@
         /* Estilos específicos para la sección FAQ */
         .faq-section { padding: 80px 20px; max-width: 900px; margin: auto; text-align: center; }
         
-        /* Botón principal rediseñado con 30% de fondo inicial */
+        /* BOTÓN CORREGIDO: 70% de opacidad inicial (casi total) */
         .faq-trigger-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 15px;
-            background: rgba(255, 255, 255, 0.1); /* Fondo sutil para que se vea */
+            background: rgba(0, 209, 255, 0.7); /* Color de acento al 70% para que sea visible */
             color: white;
             border: 2px solid var(--accent);
             padding: 18px 40px;
@@ -33,9 +33,9 @@
         }
 
         .faq-trigger-btn:hover {
-            background: var(--accent);
+            background: var(--accent); /* 100% de opacidad al pasar el ratón */
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 209, 255, 0.3); /* Sombra de color acorde al acento */
+            box-shadow: 0 10px 30px rgba(0, 209, 255, 0.4);
         }
 
         /* Contenedor principal de las FAQ */
@@ -311,24 +311,21 @@
             const faqContainer = document.getElementById('faq-main-container');
             const faqQuestions = document.querySelectorAll('.faq-question');
 
-            // 1. Mostrar/Ocultar bloque FAQ
             mainBtn.addEventListener('click', () => {
                 const isOpening = !faqContainer.classList.contains('show');
                 faqContainer.classList.toggle('show');
                 
-                // Actualizar texto del botón según estado
                 mainBtn.innerHTML = isOpening 
                     ? `CERRAR PREGUNTAS <i data-lucide="x-circle"></i>` 
                     : `PREGUNTAS FRECUENTES <i data-lucide="help-circle"></i>`;
                 
-                lucide.createIcons(); // Re-renderizar iconos nuevos
+                lucide.createIcons();
 
                 if(!isOpening) {
                     document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
                 }
             });
 
-            // 2. Acordeón interno
             faqQuestions.forEach(question => {
                 question.addEventListener('click', () => {
                     const item = question.closest('.faq-item');
