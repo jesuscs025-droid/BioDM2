@@ -11,16 +11,16 @@
         /* Estilos específicos para la sección FAQ */
         .faq-section { padding: 80px 20px; max-width: 900px; margin: auto; text-align: center; }
         
-        /* BOTÓN ACTUALIZADO: Mismo color de acento con 65% de opacidad (100% - 35%) */
+        /* BOTÓN FINAL: Color coordinado con 65% de opacidad */
         .faq-trigger-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 15px;
-            /* Aplicamos el color de acento con opacidad del 65% */
-            background: rgba(0, 209, 255, 0.65); 
+            /* Color de marca con opacidad del 65% */
+            background: rgba(30, 185, 175, 0.65); 
             color: white;
-            border: 2px solid #00d1ff;
+            border: 2px solid #1eb9af;
             padding: 18px 40px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 800;
@@ -35,9 +35,9 @@
         }
 
         .faq-trigger-btn:hover {
-            background: rgba(0, 209, 255, 1); /* 100% opacidad al pasar el ratón */
+            background: rgba(30, 185, 175, 1); /* 100% de opacidad en hover */
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 209, 255, 0.4);
+            box-shadow: 0 10px 30px rgba(30, 185, 175, 0.4);
         }
 
         /* Contenedor principal de las FAQ */
@@ -58,7 +58,7 @@
         .faq-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
         
         .faq-group h3 { 
-            color: #00d1ff; 
+            color: #1eb9af; 
             text-transform: uppercase; 
             letter-spacing: 2px; 
             font-size: 1.1rem; 
@@ -101,14 +101,14 @@
         }
         
         .faq-item.active .faq-answer { 
-            padding: 0 22px 25px 22px; 
+            padding: 22px 22px 25px 22px; 
             max-height: 600px; 
             opacity: 1; 
         }
         
-        .faq-item.active { border-color: #00d1ff; background: rgba(255,255,255,0.06); }
+        .faq-item.active { border-color: #1eb9af; background: rgba(255,255,255,0.06); }
         .faq-icon-arrow { transition: transform 0.3s ease; opacity: 0.6; }
-        .faq-item.active .faq-icon-arrow { transform: rotate(180deg); opacity: 1; color: #00d1ff; }
+        .faq-item.active .faq-icon-arrow { transform: rotate(180deg); opacity: 1; color: #1eb9af; }
     </style>
 </head>
 <body>
@@ -130,7 +130,7 @@
 
     <header class="hero">
         <div class="hero-content">
-            <span class="badge" style="background: var(--accent); padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; letter-spacing: 2px;">BIOMARCADORES DIGITALES</span>
+            <span class="badge" style="background: #1eb9af; padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; letter-spacing: 2px;">BIOMARCADORES DIGITALES</span>
             <h1 style="margin-top: 20px;">PROYECTO <span class="highlight">BioDM2</span></h1>
             <p style="max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; opacity: 0.9;">Desarrollo de soluciones avanzadas para el diagnóstico temprano y monitorización de precisión mediante tecnología digital de vanguardia.</p>
             
@@ -153,7 +153,7 @@
     <section id="que-es" class="container" style="text-align: center; padding: 100px 20px;">
         <div class="section-title">
             <h2 style="font-size: 2.5rem; margin-bottom: 10px;">¿Qué es BioDM2?</h2>
-            <div class="underline" style="width: 60px; height: 4px; background: var(--accent); margin: 0 auto 30px;"></div>
+            <div class="underline" style="width: 60px; height: 4px; background: #1eb9af; margin: 0 auto 30px;"></div>
         </div>
         <div class="content-text" style="max-width: 800px; margin: auto; font-size: 1.2rem; color: #ccc;">
             <p>BioDM2 es un prototipo de Inteligencia Artificial diseñado para prevenir la diabetes tipo 2. Analiza riesgos individuales para ofrecer planes personalizados de alimentación y ejercicio que optimizan la salud y frenan la enfermedad.</p>
@@ -162,14 +162,14 @@
 
     <section id="participantes" class="split-section">
         <div class="profile-card athlete">
-            <span class="card-tag" style="letter-spacing: 3px; font-weight: bold; color: var(--accent);">LIFE & SPORT</span>
+            <span class="card-tag" style="letter-spacing: 3px; font-weight: bold; color: #1eb9af;">LIFE & SPORT</span>
             <h2>PARTICIPANTES</h2>
             <p>Convierte tu ejercicio en ciencia: descubre tus biomarcadores y colabora con la investigación.</p>
             <a href="#" class="btn btn-secondary" style="border-color: white; width: fit-content;">SABER MÁS</a>
         </div>
 
         <div id="profesionales" class="profile-card science">
-            <span class="card-tag" style="letter-spacing: 3px; font-weight: bold; color: var(--accent);">TECH & HEALTH</span>
+            <span class="card-tag" style="letter-spacing: 3px; font-weight: bold; color: #1eb9af;">TECH & HEALTH</span>
             <h2>PROFESIONALES</h2>
             <p>Portal técnico para científicos y profesionales de la salud. Acceso a protocolos clínicos y documentación oficial.</p>
             <a href="#" class="btn btn-primary" style="width: fit-content;">ACCESO TÉCNICO</a>
@@ -206,7 +206,7 @@
         <div id="faq-main-container">
             <div class="section-title" style="text-align: center;">
                 <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Preguntas frecuentes</h2>
-                <div class="underline" style="width: 60px; height: 4px; background: #00d1ff; margin: 0 auto 30px;"></div>
+                <div class="underline" style="width: 60px; height: 4px; background: #1eb9af; margin: 0 auto 30px;"></div>
             </div>
 
             <div class="faq-grid">
@@ -281,7 +281,7 @@
                 <div style="display: flex; align-items: flex-start; gap: 12px; text-align: left;">
                     <input type="checkbox" required id="privacy" style="width: 18px; height: 18px; cursor: pointer; flex-shrink: 0;">
                     <label for="privacy" style="font-size: 0.9rem; opacity: 0.8; line-height: 1.4; cursor: pointer;">
-                        He leído y acepto la <a href="#" style="color: #00d1ff; text-decoration: underline;">política de privacidad</a>.
+                        He leído y acepto la <a href="#" style="color: #1eb9af; text-decoration: underline;">política de privacidad</a>.
                     </label>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer; border: none; padding: 15px; font-weight: bold;">ENVIAR MENSAJE</button>
