@@ -8,15 +8,52 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilos específicos para la sección FAQ */
-        .faq-section { padding: 80px 20px; max-width: 900px; margin: auto; text-align: center; }
+        /* Estilos específicos para la sección Consorcio */
+        .consorcio-section { padding: 100px 20px; background: rgba(255, 255, 255, 0.02); }
+        .consorcio-intro { max-width: 800px; margin: 0 auto 50px; text-align: center; color: #ccc; line-height: 1.6; font-size: 1.1rem; }
+        .consorcio-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 30px; 
+            max-width: 1100px; 
+            margin: 0 auto; 
+        }
+        .partner-card { 
+            background: rgba(255, 255, 255, 0.03); 
+            padding: 35px 30px; 
+            border-radius: 15px; 
+            text-align: center; 
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .partner-card:hover { transform: translateY(-5px); border-color: #1eb9af; background: rgba(255, 255, 255, 0.05); }
         
+        .partner-logo-placeholder { 
+            height: 50px; 
+            margin-bottom: 25px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            font-weight: 900;
+            color: #1eb9af;
+            font-size: 1.3rem;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+        }
+        
+        .partner-card p { font-size: 0.9rem; color: #888; line-height: 1.6; margin: 0; }
+
+        /* Estilos FAQ */
+        .faq-section { padding: 80px 20px; max-width: 900px; margin: auto; text-align: center; }
         .faq-trigger-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 15px;
-            background: rgba(30, 185, 175, 0.65); 
+            background: rgba(0, 0, 0, 0.4); 
             color: white;
             border: 2px solid #1eb9af;
             padding: 18px 40px;
@@ -31,80 +68,20 @@
             width: fit-content;
             text-transform: uppercase;
         }
-
         .faq-trigger-btn:hover {
-            background: rgba(30, 185, 175, 1);
+            background: #1eb9af;
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(30, 185, 175, 0.4);
         }
-
-        #faq-main-container {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.8s ease-in-out, margin 0.3s ease;
-            text-align: left;
-            opacity: 0;
-        }
-        
-        #faq-main-container.show {
-            max-height: 3000px; 
-            margin-top: 60px;
-            opacity: 1;
-        }
-
+        #faq-main-container { max-height: 0; overflow: hidden; transition: max-height 0.8s ease-in-out, margin 0.3s ease; text-align: left; opacity: 0; }
+        #faq-main-container.show { max-height: 3000px; margin-top: 60px; opacity: 1; }
         .faq-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
-        
-        .faq-group h3 { 
-            color: #1eb9af; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            font-size: 1.1rem; 
-            margin-bottom: 25px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 10px;
-        }
-
-        .faq-item { 
-            background: rgba(255,255,255,0.03); 
-            border-radius: 12px; 
-            margin-bottom: 12px; 
-            border: 1px solid rgba(255,255,255,0.05);
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-question { 
-            padding: 22px; 
-            cursor: pointer; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            font-weight: 600;
-            font-size: 1.05rem;
-            user-select: none;
-        }
-
+        .faq-group h3 { color: #1eb9af; text-transform: uppercase; letter-spacing: 2px; font-size: 1.1rem; margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+        .faq-item { background: rgba(255,255,255,0.03); border-radius: 12px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.05); overflow: hidden; transition: all 0.3s ease; }
+        .faq-question { padding: 22px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.05rem; user-select: none; }
         .faq-question:hover { background: rgba(255,255,255,0.07); }
-        
-        /* RESPUESTAS: Color gris un 30% más oscuro (#888) para mejor legibilidad */
-        .faq-answer { 
-            padding: 0 22px; 
-            max-height: 0; 
-            overflow: hidden; 
-            transition: all 0.4s ease; 
-            opacity: 0;
-            color: #888; /* Gris más oscuro */
-            line-height: 1.7;
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-        
-        .faq-item.active .faq-answer { 
-            padding: 22px 22px 25px 22px; 
-            max-height: 600px; 
-            opacity: 1; 
-        }
-        
+        .faq-answer { padding: 0 22px; max-height: 0; overflow: hidden; transition: all 0.4s ease; opacity: 0; color: #888; line-height: 1.7; font-size: 0.95rem; font-weight: 500; }
+        .faq-item.active .faq-answer { padding: 22px 22px 25px 22px; max-height: 600px; opacity: 1; }
         .faq-item.active { border-color: #1eb9af; background: rgba(255,255,255,0.06); }
         .faq-icon-arrow { transition: transform 0.3s ease; opacity: 0.6; }
         .faq-item.active .faq-icon-arrow { transform: rotate(180deg); opacity: 1; color: #1eb9af; }
@@ -121,6 +98,7 @@
                 <a href="#que-es" class="nav-item">PROYECTO</a>
                 <a href="#participantes" class="nav-item">PARTICIPANTES</a>
                 <a href="#profesionales" class="nav-item">PROFESIONALES</a>
+                <a href="#consorcio" class="nav-item">CONSORCIO</a>
                 <a href="#faq" class="nav-item">FAQ</a>
                 <a href="#contacto" class="btn-nav">CONTACTO</a>
             </div>
@@ -132,19 +110,9 @@
             <span class="badge" style="background: #1eb9af; padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; letter-spacing: 2px;">BIOMARCADORES DIGITALES</span>
             <h1 style="margin-top: 20px;">PROYECTO <span class="highlight">BioDM2</span></h1>
             <p style="max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; opacity: 0.9;">Desarrollo de soluciones avanzadas para el diagnóstico temprano y monitorización de precisión mediante tecnología digital de vanguardia.</p>
-            
             <div class="hero-btns">
                 <a href="#participantes" class="btn btn-primary">PARTICIPANTES</a>
                 <a href="#profesionales" class="btn btn-secondary">PROFESIONALES</a>
-            </div>
-
-            <div class="hero-partners" style="margin-top: 80px; opacity: 0.9; text-align: center;">
-                <p style="font-size: 0.75rem; letter-spacing: 3px; margin-bottom: 25px; font-weight: 600;">CON EL APOYO DE</p>
-                <div class="logo-row" style="display: flex; justify-content: center; align-items: center; gap: 50px; flex-wrap: wrap;">
-                    <span style="font-weight: 900; font-family: 'Montserrat'; font-size: 1.2rem;">UGR</span>
-                    <span style="font-weight: 900; font-family: 'Montserrat'; font-size: 1.2rem;">HUMANLAB</span>
-                    <span style="font-weight: 900; font-family: 'Montserrat'; font-size: 1.2rem;">UNIÓN EUROPEA</span>
-                </div>
             </div>
         </div>
     </header>
@@ -166,12 +134,41 @@
             <p>Convierte tu ejercicio en ciencia: descubre tus biomarcadores y colabora con la investigación.</p>
             <a href="#" class="btn btn-secondary" style="border-color: white; width: fit-content;">SABER MÁS</a>
         </div>
-
         <div id="profesionales" class="profile-card science">
             <span class="card-tag" style="letter-spacing: 3px; font-weight: bold; color: #1eb9af;">TECH & HEALTH</span>
             <h2>PROFESIONALES</h2>
             <p>Portal técnico para científicos y profesionales de la salud. Acceso a protocolos clínicos y documentación oficial.</p>
             <a href="#" class="btn btn-primary" style="width: fit-content;">ACCESO TÉCNICO</a>
+        </div>
+    </section>
+
+    <section id="consorcio" class="consorcio-section">
+        <div class="section-title" style="text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Consorcio y partners</h2>
+            <div class="underline" style="width: 60px; height: 4px; background: #1eb9af; margin: 0 auto 30px;"></div>
+        </div>
+        
+        <p class="consorcio-intro">
+            BioDM2 se desarrolla en el marco de un consorcio público-privado que integra entidades del ámbito sanitario, tecnológico y académico, con experiencia en investigación, innovación y promoción de la salud.
+        </p>
+
+        <div class="consorcio-grid">
+            <div class="partner-card">
+                <div class="partner-logo-placeholder">INTELINOVA</div>
+                <p>Coordinación general del proyecto y desarrollo tecnológico del prototipo basado en inteligencia artificial.</p>
+            </div>
+            <div class="partner-card">
+                <div class="partner-logo-placeholder">SANO</div>
+                <p>Implementación de estrategias de ejercicio físico y promoción de hábitos de vida saludables en el marco del proyecto.</p>
+            </div>
+            <div class="partner-card">
+                <div class="partner-logo-placeholder">FUNDACIÓN VITHAS</div>
+                <p>Participación desde el ámbito sanitario y apoyo a la evaluación clínica y al desarrollo del estudio piloto.</p>
+            </div>
+            <div class="partner-card">
+                <div class="partner-logo-placeholder">UGR (iMUDS)</div>
+                <p>Soporte académico y científico, participación en el diseño metodológico y análisis de datos del proyecto.</p>
+            </div>
         </div>
     </section>
 
@@ -260,7 +257,6 @@
         <div class="contact-card" style="max-width: 600px; margin: auto; background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
             <h2 style="margin-bottom: 15px; text-align: center;">¿HABLAMOS?</h2>
             <p style="margin-bottom: 30px; opacity: 0.8; text-align: center;">Nuestro equipo está disponible para resolver tus dudas.</p>
-            
             <form action="https://formspree.io/f/xqeqreva" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
                 <div style="text-align: left;">
                     <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">NOMBRE</label>
@@ -285,6 +281,14 @@
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer; border: none; padding: 15px; font-weight: bold;">ENVIAR MENSAJE</button>
             </form>
+
+            <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 10px;">También puedes contactar con el equipo del proyecto a través del siguiente correo electrónico:</p>
+                <a href="mailto:info@redpapef.com" style="display: inline-flex; align-items: center; gap: 10px; color: #1eb9af; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: opacity 0.3s;">
+                    <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
+                    info@redpapef.com
+                </a>
+            </div>
         </div>
     </section>
 
@@ -306,7 +310,6 @@
 
     <script>
         lucide.createIcons();
-
         document.addEventListener('DOMContentLoaded', () => {
             const mainBtn = document.getElementById('main-faq-btn');
             const faqContainer = document.getElementById('faq-main-container');
@@ -315,28 +318,17 @@
             mainBtn.addEventListener('click', () => {
                 const isOpening = !faqContainer.classList.contains('show');
                 faqContainer.classList.toggle('show');
-                
-                mainBtn.innerHTML = isOpening 
-                    ? `CERRAR PREGUNTAS <i data-lucide="x-circle"></i>` 
-                    : `PREGUNTAS FRECUENTES <i data-lucide="help-circle"></i>`;
-                
+                mainBtn.innerHTML = isOpening ? `CERRAR PREGUNTAS <i data-lucide="x-circle"></i>` : `PREGUNTAS FRECUENTES <i data-lucide="help-circle"></i>`;
                 lucide.createIcons();
-
-                if(!isOpening) {
-                    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-                }
+                if(!isOpening) { document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active')); }
             });
 
             faqQuestions.forEach(question => {
                 question.addEventListener('click', () => {
                     const item = question.closest('.faq-item');
                     const isActive = item.classList.contains('active');
-                    
                     document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-                    
-                    if (!isActive) {
-                        item.classList.add('active');
-                    }
+                    if (!isActive) { item.classList.add('active'); }
                 });
             });
         });
