@@ -553,11 +553,11 @@ El proyecto BioDM2 se desarrolla conforme a la normativa vigente en materia de i
     <div class="footer-bottom">
         <div class="footer-container">
             <div class="footer-bottom-inner">
-                <div class="footer-legal-links">
-                    <a href="#">Aviso Legal</a>
-                    <a href="#">Privacidad</a>
-                    <a href="#">Cookies</a>
-                </div>
+<div class="footer-legal-links">
+    <a href="#aviso-legal">Aviso Legal</a>
+    <a href="#privacidad">Privacidad</a>
+    <a href="#cookies">Cookies</a>
+</div>
                 <div class="copyright-text">
                     <b>BioDM2</b> © 2024-2026. Todos los derechos reservados.<br>
                     <span style="opacity: 0.6;">Impulsando la Salud Digital de Precisión.</span>
@@ -592,5 +592,68 @@ El proyecto BioDM2 se desarrolla conforme a la normativa vigente en materia de i
             });
         });
     </script>
+    <style>
+    .modal-css {
+        display: none; /* Oculto por defecto */
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.85);
+        backdrop-filter: blur(8px);
+        z-index: 10000;
+        padding: 20px;
+    }
+    /* El truco: cuando el ID es el "target" de la URL, se muestra */
+    .modal-css:target {
+        display: block;
+    }
+    .modal-content-css {
+        background: #1a1a1a;
+        color: #ddd;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 40px;
+        border-radius: 15px;
+        border: 1px solid #1eb9af;
+        max-height: 80vh;
+        overflow-y: auto;
+        position: relative;
+        font-family: 'Inter', sans-serif;
+    }
+    .modal-content-css h2 { color: #1eb9af; margin-bottom: 20px; font-family: 'Montserrat'; }
+    .btn-cerrar-modal {
+        position: absolute;
+        top: 20px; right: 20px;
+        color: #fff; text-decoration: none; font-size: 30px; line-height: 1;
+    }
+</style>
+
+<div id="aviso-legal" class="modal-css">
+    <div class="modal-content-css">
+        <a href="#" class="btn-cerrar-modal">&times;</a>
+        <h2>Aviso Legal</h2>
+        <p>En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información, le informamos que este sitio web es propiedad del Consorcio BioDM2, coordinado por Intelinova.</p>
+        <p><strong>Propiedad Intelectual:</strong> Los contenidos de esta web están protegidos por derechos de propiedad intelectual propiedad de las entidades del consorcio.</p>
+        <p><strong>Exclusión de Responsabilidad:</strong> BioDM2 es un proyecto de investigación. La información no constituye diagnóstico médico.</p>
+    </div>
+</div>
+
+<div id="privacidad" class="modal-css">
+    <div class="modal-content-css">
+        <a href="#" class="btn-cerrar-modal">&times;</a>
+        <h2>Política de Privacidad</h2>
+        <p>De acuerdo con el RGPD y la LOPDGDD, sus datos serán tratados con la máxima confidencialidad.</p>
+        <p><strong>Finalidad:</strong> Los datos se utilizan exclusivamente para responder dudas o evaluar el interés en el proyecto BioDM2.</p>
+        <p><strong>Derechos:</strong> Puede ejercer sus derechos enviando un correo a info@redpapef.com.</p>
+    </div>
+</div>
+
+<div id="cookies" class="modal-css">
+    <div class="modal-content-css">
+        <a href="#" class="btn-cerrar-modal">&times;</a>
+        <h2>Política de Cookies</h2>
+        <p>Este sitio web utiliza únicamente cookies técnicas esenciales para el correcto funcionamiento de la navegación y la seguridad de los formularios.</p>
+        <p>No se utilizan cookies de seguimiento publicitario ni se comparten datos con terceros.</p>
+    </div>
+</div>
 </body>
 </html>
