@@ -242,7 +242,90 @@ El proyecto BioDM2 se desarrolla conforme a la normativa vigente en materia de i
         <a href="#contacto" class="btn btn-secondary">CONTACTO PARA COLABORACIÓN O TRANSFERENCIA</a>
         <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 10px;">Para profesionales, entidades sanitarias y grupos de investigación interesados.</p>
     </div>
-<section id="consorcio" style="padding: 60px 20px; background: transparent;">
+<<style>
+    .consorcio-wrapper {
+        max-width: 1000px;
+        margin: auto;
+        padding: 40px;
+        border: 2px solid rgba(30, 185, 175, 0.5);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        /* Asegura que el contenedor crezca con las tarjetas */
+        display: block; 
+        overflow: hidden;
+    }
+
+    .consorcio-grid-ajustada {
+        display: grid;
+        /* Desktop: 2 columnas iguales */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 25px;
+    }
+
+    .partner-item {
+        padding: 20px;
+        background: rgba(30, 185, 175, 0.05);
+        border-radius: 10px;
+        border: 1px solid rgba(30, 185, 175, 0.2);
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* RESPONSIVE: En móviles menores a 768px pasa a 1 columna */
+    @media (max-width: 768px) {
+        .consorcio-wrapper {
+            padding: 25px 15px; /* Menos padding lateral para ganar espacio */
+            margin: 0 10px;    /* Margen pequeño para que no toque el borde del móvil */
+        }
+        .consorcio-grid-ajustada {
+            grid-template-columns: 1fr; /* Una sola columna */
+            gap: 15px;
+        }
+        .consorcio-wrapper h2 {
+            font-size: 1.8rem !important;
+        }
+    }
+</style>
+
+<section id="consorcio" style="padding: 60px 0; background: transparent;">
+    <div class="consorcio-wrapper">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 style="font-size: 2.2rem; color: #1eb9af; margin-bottom: 15px; letter-spacing: 1px; font-weight: bold;">Consorcio y partners</h2>
+            <p style="font-size: 1.05rem; line-height: 1.6; color: #000000; max-width: 800px; margin: auto; font-weight: 500;">
+                BioDM2 se desarrolla en el marco de un consorcio público-privado que integra entidades del ámbito sanitario, tecnológico y académico.
+            </p>
+        </div>
+
+        <div class="consorcio-grid-ajustada">
+            <div class="partner-item">
+                <strong style="display: block; color: #1eb9af; margin-bottom: 8px; font-size: 1.1rem;">FUNDACIÓN VITHAS</strong>
+                <p style="font-size: 0.95rem; color: #000000; margin: 0; line-height: 1.5;">Participación desde el ámbito sanitario y apoyo a la evaluación clínica y al desarrollo del estudio piloto.</p>
+            </div>
+
+            <div class="partner-item">
+                <strong style="display: block; color: #1eb9af; margin-bottom: 8px; font-size: 1.1rem;">UGR (iMUDS)</strong>
+                <p style="font-size: 0.95rem; color: #000000; margin: 0; line-height: 1.5;">Soporte académico y científico, diseño metodológico y análisis de datos del proyecto.</p>
+            </div>
+
+            <div class="partner-item">
+                <strong style="display: block; color: #1eb9af; margin-bottom: 8px; font-size: 1.1rem;">INTELINOVA</strong>
+                <p style="font-size: 0.95rem; color: #000000; margin: 0; line-height: 1.5;">Coordinación general del proyecto y desarrollo tecnológico del prototipo basado en IA.</p>
+            </div>
+
+            <div class="partner-item">
+                <strong style="display: block; color: #1eb9af; margin-bottom: 8px; font-size: 1.1rem;">SANO</strong>
+                <p style="font-size: 0.95rem; color: #000000; margin: 0; line-height: 1.5;">Implementación de estrategias de ejercicio físico y promoción de hábitos de vida saludables.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 20px;">
+            <p style="font-size: 0.85rem; color: #000000; opacity: 0.7;">
+                Proyecto financiado en el marco de programas públicos de apoyo a la investigación y la innovación.
+            </p>
+        </div>
+    </div>
+</section>cio" style="padding: 60px 20px; background: transparent;">
     <div style="max-width: 1000px; margin: auto; padding: 40px; border: 2px solid rgba(30, 185, 175, 0.5); border-radius: 20px; background: rgba(255, 255, 255, 0.95); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
         
         <div style="text-align: center; margin-bottom: 40px;">
