@@ -553,11 +553,11 @@ El proyecto BioDM2 se desarrolla conforme a la normativa vigente en materia de i
     <div class="footer-bottom">
         <div class="footer-container">
             <div class="footer-bottom-inner">
-                <div class="footer-legal-links">
-                    <a href="#">Aviso Legal</a>
-                    <a href="#">Privacidad</a>
-                    <a href="#">Cookies</a>
-                </div>
+<div class="footer-legal-links">
+    <a href="javascript:void(0)" onclick="openModal('modal-legal')">Aviso Legal</a>
+    <a href="javascript:void(0)" onclick="openModal('modal-privacidad')">Privacidad</a>
+    <a href="javascript:void(0)" onclick="openModal('modal-cookies')">Cookies</a>
+</div>
                 <div class="copyright-text">
                     <b>BioDM2</b> © 2024-2026. Todos los derechos reservados.<br>
                     <span style="opacity: 0.6;">Impulsando la Salud Digital de Precisión.</span>
@@ -592,5 +592,27 @@ El proyecto BioDM2 se desarrolla conforme a la normativa vigente en materia de i
             });
         });
     </script>
+    </footer>
+
+<style>
+    .modal-legal-overlay { ... }
+    /* resto del css */
+</style>
+
+<div id="modal-legal" ...> ... </div>
+<div id="modal-privacidad" ...> ... </div>
+<div id="modal-cookies" ...> ... </div>
+
+<script>
+    function openModal(id) { ... }
+    /* resto del javascript */
+</script>
+
+<script>
+    lucide.createIcons();
+    /* ... tu código de FAQ anterior ... */
+</script>
+
+</body> </html>
 </body>
 </html>
