@@ -394,11 +394,132 @@ El proyecto BioDM2 se desarrolla conforme a la normativa vigente en materia de i
         </div>
     </section>
 
+<style>
+    /* Estilos encapsulados para el footer */
+    .main-footer {
+        background: #0d0d0d !important; /* Negro profundo profesional */
+        color: #ffffff !important;
+        padding: 80px 0 0 0 !important;
+        font-family: 'Inter', sans-serif;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        clear: both;
+    }
+
+    .footer-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .footer-top-info {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .footer-tagline {
+        font-size: 0.8rem;
+        color: #1eb9af;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    /* Contenedor de logos inteligente */
+    .logo-cloud {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .logo-cloud img {
+        height: auto;
+        max-height: 45px; /* Altura controlada */
+        max-width: 140px; /* Evita que desborden en móvil */
+        filter: grayscale(1) brightness(1.5); /* Look elegante */
+        opacity: 0.6;
+        transition: all 0.4s ease;
+        object-fit: contain;
+    }
+
+    .logo-cloud img:hover {
+        filter: grayscale(0) brightness(1);
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    .footer-divider {
+        border: 0;
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+        margin: 40px 0;
+    }
+
+    .funding-notice {
+        font-size: 0.75rem;
+        color: #666;
+        line-height: 1.6;
+        max-width: 700px;
+        margin: 0 auto 60px;
+        text-align: center;
+    }
+
+    /* Barra inferior (Aviso legal) */
+    .footer-bottom {
+        background: #050505;
+        padding: 25px 0;
+        border-top: 1px solid rgba(255,255,255,0.03);
+    }
+
+    .footer-bottom-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer-legal-links a {
+        color: #888 !important;
+        text-decoration: none;
+        font-size: 0.75rem;
+        margin-right: 20px;
+        transition: color 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .footer-legal-links a:hover {
+        color: #1eb9af !important;
+    }
+
+    .copyright-text {
+        font-size: 0.75rem;
+        color: #555;
+        text-align: right;
+        line-height: 1.4;
+    }
+
+    /* Solución para Móvil */
+    @media (max-width: 768px) {
+        .main-footer { padding-top: 60px !important; }
+        .logo-cloud { gap: 20px; }
+        .logo-cloud img { max-height: 35px; max-width: 100px; }
+        .footer-bottom-inner { flex-direction: column; text-align: center; }
+        .copyright-text { text-align: center; }
+        .footer-legal-links { margin-bottom: 10px; }
+    }
+</style>
+
 <footer class="main-footer">
     <div class="footer-container">
         <div class="footer-top-info">
             <span class="footer-tagline">Consorcio de Innovación</span>
-            <p style="color: #888; font-size: 0.95rem;">Colaboración estratégica para el futuro de la salud digital.</p>
+            <p style="color: #888; font-size: 0.95rem; margin: 0;">Colaboración estratégica para el futuro de la salud digital.</p>
         </div>
 
         <div class="logo-cloud">
@@ -411,12 +532,12 @@ El proyecto BioDM2 se desarrolla conforme a la normativa vigente en materia de i
         <hr class="footer-divider">
 
         <div class="logo-cloud">
-            <img src="logo-gobiernoyunioneuropea.png" alt="Gobierno de España y Unión Europea" style="max-height: 60px;">
+            <img src="logo-gobiernoyunioneuropea.png" alt="Gobierno de España y Unión Europea" style="max-height: 55px;">
             <img src="logo-lidera.png" alt="Programa Lidera">
         </div>
 
         <div class="funding-notice">
-            <p>Este proyecto está cofinanciado por fondos públicos destinados a la investigación, desarrollo e innovación tecnológica, bajo la coordinación de <b>Intelinova</b> en colaboración con entidades de salud y deporte.</p>
+            <p>Este proyecto está cofinanciado por fondos públicos destinados a la investigación, desarrollo e innovación tecnológica, bajo la coordinación de <b>Intelinova</b>.</p>
         </div>
     </div>
 
@@ -430,7 +551,7 @@ El proyecto BioDM2 se desarrolla conforme a la normativa vigente en materia de i
                 </div>
                 <div class="copyright-text">
                     <b>BioDM2</b> © 2024-2026. Todos los derechos reservados.<br>
-                    <span style="font-size: 0.7rem; opacity: 0.6;">Impulsando la Salud Digital de Precisión.</span>
+                    <span style="opacity: 0.6;">Impulsando la Salud Digital de Precisión.</span>
                 </div>
             </div>
         </div>
