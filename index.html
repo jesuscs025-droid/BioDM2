@@ -487,23 +487,27 @@ El proyecto BioDM2 se desarrolla conforme a la normativa vigente en materia de i
 
 <section id="contacto" class="contact-area" style="padding: 60px 20px;">
     <div class="contact-card">
-        <h2 style="text-align: center; margin-bottom: 25px; font-size: 2.3rem; letter-spacing: 2px; color: white; font-family: 'Montserrat';">¿Hablamos?</h2>
-        <p style="margin-bottom: 35px; opacity: 0.8; text-align: center; color: #ddd;">Nuestro equipo está disponible para resolver tus dudas.</p>
+        <div class="form-icon-container">
+            <i data-lucide="mail" style="width: 50px; height: 50px; stroke-width: 1.5;"></i>
+        </div>
+
+        <h2 style="text-align: center; margin-bottom: 10px; font-size: 2.3rem; letter-spacing: 2px; color: #000000 !important; font-family: 'Montserrat'; font-weight: 800;">¿Hablamos?</h2>
+        <p style="margin-bottom: 35px; text-align: center; color: #000000 !important; font-weight: 500; opacity: 0.9;">Nuestro equipo está disponible para resolver tus dudas.</p>
         
         <form action="https://formspree.io/f/xqeqreva" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
             <div style="text-align: left;">
-                <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600; color: #1eb9af; letter-spacing: 1px;">NOMBRE Y APELLIDOS</label>
-                <input type="text" name="nombre" placeholder="Tu nombre" required style="width: 100%; padding: 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: white;">
+                <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 700; color: #164e4b; letter-spacing: 1px;">NOMBRE Y APELLIDOS</label>
+                <input type="text" name="nombre" placeholder="Tu nombre" required style="width: 100%; padding: 14px; background: rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.1); border-radius: 10px; color: #000;">
             </div>
             
             <div style="text-align: left;">
-                <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600; color: #1eb9af; letter-spacing: 1px;">EMAIL O TELÉFONO</label>
-                <input type="text" name="contacto" required placeholder="Email o número de teléfono" style="width: 100%; padding: 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: white;">
+                <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 700; color: #164e4b; letter-spacing: 1px;">EMAIL O TELÉFONO</label>
+                <input type="text" name="contacto" required placeholder="Email o número de teléfono" style="width: 100%; padding: 14px; background: rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.1); border-radius: 10px; color: #000;">
             </div>
 
             <div style="text-align: left;">
-                <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600; color: #1eb9af; letter-spacing: 1px;">PERFIL DE INTERÉS</label>
-                <select name="perfil_interes" required style="width: 100%; padding: 14px; background: #1a1a1a; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: white;">
+                <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 700; color: #164e4b; letter-spacing: 1px;">PERFIL DE INTERÉS</label>
+                <select name="perfil_interes" required style="width: 100%; padding: 14px; background: #fff; border: 1px solid rgba(0,0,0,0.1); border-radius: 10px; color: #000;">
                     <option value="" disabled selected>Selecciona una opción...</option>
                     <option value="participante">Persona interesada en participar</option>
                     <option value="profesional_investigador">Profesional / investigador</option>
@@ -511,6 +515,21 @@ El proyecto BioDM2 se desarrolla conforme a la normativa vigente en materia de i
                     <option value="otro">Otro</option>
                 </select>
             </div>
+
+            <div style="text-align: left;">
+                <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 700; color: #164e4b; letter-spacing: 1px;">MENSAJE</label>
+                <textarea name="mensaje" rows="4" required placeholder="¿En qué podemos ayudarte?" style="width: 100%; padding: 14px; background: rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.1); border-radius: 10px; color: #000; resize: none;"></textarea>
+            </div>
+
+            <div style="background: rgba(255, 100, 100, 0.15); border-left: 4px solid #ff4d4d; padding: 15px; font-size: 0.85rem; border-radius: 4px; color: #000;">
+                <strong style="color: #d32f2f;">Aviso:</strong> No incluya datos de salud en este formulario.
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer; border: none; padding: 18px; font-weight: 800; text-transform: uppercase; border-radius: 10px; background: #1eb9af; color: white; box-shadow: 0 4px 15px rgba(30, 185, 175, 0.3);">
+                ENVIAR MENSAJE
+            </button>
+        </form>
+    </div>
 
             <div style="text-align: left;">
                 <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600; color: #1eb9af; letter-spacing: 1px;">MENSAJE</label>
