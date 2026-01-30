@@ -7,15 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
-    
     <style>
-        /* CONFIGURACIÓN GENERAL Y SECCIONES */
+        /* CONFIGURACIÓN DE SECCIONES Y SCROLL */
         #que-es, #noticias, #participantes, #profesionales, #consorcio, #faq, #contacto {
             scroll-margin-top: 100px !important;
         }
 
+        /* HERO SECTION */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('hero-bg.png') no-repeat center center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+                        url('hero-bg.png') no-repeat center center;
             background-size: cover;
             min-height: 100vh;
             display: flex;
@@ -26,20 +27,76 @@
             padding: 100px 20px;
         }
 
-        /* --- SECCIÓN NOTICIAS --- */
-        #noticias { background: #164e4b; padding: 100px 20px; }
-        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1100px; margin: 40px auto 0; }
-        .news-card-placeholder { background: rgba(0, 0, 0, 0.15); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 40px; text-align: center; position: relative; overflow: hidden; transition: all 0.4s ease; backdrop-filter: blur(10px); }
-        .news-card-placeholder:hover { background: rgba(0, 0, 0, 0.25); transform: translateY(-10px); border-color: rgba(255, 255, 255, 0.4); }
-        .news-card-placeholder i { color: white; margin-bottom: 20px; opacity: 0.7; }
-        .news-card-placeholder h3 { color: white !important; font-family: 'Montserrat', sans-serif; }
-        .news-card-placeholder p { color: rgba(255, 255, 255, 0.7) !important; }
-        .upcoming-badge { background: rgba(255, 255, 255, 0.1); color: white; border: 1px solid rgba(255, 255, 255, 0.3); padding: 5px 15px; border-radius: 50px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-        .pulse-loader { width: 100%; height: 2px; background: rgba(255, 255, 255, 0.1); margin: 20px 0; position: relative; overflow: hidden; }
-        .pulse-loader::after { content: ""; position: absolute; width: 40%; height: 100%; background: rgba(255, 255, 255, 0.5); animation: loading 2s infinite linear; }
+        /* EFECTO GLASSMORPHISM EN TARJETAS */
+        .partner-card { 
+            background: rgba(255, 255, 255, 0.03); 
+            padding: 35px 30px; 
+            border-radius: 15px; 
+            text-align: center; 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            backdrop-filter: blur(12px);
+        }
+        .partner-card:hover { 
+            transform: translateY(-5px); 
+            border-color: #1eb9af; 
+            background: rgba(255, 255, 255, 0.05); 
+            box-shadow: 0 10px 30px rgba(30, 185, 175, 0.2);
+        }
+
+        /* SECCIÓN NOTICIAS (COLOR BIODM2 APAGADO) */
+        #noticias {
+            background: #164e4b;
+            padding: 100px 20px;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 40px auto 0;
+        }
+        .news-card-placeholder {
+            background: rgba(0, 0, 0, 0.15); 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+        }
+        .news-card-placeholder:hover {
+            background: rgba(0, 0, 0, 0.25);
+            transform: translateY(-10px);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        .upcoming-badge {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .pulse-loader {
+            width: 100%; height: 2px; background: rgba(255, 255, 255, 0.1);
+            margin: 20px 0; position: relative; overflow: hidden;
+        }
+        .pulse-loader::after {
+            content: ""; position: absolute; width: 40%; height: 100%;
+            background: rgba(255, 255, 255, 0.5); animation: loading 2s infinite linear;
+        }
         @keyframes loading { 0% { left: -40%; } 100% { left: 100%; } }
 
-        /* --- CONTACTO (EFECTO DEFINITIVO) --- */
+        /* CONTACTO - DISEÑO RESALTADO ACTUAL */
         .contact-card {
             max-width: 600px;
             margin: auto;
@@ -62,7 +119,11 @@
         }
         .form-icon-container { text-align: center; margin-bottom: 15px; color: #1eb9af; }
 
-        /* Estilos FAQ y Modales omitidos para brevedad, pero se mantienen igual que tu código original */
+        /* ESTILOS FAQ Y MODALES */
+        .modal-css { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 10000; padding: 20px; }
+        .modal-css:target { display: block; }
+        .modal-content-css { background: #1a1a1a; color: #ddd; max-width: 800px; margin: 40px auto; padding: 40px; border-radius: 15px; border: 1px solid #1eb9af; max-height: 80vh; overflow-y: auto; position: relative; font-family: 'Inter', sans-serif; }
+        .btn-cerrar-modal { position: absolute; top: 20px; right: 20px; color: #fff; text-decoration: none; font-size: 30px; }
     </style>
 </head>
 <body>
@@ -72,7 +133,7 @@
             <a href="#"><img src="logo.png" alt="BioDM2" class="nav-logo"></a>
             <div class="nav-links">
                 <a href="#que-es" class="nav-item">PROYECTO</a>
-                <a href="#noticias" class="nav-item">NOTICIAS</a> 
+                <a href="#noticias" class="nav-item">NOTICIAS</a>
                 <a href="#participantes" class="nav-item">PARTICIPANTES</a>
                 <a href="#profesionales" class="nav-item">PROFESIONALES</a>
                 <a href="#consorcio" class="nav-item">CONSORCIO</a>
@@ -82,30 +143,72 @@
         </div>
     </nav>
 
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge" style="background: #1eb9af; padding: 6px 18px; border-radius: 25px; font-size: 0.81rem; font-weight: bold; letter-spacing: 2px; display: inline-block;">BIOMARCADORES DIGITALES</span>
+            <h1 style="margin-top: 20px;">PROYECTO <span class="highlight">BioDM2</span></h1>
+            <p style="max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; opacity: 0.9;">Desarrollo de soluciones avanzadas para el diagnóstico temprano y monitorización de precisión mediante tecnología digital de vanguardia.</p>
+            <div class="hero-btns">
+                <a href="#participantes" class="btn btn-primary">PARTICIPANTES</a>
+                <a href="#profesionales" class="btn btn-secondary">PROFESIONALES</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="que-es" class="container" style="text-align: center; padding: 100px 20px;">
+        <div class="section-title">
+            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">¿Qué es BioDM2?</h2>
+            <div class="underline" style="width: 60px; height: 4px; background: #1eb9af; margin: 0 auto 30px;"></div>
+        </div>
+        <div class="content-text" style="max-width: 800px; margin: auto; font-size: 1.2rem; color: #777;">
+            <p>BioDM2 es un proyecto de investigación aplicada que tiene como objetivo mejorar la calidad de vida y prevenir el desarrollo de la diabetes mellitus tipo 2 en poblaciones de riesgo, mediante la detección precoz del riesgo y la personalización de estrategias de ejercicio físico y nutrición apoyadas en inteligencia artificial.</p>
+        </div>
+    </section>
+
     <section id="noticias">
         <div style="text-align: center; margin-bottom: 50px;">
             <span class="upcoming-badge">Actualidad BioDM2</span>
-            <h2 style="font-size: 2.5rem; margin-top: 15px; color: white;">Últimas Noticias</h2>
-            <div class="underline" style="width: 60px; height: 4px; background: white; margin: 20px auto;"></div>
+            <h2 style="font-size: 2.5rem; margin-top: 15px; color: white; font-family: 'Montserrat';">Últimas Noticias</h2>
+            <div class="underline" style="width: 60px; height: 4px; background: rgba(255,255,255,0.3); margin: 20px auto;"></div>
         </div>
         <div class="news-grid">
             <div class="news-card-placeholder">
-                <i data-lucide="newspaper" style="width: 40px; height: 40px;"></i>
-                <h3>Avances de la Investigación</h3>
+                <i data-lucide="newspaper" style="width: 40px; height: 40px; color: white; margin-bottom: 20px; opacity: 0.7;"></i>
+                <h3 style="color: white; margin-bottom: 10px; font-family: 'Montserrat';">Avances de la Investigación</h3>
                 <div class="pulse-loader"></div>
-                <p>Próximamente compartiremos los primeros hitos y descubrimientos del consorcio.</p>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Próximamente compartiremos los primeros hitos y descubrimientos del consorcio.</p>
             </div>
             <div class="news-card-placeholder">
-                <i data-lucide="mic" style="width: 40px; height: 40px;"></i>
-                <h3>Eventos y Conferencias</h3>
+                <i data-lucide="mic" style="width: 40px; height: 40px; color: white; margin-bottom: 20px; opacity: 0.7;"></i>
+                <h3 style="color: white; margin-bottom: 10px; font-family: 'Montserrat';">Eventos y Conferencias</h3>
                 <div class="pulse-loader"></div>
-                <p>Calendario de presentaciones en congresos científicos.</p>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Calendario de presentaciones en congresos científicos y jornadas de divulgación.</p>
             </div>
             <div class="news-card-placeholder">
-                <i data-lucide="users" style="width: 40px; height: 40px;"></i>
-                <h3>Comunidad BioDM2</h3>
+                <i data-lucide="users" style="width: 40px; height: 40px; color: white; margin-bottom: 20px; opacity: 0.7;"></i>
+                <h3 style="color: white; margin-bottom: 10px; font-family: 'Montserrat';">Comunidad BioDM2</h3>
                 <div class="pulse-loader"></div>
-                <p>Impacto del proyecto en la salud digital de precisión.</p>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Historias, entrevistas y el impacto del proyecto en la salud digital de precisión.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="participantes" style="padding: 80px 20px; color: white; background: #0f0f0f;">
+        <div style="max-width: 1000px; margin: auto;">
+            <h2 style="font-size: 2.2rem; text-align: center; margin-bottom: 40px;">Para participantes</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                <div class="partner-card">
+                    <h3 style="font-size: 1.2rem; color: #1eb9af; margin-bottom: 15px;">¿A quién va dirigido?</h3>
+                    <p>Adultos con mayor riesgo de diabetes tipo 2. Sujeto a criterios clínicos.</p>
+                </div>
+                <div class="partner-card">
+                    <h3 style="font-size: 1.2rem; color: #1eb9af; margin-bottom: 15px;">¿Qué implica?</h3>
+                    <p>Seguimiento estructurado, nutrición y ejercicio personalizado bajo investigación.</p>
+                </div>
+                <div class="partner-card">
+                    <h3 style="font-size: 1.2rem; color: #1eb9af; margin-bottom: 15px;">Garantías</h3>
+                    <p>Confidencialidad absoluta y cumplimiento de normativa de investigación.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -156,6 +259,16 @@
         </div>
     </section>
 
+    <footer class="main-footer" style="background: #0d0d0d; color: white; padding: 60px 0 20px 0; text-align: center;">
+        <div class="footer-legal-links" style="margin-bottom: 20px;">
+            <a href="#aviso-legal" style="color: #888; margin: 0 15px; text-decoration: none; font-size: 0.8rem;">AVISO LEGAL</a>
+            <a href="#privacidad" style="color: #888; margin: 0 15px; text-decoration: none; font-size: 0.8rem;">PRIVACIDAD</a>
+            <a href="#cookies" style="color: #888; margin: 0 15px; text-decoration: none; font-size: 0.8rem;">COOKIES</a>
+            <a href="#accesibilidad" style="color: #888; margin: 0 15px; text-decoration: none; font-size: 0.8rem;">ACCESIBILIDAD</a>
+        </div>
+        <p style="font-size: 0.75rem; color: #555;">BioDM2 © 2024-2026. Todos los derechos reservados.</p>
+    </footer>
+
     <script>
         lucide.createIcons();
         document.addEventListener('DOMContentLoaded', () => {
@@ -163,11 +276,11 @@
             const faqContainer = document.getElementById('faq-main-container');
             const faqQuestions = document.querySelectorAll('.faq-question');
 
-            if(mainBtn) {
+            if(mainBtn){
                 mainBtn.addEventListener('click', () => {
                     const isOpening = !faqContainer.classList.contains('show');
                     faqContainer.classList.toggle('show');
-                    mainBtn.innerHTML = isOpening ? `CERRAR PREGUNTAS <i data-lucide="x-circle"></i>` : `PREGUNTAS FRECUENTES <i data-lucide="help-circle"></i>`;
+                    mainBtn.innerHTML = isOpening ? `CERRAR PREGUNTAS <i data-lucide="chevron-up" style="margin-left: 10px;"></i>` : `PREGUNTAS FRECUENTES <i data-lucide="chevron-down" style="margin-left: 10px;"></i>`;
                     lucide.createIcons();
                 });
             }
@@ -175,12 +288,17 @@
             faqQuestions.forEach(question => {
                 question.addEventListener('click', () => {
                     const item = question.closest('.faq-item');
-                    const isActive = item.classList.contains('active');
                     document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-                    if (!isActive) { item.classList.add('active'); }
+                    item.classList.add('active');
                 });
             });
         });
     </script>
+
+    <div id="aviso-legal" class="modal-css"><div class="modal-content-css"><a href="#" class="btn-cerrar-modal">&times;</a><h2>Aviso Legal</h2><p>Contenido del aviso legal...</p></div></div>
+    <div id="privacidad" class="modal-css"><div class="modal-content-css"><a href="#" class="btn-cerrar-modal">&times;</a><h2>Privacidad</h2><p>Contenido de privacidad...</p></div></div>
+    <div id="cookies" class="modal-css"><div class="modal-content-css"><a href="#" class="btn-cerrar-modal">&times;</a><h2>Cookies</h2><p>Contenido de cookies...</p></div></div>
+    <div id="accesibilidad" class="modal-css"><div class="modal-content-css"><a href="#" class="btn-cerrar-modal">&times;</a><h2>Accesibilidad</h2><p>Contenido de accesibilidad...</p></div></div>
+
 </body>
 </html>
