@@ -326,8 +326,38 @@
         <a href="#contacto" class="btn btn-secondary">CONTACTO PARA COLABORACIÓN O TRANSFERENCIA</a>
         <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 10px;">Para profesionales, entidades sanitarias y grupos de investigación interesados.</p>
     </div>
-<section id="consorcio" style="padding: 60px 20px 45px 20px; background: transparent;">
+<section id="consorcio" style="padding: 80px 20px; background: transparent;">
     <style>
+        /* Estilos para el efecto interactivo */
+        .partner-box {
+            padding: 25px;
+            background: rgba(30, 185, 175, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(30, 185, 175, 0.15);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: default;
+        }
+
+        .partner-box:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 1);
+            border-color: #1eb9af;
+            box-shadow: 0 15px 35px rgba(30, 185, 175, 0.15);
+        }
+
+        .partner-box strong {
+            display: block;
+            color: #1eb9af;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .partner-box:hover strong {
+            transform: scale(1.05);
+            color: #168b83;
+        }
+
         @media (max-width: 768px) {
             .consorcio-grid-ajuste {
                 grid-template-columns: 1fr !important;
@@ -335,41 +365,41 @@
         }
     </style>
 
-    <div style="max-width: 1000px; margin: auto; padding: 40px; border: 2px solid rgba(30, 185, 175, 0.5); border-radius: 20px; background: rgba(255, 255, 255, 0.95); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+    <div style="max-width: 1000px; margin: auto; padding: 50px 40px; border: 1px solid rgba(0,0,0,0.05); border-radius: 24px; background: rgba(255, 255, 255, 0.98); box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
         
-        <div style="text-align: center; margin-bottom: 40px;">
-            <h2 style="font-size: 2.2rem; color: #1eb9af; margin-bottom: 15px; letter-spacing: 1px; font-weight: bold;">Consorcio y partners</h2>
-            <p style="font-size: 1.05rem; line-height: 1.6; color: #000000; max-width: 800px; margin: auto; font-weight: 500;">
-                BioDM2 se desarrolla en el marco de un consorcio público-privado que integra entidades del ámbito sanitario, tecnológico y académico, con experiencia en investigación, innovación y salud.
+        <div style="text-align: center; margin-bottom: 45px;">
+            <h2 style="font-size: 2.2rem; color: #1a1a1a; margin-bottom: 15px; letter-spacing: 1px; font-weight: bold;">Consorcio y partners</h2>
+            <p style="font-size: 1.05rem; line-height: 1.6; color: #555; max-width: 800px; margin: auto;">
+                BioDM2 se desarrolla en el marco de un consorcio público-privado que integra entidades del ámbito sanitario, tecnológico y académico.
             </p>
         </div>
 
         <div class="consorcio-grid-ajuste" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px;">
             
-            <div style="padding: 20px; background: rgba(30, 185, 175, 0.05); border-radius: 10px; border: 1px solid rgba(30, 185, 175, 0.2);">
-                <strong style="display: block; color: #1eb9af; margin-bottom: 8px; font-size: 1.1rem;">FUNDACIÓN VITHAS</strong>
-                <p style="font-size: 0.95rem; color: #000000; margin: 0; line-height: 1.5;">Participación desde el ámbito sanitario y apoyo a la evaluación clínica y al desarrollo del estudio piloto.</p>
+            <div class="partner-box">
+                <strong>FUNDACIÓN VITHAS</strong>
+                <p style="font-size: 0.95rem; color: #444; margin: 0; line-height: 1.5;">Participación desde el ámbito sanitario y apoyo a la evaluación clínica y al desarrollo del estudio piloto.</p>
             </div>
 
-            <div style="padding: 20px; background: rgba(30, 185, 175, 0.05); border-radius: 10px; border: 1px solid rgba(30, 185, 175, 0.2);">
-                <strong style="display: block; color: #1eb9af; margin-bottom: 8px; font-size: 1.1rem;">UGR (iMUDS)</strong>
-                <p style="font-size: 0.95rem; color: #000000; margin: 0; line-height: 1.5;">Soporte académico y científico, participación en el diseño metodológico y análisis de datos del proyecto.</p>
+            <div class="partner-box">
+                <strong>UGR (iMUDS)</strong>
+                <p style="font-size: 0.95rem; color: #444; margin: 0; line-height: 1.5;">Soporte académico y científico, participación en el diseño metodológico y análisis de datos del proyecto.</p>
             </div>
 
-            <div style="padding: 20px; background: rgba(30, 185, 175, 0.05); border-radius: 10px; border: 1px solid rgba(30, 185, 175, 0.2);">
-                <strong style="display: block; color: #1eb9af; margin-bottom: 8px; font-size: 1.1rem;">INTELINOVA</strong>
-                <p style="font-size: 0.95rem; color: #000000; margin: 0; line-height: 1.5;">Coordinación general del proyecto y desarrollo tecnológico del prototipo basado en inteligencia artificial.</p>
+            <div class="partner-box">
+                <strong>INTELINOVA</strong>
+                <p style="font-size: 0.95rem; color: #444; margin: 0; line-height: 1.5;">Coordinación general del proyecto y desarrollo tecnológico del prototipo basado en inteligencia artificial.</p>
             </div>
 
-            <div style="padding: 20px; background: rgba(30, 185, 175, 0.05); border-radius: 10px; border: 1px solid rgba(30, 185, 175, 0.2);">
-                <strong style="display: block; color: #1eb9af; margin-bottom: 8px; font-size: 1.1rem;">SANO</strong>
-                <p style="font-size: 0.95rem; color: #000000; margin: 0; line-height: 1.5;">Implementación de estrategias de ejercicio físico y promoción de hábitos de vida saludables en el marco del proyecto.</p>
+            <div class="partner-box">
+                <strong>SANO</strong>
+                <p style="font-size: 0.95rem; color: #444; margin: 0; line-height: 1.5;">Implementación de estrategias de ejercicio físico y promoción de hábitos de vida saludables.</p>
             </div>
 
         </div>
 
-        <div style="margin-top: 30px; text-align: center; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 20px;">
-            <p style="font-size: 0.85rem; color: #000000; opacity: 0.7;">
+        <div style="margin-top: 40px; text-align: center; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 25px;">
+            <p style="font-size: 0.85rem; color: #888;">
                 Proyecto financiado en el marco de programas públicos de apoyo a la investigación y la innovación.
             </p>
         </div>
