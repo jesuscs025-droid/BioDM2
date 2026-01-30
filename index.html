@@ -121,67 +121,87 @@
         scroll-margin-top: 100px !important;
     }
 
-    /* --- PEGA AQUÍ EL BLOQUE DE NOTICIAS --- */
-    #noticias {
-        background: #0a0a0a;
-        padding: 100px 20px;
-    }
-    .news-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        max-width: 1100px;
-        margin: 40px auto 0;
-    }
-    .news-card-placeholder {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(30, 185, 175, 0.1);
-        border-radius: 20px;
-        padding: 40px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        transition: all 0.4s ease;
-    }
-    .news-card-placeholder:hover {
-        border-color: #1eb9af;
-        transform: translateY(-10px);
-    }
-    .news-card-placeholder i {
-        color: #1eb9af;
-        margin-bottom: 20px;
-        opacity: 0.5;
-    }
-    .upcoming-badge {
-        background: rgba(30, 185, 175, 0.1);
-        color: #1eb9af;
-        padding: 5px 15px;
-        border-radius: 50px;
-        font-size: 0.75rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-    .pulse-loader {
-        width: 100%;
-        height: 4px;
-        background: rgba(30, 185, 175, 0.05);
-        margin: 20px 0;
-        position: relative;
-        overflow: hidden;
-    }
-    .pulse-loader::after {
-        content: "";
-        position: absolute;
-        width: 40%;
-        height: 100%;
-        background: #1eb9af;
-        animation: loading 2s infinite linear;
-    }
-    @keyframes loading {
-        0% { left: -40%; }
-        100% { left: 100%; }
-    }
+    /* --- NOTICIAS --- */
+#noticias {
+    background: #1eb9af; /* El color turquesa de BioDM2 */
+    padding: 100px 20px;
+    scroll-margin-top: 100px !important;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.news-card-placeholder {
+    /* Ahora usamos un fondo oscuro semi-transparente para que resalte sobre el turquesa */
+    background: rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.news-card-placeholder:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    border-color: white;
+}
+
+.news-card-placeholder i {
+    color: white; /* Iconos en blanco para mejor contraste */
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.news-card-placeholder h3 {
+    color: white !important;
+}
+
+.news-card-placeholder p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.upcoming-badge {
+    background: white; /* Badge en blanco para que destaque */
+    color: #1eb9af;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pulse-loader {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.pulse-loader::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background: white; /* Barra de carga en blanco */
+    animation: loading 2s infinite linear;
+}
+
+@keyframes loading {
+    0% { left: -40%; }
+    100% { left: 100%; }
+}
     /* --- FIN DEL BLOQUE --- */
 </style>
 </head>
@@ -227,8 +247,9 @@
     <div style="text-align: center; margin-bottom: 50px;">
         <span class="upcoming-badge">Actualidad BioDM2</span>
         <h2 style="font-size: 2.5rem; margin-top: 15px; color: white;">Últimas Noticias</h2>
-        <div class="underline" style="width: 60px; height: 4px; background: #1eb9af; margin: 20px auto;"></div>
+        <div class="underline" style="width: 60px; height: 4px; background: white; margin: 20px auto;"></div>
     </div>
+    ...
 
     <div class="news-grid">
         <div class="news-card-placeholder">
