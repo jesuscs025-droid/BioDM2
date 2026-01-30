@@ -483,55 +483,48 @@ El proyecto BioDM2 se desarrolla conforme a la normativa vigente en materia de i
     </div>
 </section>
 
-<section id="contacto" class="contact-area" style="padding: 35px 20px;">
-    <div class="contact-card" style="max-width: 600px; margin: auto; background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
-        <h2 style="text-align: center; margin-bottom: 25px; font-size: 2rem; letter-spacing: 2px;">¿Hablamos?</h2>
-        <p style="margin-bottom: 30px; opacity: 0.8; text-align: center;">Nuestro equipo está disponible para resolver tus dudas.</p>
+</section>
+
+<section id="contacto" class="contact-area" style="padding: 60px 20px;">
+    <div class="contact-card">
+        <h2 style="text-align: center; margin-bottom: 25px; font-size: 2.3rem; letter-spacing: 2px; color: white; font-family: 'Montserrat';">¿Hablamos?</h2>
+        <p style="margin-bottom: 35px; opacity: 0.8; text-align: center; color: #ddd;">Nuestro equipo está disponible para resolver tus dudas.</p>
+        
         <form action="https://formspree.io/f/xqeqreva" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
             <div style="text-align: left;">
-                <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">NOMBRE Y APELLIDOS</label>
-                <input type="text" name="nombre" placeholder="Tu nombre" required style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;">
+                <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600; color: #1eb9af; letter-spacing: 1px;">NOMBRE Y APELLIDOS</label>
+                <input type="text" name="nombre" placeholder="Tu nombre" required style="width: 100%; padding: 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: white;">
             </div>
+            
             <div style="text-align: left;">
-                <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">EMAIL O TELÉFONO</label>
-                <input type="text" name="contacto" required placeholder="Email o número de teléfono" style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;">
-                <div style="text-align: left;">
-                    <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">PERFIL DE INTERÉS</label>
-                    <select name="perfil_interes" required style="width: 100%; padding: 12px; background: #1a1a1a; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white; margin-bottom: 15px;">
-                        <option value="" disabled selected>Selecciona una opción...</option>
-                        <option value="participante">Persona interesada en participar</option>
-                        <option value="profesional_investigador">Profesional / investigador</option>
-                        <option value="entidad_institucion">Entidad / institución</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                    
-                    <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">DETALLES DEL PERFIL </label>
-                    <textarea name="detalles_perfil" placeholder="Proporciona más detalles sobre tu perfil..." rows="3" required style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;"></textarea>
-                </div>
+                <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600; color: #1eb9af; letter-spacing: 1px;">EMAIL O TELÉFONO</label>
+                <input type="text" name="contacto" required placeholder="Email o número de teléfono" style="width: 100%; padding: 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: white;">
             </div>
-            <div style="text-align: left;">
-                <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600;">MENSAJE</label>
-                <textarea name="mensaje" rows="4" required style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white;"></textarea>
-            </div>
-            <div style="background: rgba(255, 100, 100, 0.1); border-left: 4px solid #ff4d4d; padding: 10px; font-size: 0.85rem;">
-                <strong style="color: #ff4d4d;">Aviso:</strong> No incluir datos de salud en este formulario.
-            </div>
-<div style="display: flex; align-items: flex-start; gap: 12px; text-align: left;">
-                <input type="checkbox" required id="privacy" style="width: 18px; height: 18px; cursor: pointer; flex-shrink: 0;">
-                <label for="privacy" style="font-size: 0.9rem; opacity: 0.8; line-height: 1.4; cursor: pointer;">
-                    He leído y acepto la <a href="#privacidad" style="color: #1eb9af; text-decoration: underline;">política de privacidad</a> y consiento el tratamiento de mis datos con la finalidad de gestionar mi solicitud de contacto.
-                </label>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer; border: none; padding: 15px; font-weight: bold;">ENVIAR MENSAJE</button>
-        </form>
 
-        <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
-            <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 10px;">También puedes contactar con el equipo del proyecto a través del siguiente correo electrónico:</p>
-            <a href="mailto:info@redpapef.com" style="display: inline-flex; align-items: center; gap: 10px; color: #1eb9af; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: opacity 0.3s;">
-                <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
-                info@redpapef.com
-            </a>
-        </div>
+            <div style="text-align: left;">
+                <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600; color: #1eb9af; letter-spacing: 1px;">PERFIL DE INTERÉS</label>
+                <select name="perfil_interes" required style="width: 100%; padding: 14px; background: #1a1a1a; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: white;">
+                    <option value="" disabled selected>Selecciona una opción...</option>
+                    <option value="participante">Persona interesada en participar</option>
+                    <option value="profesional_investigador">Profesional / investigador</option>
+                    <option value="entidad_institucion">Entidad / institución</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div style="text-align: left;">
+                <label style="display: block; font-size: 0.8rem; margin-bottom: 8px; font-weight: 600; color: #1eb9af; letter-spacing: 1px;">MENSAJE</label>
+                <textarea name="mensaje" rows="4" required placeholder="¿En qué podemos ayudarte?" style="width: 100%; padding: 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: white; resize: none;"></textarea>
+            </div>
+
+            <div style="background: rgba(255, 100, 100, 0.1); border-left: 4px solid #ff4d4d; padding: 15px; font-size: 0.85rem; border-radius: 4px; margin: 10px 0;">
+                <strong style="color: #ff4d4d;">Aviso importante:</strong> No incluya datos de salud ni información clínica sensible en este formulario.
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer; border: none; padding: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; border-radius: 10px; box-shadow: 0 4px 15px rgba(30, 185, 175, 0.3); background: #1eb9af; color: white;">
+                ENVIAR MENSAJE
+            </button>
+        </form>
     </div>
 </section>
 
