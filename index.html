@@ -659,6 +659,13 @@
             border-color: #1eb9af;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
+        /* Clase para limpiar fondos de logos en cuadros azulados */
+        .blend-logo {
+            max-height: 100%; 
+            width: auto; 
+            mix-blend-mode: multiply; 
+            filter: contrast(1.1) brightness(1.05);
+        }
     </style>
 
     <div style="max-width: 1000px; margin: auto; padding: 60px 40px; border: 1px solid rgba(0,0,0,0.05); border-radius: 24px; background: rgba(255, 255, 255, 0.98); box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
@@ -671,30 +678,31 @@
         </div>
 
         <div class="consorcio-grid-ajuste" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; margin-bottom: 60px;">
+            
             <div class="partner-box" style="text-align: center;">
                 <div style="height: 60px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center;">
-                    <img src="logo-vithas.png" alt="Vithas" style="max-height: 100%; width: auto; mix-blend-mode: multiply;">
+                    <img src="logo-vithas.png" alt="Vithas" class="blend-logo">
                 </div>
                 <p style="font-size: 0.9rem; color: #444; line-height: 1.4;">Apoyo a la evaluación clínica y al desarrollo del estudio piloto.</p>
             </div>
 
             <div class="partner-box" style="text-align: center;">
                 <div style="height: 60px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center;">
-                    <img src="logo-ugr.png" alt="UGR" style="max-height: 100%; width: auto; mix-blend-mode: multiply;">
+                    <img src="logo-ugr.png" alt="UGR" class="blend-logo" style="transform: scale(0.85);">
                 </div>
                 <p style="font-size: 0.9rem; color: #444; line-height: 1.4;">Soporte científico, diseño metodológico y análisis de datos.</p>
             </div>
 
             <div class="partner-box" style="text-align: center;">
                 <div style="height: 60px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center;">
-                    <img src="logo-intelinova.png" alt="Intelinova" style="max-height: 100%; width: auto; mix-blend-mode: multiply;">
+                    <img src="logo-intelinova.png" alt="Intelinova" class="blend-logo">
                 </div>
                 <p style="font-size: 0.9rem; color: #444; line-height: 1.4;">Coordinación general y desarrollo tecnológico de la IA.</p>
             </div>
 
             <div class="partner-box" style="text-align: center;">
                 <div style="height: 60px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center;">
-                    <img src="logo-sano.png" alt="Sano" style="max-height: 100%; width: auto; mix-blend-mode: multiply;">
+                    <img src="logo-sano.png" alt="Sano" class="blend-logo">
                 </div>
                 <p style="font-size: 0.9rem; color: #444; line-height: 1.4;">Implementación de estrategias de ejercicio y hábitos saludables.</p>
             </div>
@@ -707,7 +715,10 @@
             
             <div style="display: flex; justify-content: center; align-items: center; gap: 50px; flex-wrap: wrap;">
                 <img src="logo-gobiernoyunioneuropea.png" alt="Ministerio y UE" style="height: 85px; width: auto; object-fit: contain; mix-blend-mode: multiply;">
-                <img src="logo-lidera.png" alt="Programa Lidera" style="height: 65px; width: auto; object-fit: contain; mix-blend-mode: multiply;">
+                
+                <div style="background: #ffffff; padding: 10px 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center;">
+                    <img src="logo-lidera.png" alt="Programa Lidera" style="height: 50px; width: auto; object-fit: contain;">
+                </div>
             </div>
 
             <p style="font-size: 0.85rem; color: #888; margin-top: 40px; max-width: 600px; margin: 40px auto 0;">
