@@ -843,18 +843,18 @@
         margin-bottom: 40px;
     }
 
-    .logo-cloud img {
+.logo-cloud img {
         height: auto;
         max-height: 45px; /* Altura controlada */
         max-width: 140px; /* Evita que desborden en móvil */
-        filter: grayscale(1) brightness(1.5); /* Look elegante */
-        opacity: 0.6;
+        filter: none; /* Eliminamos el grayscale para que se vea el color original */
+        opacity: 0.9; /* Un toque de transparencia sutil para elegancia */
         transition: all 0.4s ease;
         object-fit: contain;
     }
 
     .logo-cloud img:hover {
-        filter: grayscale(0) brightness(1);
+        filter: none;
         opacity: 1;
         transform: scale(1.05);
     }
