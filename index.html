@@ -646,14 +646,17 @@
 
 <section id="consorcio" style="padding: 80px 20px; background: transparent;">
     <style>
-        /* Estilos para el efecto interactivo */
         .partner-box {
-            padding: 25px;
+            padding: 30px;
             background: rgba(30, 185, 175, 0.03);
             border-radius: 12px;
             border: 1px solid rgba(30, 185, 175, 0.15);
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             cursor: default;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 220px;
         }
 
         .partner-box:hover {
@@ -671,14 +674,45 @@
             transition: transform 0.3s ease;
         }
 
-        .partner-box:hover strong {
-            transform: scale(1.05);
-            color: #168b83;
+        .partner-box p {
+            font-size: 0.95rem; 
+            color: #444; 
+            margin: 0 0 20px 0; 
+            line-height: 1.5;
+        }
+
+        /* Contenedor del logo integrado */
+        .partner-logo-container {
+            margin-top: auto;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .partner-logo-container img {
+            max-height: 45px;
+            max-width: 140px;
+            object-fit: contain;
+            /* El truco de integración: mezcla el fondo del logo con el fondo del cuadro */
+            mix-blend-mode: multiply; 
+            filter: grayscale(0.2);
+            transition: filter 0.3s ease;
+        }
+
+        .partner-box:hover .partner-logo-container img {
+            filter: grayscale(0);
         }
 
         @media (max-width: 768px) {
             .consorcio-grid-ajuste {
                 grid-template-columns: 1fr !important;
+            }
+            .partner-logo-container {
+                justify-content: center;
+            }
+            .partner-box {
+                text-align: center;
             }
         }
     </style>
@@ -695,23 +729,43 @@
         <div class="consorcio-grid-ajuste" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px;">
             
             <div class="partner-box">
-                <strong>FUNDACIÓN VITHAS</strong>
-                <p style="font-size: 0.95rem; color: #444; margin: 0; line-height: 1.5;">Participación desde el ámbito sanitario y apoyo a la evaluación clínica y al desarrollo del estudio piloto.</p>
+                <div>
+                    <strong>FUNDACIÓN VITHAS</strong>
+                    <p>Participación desde el ámbito sanitario y apoyo a la evaluación clínica y al desarrollo del estudio piloto.</p>
+                </div>
+                <div class="partner-logo-container">
+                    <img src="logo-vithas.png" alt="Fundación Vithas">
+                </div>
             </div>
 
             <div class="partner-box">
-                <strong>UGR (iMUDS)</strong>
-                <p style="font-size: 0.95rem; color: #444; margin: 0; line-height: 1.5;">Soporte académico y científico, participación en el diseño metodológico y análisis de datos del proyecto.</p>
+                <div>
+                    <strong>UGR (iMUDS)</strong>
+                    <p>Soporte académico y científico, participación en el diseño metodológico y análisis de datos del proyecto.</p>
+                </div>
+                <div class="partner-logo-container">
+                    <img src="logo-ugr.png" alt="Universidad de Granada">
+                </div>
             </div>
 
             <div class="partner-box">
-                <strong>INTELINOVA</strong>
-                <p style="font-size: 0.95rem; color: #444; margin: 0; line-height: 1.5;">Coordinación general del proyecto y desarrollo tecnológico del prototipo basado en inteligencia artificial.</p>
+                <div>
+                    <strong>INTELINOVA</strong>
+                    <p>Coordinación general del proyecto y desarrollo tecnológico del prototipo basado en inteligencia artificial.</p>
+                </div>
+                <div class="partner-logo-container">
+                    <img src="logo-intelinova.png" alt="Intelinova">
+                </div>
             </div>
 
             <div class="partner-box">
-                <strong>SANO</strong>
-                <p style="font-size: 0.95rem; color: #444; margin: 0; line-height: 1.5;">Implementación de estrategias de ejercicio físico y promoción de hábitos de vida saludables.</p>
+                <div>
+                    <strong>SANO</strong>
+                    <p>Implementación de estrategias de ejercicio físico y promoción de hábitos de vida saludables.</p>
+                </div>
+                <div class="partner-logo-container">
+                    <img src="logo-sano.png" alt="Sano Center">
+                </div>
             </div>
 
         </div>
