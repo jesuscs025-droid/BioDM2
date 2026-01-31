@@ -186,99 +186,34 @@
         </div>
     </nav>
 
-<header class="hero" style="position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-    <div class="hero-content" style="position: relative; z-index: 2; padding-bottom: 200px;">
-        <span class="badge" style="background: #1eb9af; padding: 6px 18px; border-radius: 25px; font-size: 0.81rem; font-weight: bold; letter-spacing: 2px; display: inline-block;">BIOMARCADORES DIGITALES</span>
-        <h1 style="margin-top: 20px;">PROYECTO <span class="highlight">BioDM2</span></h1>
-        
-        <p style="max-width: 600px; margin: 0 auto 20px; font-size: 1.1rem; text-align: center; color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
-            <strong>Desarrollo de un prototipo de IA para optimizar la calidad de vida y prevenir la diabetes mellitus tipo 2.</strong>
-        </p>
+    <header class="hero">
+        <div class="hero-content">
+<span class="badge" style="background: #1eb9af; padding: 6px 18px; border-radius: 25px; font-size: 0.81rem; font-weight: bold; letter-spacing: 2px; display: inline-block;">BIOMARCADORES DIGITALES</span>            <h1 style="margin-top: 20px;">PROYECTO <span class="highlight">BioDM2</span></h1>
+<p style="max-width: 600px; margin: 0 auto 20px; font-size: 1.1rem; text-align: center; color: #000;">
+  <strong>Desarrollo de un prototipo de IA para optimizar la calidad de vida y prevenir la diabetes mellitus tipo 2 mediante la detección precoz, así como el desarrollo de estrategias personalizadas de ejercicio físico y nutrición en poblaciones de riesgo.</strong>
+</p>
 
-        <div class="hero-btns">
-            <a href="#participantes" class="btn btn-primary">PARTICIPANTES</a>
-            <a href="#profesionales" class="btn btn-secondary">PROFESIONALES</a>
-        </div>
-    </div>
-
-    <div class="hero-partners-bar">
-        <div class="partners-inner">
-            <span class="partners-label">PROYECTO IMPULSADO POR EL CONSORCIO</span>
-            <div class="partners-logos">
-                <img src="logo-lidera.png" alt="Programa Lidera">
-                <img src="logo-sano.png" alt="Sano">
-                <img src="logo-trainingym.png" alt="Trainingym">
-                <img src="logo-vithas.png" alt="Fundación Vithas">
-                <img src="logo-ugr.png" alt="Universidad de Granada">
+<p style="max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; opacity: 0.9; text-align: center;">
+  Investigación aplicada para identificar de forma temprana el riesgo de diabetes tipo 2 y mejorar la calidad de vida mediante recomendaciones personalizadas de ejercicio y nutrición.
+</p>    
+            <p style="max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; opacity: 0.6; text-align: center;">
+Proyecto de I+D+i en consorcio público-privado.
+Por qué incluirla: Refuerza credibilidad institucional en 1 línea. Evita que parezca una iniciativa aislada o comercial. Muy bien vista por perfiles académicos y sanitarios.</p><div class="hero-btns">
+                <a href="#participantes" class="btn btn-primary">PARTICIPANTES</a>
+                <a href="#profesionales" class="btn btn-secondary">PROFESIONALES</a>
             </div>
         </div>
-    </div>
-
-    <style>
-        .hero-partners-bar {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.45);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 45px 0; 
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
-            z-index: 3;
-            animation: fadeInUp 1s ease-out;
-        }
-        .partners-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .partners-label {
-            font-size: 0.7rem;
-            font-weight: 800;
-            color: rgba(255, 255, 255, 0.5);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-        .partners-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 60px;
-            flex-wrap: wrap;
-            padding: 0 20px;
-        }
-        .partners-logos img {
-            height: 48px; /* Tamaño aumentado +30% */
-            width: auto;
-            object-fit: contain;
-            filter: brightness(0) invert(1);
-            opacity: 0.75;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .partners-logos img:hover {
-            opacity: 1;
-            transform: scale(1.15);
-            filter: brightness(1) invert(0);
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
-</header>
+    </header>
 
 <style>
     .biodm2-grid {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(6, 1fr); /* Sistema de 6 columnas para centrar la fila de 2 */
         gap: 25px;
         max-width: 1200px;
         margin: 50px auto;
     }
+
     .info-card {
         background: #ffffff;
         padding: 40px 30px;
@@ -292,13 +227,17 @@
         text-align: center;
         position: relative;
         overflow: hidden;
-        grid-column: span 2;
+        grid-column: span 2; /* Cada tarjeta ocupa 2 columnas de las 6 disponibles */
     }
+
+    /* Efecto Interactivo */
     .info-card:hover {
         transform: translateY(-10px);
         border-color: #1eb9af;
         box-shadow: 0 20px 40px rgba(30, 185, 175, 0.15);
+        background: #fff;
     }
+
     .info-card::before {
         content: "";
         position: absolute;
@@ -307,13 +246,18 @@
         transform: scaleX(0);
         transition: transform 0.4s ease;
     }
-    .info-card:hover::before { transform: scaleX(1); }
+
+    .info-card:hover::before {
+        transform: scaleX(1);
+    }
+
     .info-card strong {
         color: #1eb9af;
         font-size: 1.5rem;
         margin-bottom: 15px;
         display: block;
     }
+
     .info-card p {
         margin: 0;
         color: #555;
@@ -321,14 +265,15 @@
         line-height: 1.7;
         font-weight: 500;
     }
+
+    /* Centrado de la segunda fila (Tarjetas 4 y 5) */
     .card-4 { grid-column: 2 / 4; }
     .card-5 { grid-column: 4 / 6; }
 
+    /* Adaptación para Tablet/Móvil */
     @media (max-width: 992px) {
-        .hero-content { padding-bottom: 260px; }
         .biodm2-grid { grid-template-columns: 1fr; gap: 20px; padding: 0 10px; }
         .info-card, .card-4, .card-5 { grid-column: span 1 !important; }
-        .partners-logos img { height: 32px; }
     }
 </style>
 
@@ -367,7 +312,7 @@
     </div>
 
     <div style="max-width: 700px; margin: 60px auto 0; text-align: center; padding-top: 30px; border-top: 1px dashed #ddd;">
-        <p style="font-size: 0.85rem; color: #999; font-style: italic; line-height: 1.5;">
+        <p style="font-size: 0.9rem; color: #aaa; font-style: italic; line-height: 1.5;">
             BioDM2 se desarrolla en el marco de un consorcio público-privado que integra entidades del ámbito sanitario, tecnológico y académico.
         </p>
     </div>
@@ -976,3 +921,4 @@ Los contenidos de este sitio web tienen carácter meramente informativo y no sus
 </div>
 </body>
 </html>
+
