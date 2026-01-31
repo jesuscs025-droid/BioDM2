@@ -648,21 +648,23 @@
     <style>
         .partner-box {
             padding: 25px;
-            background: rgba(30, 185, 175, 0.03);
+            background: rgba(30, 185, 175, 0.03); /* El fondo azulado */
             border-radius: 12px;
             border: 1px solid rgba(30, 185, 175, 0.15);
             transition: all 0.4s ease;
         }
         .partner-box:hover {
             transform: translateY(-5px);
-            background: #fff;
+            background: #ffffff;
             border-color: #1eb9af;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
-        .blend-logo {
+        /* Filtro profesional para limpiar fondos grises rebeldes */
+        .blend-logo-clean {
             max-height: 100%; 
             width: auto; 
             mix-blend-mode: multiply; 
+            filter: contrast(1.2) brightness(1.1); /* Limpia el gris convirtiéndolo en blanco/transparente */
         }
     </style>
 
@@ -679,28 +681,28 @@
             
             <div class="partner-box" style="text-align: center;">
                 <div style="height: 60px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center;">
-                    <img src="logo-vithas.png" alt="Vithas" class="blend-logo">
+                    <img src="logo-vithas.png" alt="Vithas" class="blend-logo-clean">
                 </div>
                 <p style="font-size: 0.9rem; color: #444; line-height: 1.4;">Apoyo a la evaluación clínica y al desarrollo del estudio piloto.</p>
             </div>
 
             <div class="partner-box" style="text-align: center;">
                 <div style="height: 60px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center;">
-                    <img src="logo-ugr.png" alt="UGR" class="blend-logo" style="transform: scale(0.78);">
+                    <img src="logo-ugr.png" alt="UGR" class="blend-logo-clean" style="transform: scale(0.78);">
                 </div>
                 <p style="font-size: 0.9rem; color: #444; line-height: 1.4;">Soporte científico, diseño metodológico y análisis de datos.</p>
             </div>
 
             <div class="partner-box" style="text-align: center;">
                 <div style="height: 60px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center;">
-                    <img src="logo-intelinova.png" alt="Intelinova" class="blend-logo">
+                    <img src="logo-intelinova.png" alt="Intelinova" class="blend-logo-clean">
                 </div>
                 <p style="font-size: 0.9rem; color: #444; line-height: 1.4;">Coordinación general y desarrollo tecnológico de la IA.</p>
             </div>
 
             <div class="partner-box" style="text-align: center;">
                 <div style="height: 60px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center;">
-                    <img src="logo-sano.png" alt="Sano" class="blend-logo">
+                    <img src="logo-sano.png" alt="Sano" class="blend-logo-clean">
                 </div>
                 <p style="font-size: 0.9rem; color: #444; line-height: 1.4;">Implementación de estrategias de ejercicio y hábitos saludables.</p>
             </div>
@@ -718,10 +720,6 @@
                     <img src="logo-lidera.png" alt="Programa Lidera" style="height: 55px; width: auto; filter: contrast(1.2) brightness(1.1);">
                 </div>
             </div>
-
-            <p style="font-size: 0.85rem; color: #888; margin-top: 40px; max-width: 600px; margin: 40px auto 0;">
-                Proyecto financiado en el marco de programas públicos de apoyo a la investigación, el desarrollo y la innovación tecnológica.
-            </p>
         </div>
     </div>
 </section>
