@@ -219,103 +219,65 @@
                     </span>
                 </div>
 
-                <div class="partners-logos">
+                <div class="partners-custom-grid">
                     <div class="logo-wrapper"><img src="logo-lidera.png" alt="Programa Lidera"></div>
                     <div class="logo-wrapper"><img src="logo-sano.png" alt="Sano"></div>
                     <div class="logo-wrapper"><img src="logo-trainingym.png" alt="Trainingym"></div>
-                    <div class="logo-wrapper"><img src="logo-vithas.png" alt="Fundación Vithas"></div>
-                    <div class="logo-wrapper"><img src="logo-ugr.png" alt="Universidad de Granada"></div>
+                    
+                    <div class="logo-wrapper row-2"><img src="logo-vithas.png" alt="Fundación Vithas"></div>
+                    <div class="logo-wrapper row-2"><img src="logo-ugr.png" alt="Universidad de Granada"></div>
                 </div>
             </div>
-        </div>
 
-        <style>
-            /* Estilos del Badge con Brillo */
-            .badge-shimmer {
-                background: #1eb9af;
-                padding: 6px 18px;
-                border-radius: 25px;
-                font-size: 0.81rem;
-                font-weight: bold;
-                letter-spacing: 2px;
-                color: white;
-                display: inline-block;
-                position: relative;
-                overflow: hidden;
-                box-shadow: 0 4px 15px rgba(30, 185, 175, 0.3);
-            }
-            .badge-shimmer::after {
-                content: "";
-                position: absolute;
-                top: -50%; left: -150%;
-                width: 100%; height: 200%;
-                background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
-                transform: rotate(30deg);
-                animation: shimmer-effect 3s infinite;
-            }
-            @keyframes shimmer-effect {
-                0% { left: -150%; }
-                30% { left: 150%; }
-                100% { left: 150%; }
-            }
+            <style>
+                .hero-partners-inline {
+                    background: rgba(255, 255, 255, 0.95); /* Fondo claro para resaltar logos en color */
+                    backdrop-filter: blur(15px);
+                    padding: 60px 20px;
+                    border-radius: 24px;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    margin-top: 30px;
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+                }
 
-            /* Estilos de la Cápsula de Partners */
-            .hero-partners-inline {
-                background: rgba(0, 0, 0, 0.4);
-                backdrop-filter: blur(15px);
-                -webkit-backdrop-filter: blur(15px);
-                padding: 55px 20px;
-                border-radius: 24px;
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                margin-top: 20px;
-            }
-            .partners-label {
-                display: block;
-                font-size: 0.75rem;
-                font-weight: 800;
-                color: #1eb9af;
-                letter-spacing: 4px;
-                margin-bottom: 35px;
-                text-transform: uppercase;
-            }
-            .partners-logos {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 70px;
-                flex-wrap: wrap;
-            }
-            .logo-wrapper {
-                position: relative;
-                overflow: hidden;
-                transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            }
-            .partners-logos img {
-                height: 54px;
-                filter: brightness(0) invert(1);
-                opacity: 1;
-                transition: all 0.4s ease;
-            }
-            .logo-wrapper:hover { transform: scale(1.15); }
-            .logo-wrapper::after {
-                content: "";
-                position: absolute;
-                top: 0; left: -100%;
-                width: 50%; height: 100%;
-                background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
-                transform: skewX(-25deg);
-            }
-            .logo-wrapper:hover::after {
-                left: 150%;
-                transition: all 0.6s ease;
-            }
+                .partners-custom-grid {
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr); /* 6 columnas para dividir en 3 y 2 */
+                    gap: 40px;
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    align-items: center;
+                }
 
-            @media (max-width: 768px) {
-                .partners-logos { gap: 35px; }
-                .partners-logos img { height: 38px; }
-                .hero-partners-inline { padding: 40px 15px; }
-            }
-        </style>
+                .logo-wrapper {
+                    grid-column: span 2; /* 6 / 2 = 3 logos en la primera fila */
+                    display: flex;
+                    justify-content: center;
+                    transition: transform 0.4s ease;
+                }
+
+                /* Posicionamiento de la segunda fila (2 logos) */
+                .logo-wrapper.row-2:nth-last-child(2) { grid-column: 2 / 4; }
+                .logo-wrapper.row-2:nth-last-child(1) { grid-column: 4 / 6; }
+
+                .partners-custom-grid img {
+                    height: 62px; /* Aumentado un 15% (de 54px a 62px) */
+                    width: auto;
+                    object-fit: contain;
+                    filter: none !important; /* Color original */
+                    opacity: 1;
+                }
+
+                .logo-wrapper:hover {
+                    transform: scale(1.1);
+                }
+
+                @media (max-width: 768px) {
+                    .partners-custom-grid { grid-template-columns: 1fr; }
+                    .logo-wrapper, .logo-wrapper.row-2 { grid-column: span 1 !important; }
+                    .partners-custom-grid img { height: 45px; }
+                }
+            </style>
     </header>
 
 <style>
