@@ -647,21 +647,21 @@
 <section id="consorcio" style="padding: 80px 20px; background: transparent;">
     <style>
         .partner-box {
-            padding: 30px;
-            background: rgba(30, 185, 175, 0.03);
+            padding: 40px 30px;
+            background: rgba(30, 185, 175, 0.04);
             border-radius: 12px;
             border: 1px solid rgba(30, 185, 175, 0.15);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            cursor: default;
+            transition: all 0.4s ease;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            min-height: 220px;
+            align-items: center; /* Centra horizontalmente */
+            text-align: center; /* Centra el texto */
+            min-height: 280px;
         }
 
         .partner-box:hover {
             transform: translateY(-8px);
-            background: rgba(255, 255, 255, 1);
+            background: #ffffff;
             border-color: #1eb9af;
             box-shadow: 0 15px 35px rgba(30, 185, 175, 0.15);
         }
@@ -669,50 +669,46 @@
         .partner-box strong {
             display: block;
             color: #1eb9af;
-            margin-bottom: 8px;
-            font-size: 1.1rem;
-            transition: transform 0.3s ease;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
         }
 
         .partner-box p {
             font-size: 0.95rem; 
-            color: #444; 
-            margin: 0 0 20px 0; 
-            line-height: 1.5;
+            color: #555; 
+            margin: 0 0 25px 0; 
+            line-height: 1.6;
         }
 
-        /* Contenedor del logo integrado */
+        /* Contenedor del logo centrado y más grande */
         .partner-logo-container {
             margin-top: auto;
-            height: 50px;
+            width: 100%;
+            height: 80px; /* Más espacio para el logo */
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
         }
 
         .partner-logo-container img {
-            max-height: 45px;
-            max-width: 140px;
+            max-height: 70px; /* Tamaño aumentado */
+            max-width: 200px; /* Tamaño aumentado */
             object-fit: contain;
-            /* El truco de integración: mezcla el fondo del logo con el fondo del cuadro */
-            mix-blend-mode: multiply; 
-            filter: grayscale(0.2);
-            transition: filter 0.3s ease;
+            /* Darken elimina fondos grisáceos integrándolos con el color del cuadro */
+            mix-blend-mode: darken; 
+            filter: contrast(1.1); /* Mejora la nitidez del logo */
+            transition: all 0.3s ease;
         }
 
         .partner-box:hover .partner-logo-container img {
-            filter: grayscale(0);
+            filter: contrast(1.2) scale(1.05);
         }
 
         @media (max-width: 768px) {
             .consorcio-grid-ajuste {
                 grid-template-columns: 1fr !important;
-            }
-            .partner-logo-container {
-                justify-content: center;
-            }
-            .partner-box {
-                text-align: center;
             }
         }
     </style>
@@ -720,7 +716,7 @@
     <div style="max-width: 1000px; margin: auto; padding: 50px 40px; border: 1px solid rgba(0,0,0,0.05); border-radius: 24px; background: rgba(255, 255, 255, 0.98); box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
         
         <div style="text-align: center; margin-bottom: 45px;">
-            <h2 style="font-size: 2.2rem; color: #1a1a1a; margin-bottom: 15px; letter-spacing: 1px; font-weight: bold;">Consorcio y partners</h2>
+            <h2 style="font-size: 2.2rem; color: #1a1a1a; margin-bottom: 15px; letter-spacing: 1px; font-weight: bold; font-family: 'Montserrat', sans-serif;">Consorcio y partners</h2>
             <p style="font-size: 1.05rem; line-height: 1.6; color: #555; max-width: 800px; margin: auto;">
                 BioDM2 se desarrolla en el marco de un consorcio público-privado que integra entidades del ámbito sanitario, tecnológico y académico.
             </p>
@@ -754,7 +750,7 @@
                     <p>Coordinación general del proyecto y desarrollo tecnológico del prototipo basado en inteligencia artificial.</p>
                 </div>
                 <div class="partner-logo-container">
-                    <img src="logo-intelinova.png" alt="Intelinova">
+                    <img src="logo-lidera.png" alt="Intelinova">
                 </div>
             </div>
 
@@ -774,9 +770,6 @@
             <p style="font-size: 0.85rem; color: #888;">
                 Proyecto financiado en el marco de programas públicos de apoyo a la investigación y la innovación.
             </p>
-        </div>
-    </div>
-</section>
 
 <section id="faq" class="faq-section" style="padding: 55px 20px 35px 20px;">
 <button class="faq-trigger-btn" id="main-faq-btn">
