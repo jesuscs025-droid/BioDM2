@@ -438,6 +438,24 @@
     </div>
 </section>
 
+<style>
+    /* Forzamos que los iconos de Lucide en esta sección sean blancos */
+    #noticias .news-card-placeholder i {
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+        opacity: 1; /* Máxima visibilidad */
+        width: 45px;
+        height: 45px;
+        margin-bottom: 25px;
+        transition: all 0.3s ease;
+    }
+
+    #noticias .news-card-placeholder:hover i {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 8px rgba(255,255,255,0.4));
+    }
+</style>
+
 <section id="noticias" style="padding: 60px 10px; background: transparent;">
     <div style="max-width: 1100px; width: 95%; margin: 0 auto; background: #164e4b; padding: 50px 20px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.3); box-sizing: border-box; overflow: hidden;">
         
@@ -451,23 +469,23 @@
             
             <div class="news-card-placeholder" style="padding: 30px 20px; margin: 0 auto; width: 100%; box-sizing: border-box; max-width: 350px;">
                 <i data-lucide="newspaper"></i>
-                <h3 style="font-size: 1.2rem;">Avances de la Investigación</h3>
+                <h3 style="font-size: 1.2rem; color: white !important;">Avances de la Investigación</h3>
                 <div class="pulse-loader"></div>
-                <p>Próximamente compartiremos los primeros hitos y descubrimientos.</p>
+                <p style="color: rgba(255,255,255,0.7) !important;">Próximamente compartiremos los primeros hitos y descubrimientos.</p>
             </div>
 
             <div class="news-card-placeholder" style="padding: 30px 20px; margin: 0 auto; width: 100%; box-sizing: border-box; max-width: 350px;">
                 <i data-lucide="mic"></i>
-                <h3 style="font-size: 1.2rem;">Eventos y Conferencias</h3>
+                <h3 style="font-size: 1.2rem; color: white !important;">Eventos y Conferencias</h3>
                 <div class="pulse-loader"></div>
-                <p>Calendario de presentaciones en congresos científicos.</p>
+                <p style="color: rgba(255,255,255,0.7) !important;">Calendario de presentaciones en congresos científicos.</p>
             </div>
 
             <div class="news-card-placeholder" style="padding: 30px 20px; margin: 0 auto; width: 100%; box-sizing: border-box; max-width: 350px;">
                 <i data-lucide="users"></i>
-                <h3 style="font-size: 1.2rem;">Comunidad BioDM2</h3>
+                <h3 style="font-size: 1.2rem; color: white !important;">Comunidad BioDM2</h3>
                 <div class="pulse-loader"></div>
-                <p>Historias y el impacto del proyecto en la salud digital.</p>
+                <p style="color: rgba(255,255,255,0.7) !important;">Historias y el impacto del proyecto en la salud digital.</p>
             </div>
 
         </div>
