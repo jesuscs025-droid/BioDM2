@@ -594,22 +594,43 @@
         </div>
     </div>
 
-    <div style="max-width: 900px; margin: 0 auto; background: #fcfcfc; border: 1px solid #f0f0f0; border-radius: 20px; padding: 60px 40px;">
+<style>
+        .recursos-wrapper {
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: #fcfcfc; 
+            border: 1px solid #f0f0f0; 
+            border-radius: 20px; 
+            padding: 60px 40px;
+        }
+        .recursos-grid-fix {
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 40px;
+        }
+        @media (max-width: 768px) {
+            .recursos-wrapper { padding: 40px 20px; border-radius: 15px; }
+            .recursos-grid-fix { grid-template-columns: 1fr; gap: 35px; }
+            .recurso-header-center { text-align: center; }
+        }
+    </style>
+
+    <div class="recursos-wrapper">
         <h3 style="text-align: center; margin-bottom: 15px; color: #1a1a1a; font-family: 'Montserrat';">Recursos del proyecto</h3>
-        <p style="text-align: center; font-size: 1rem; color: #888; margin-bottom: 40px;">En este apartado se recoge documentación, publicaciones y comunicaciones relacionadas con el desarrollo y los resultados del proyecto BioDM2.</p>
+        <p style="text-align: center; font-size: 1rem; color: #888; margin-bottom: 40px; line-height: 1.5;">En este apartado se recoge documentación, publicaciones y comunicaciones relacionadas con el desarrollo y los resultados del proyecto BioDM2.</p>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
+        <div class="recursos-grid-fix">
             <div>
-                <h4 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #1eb9af; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">Documentación</h4>
+                <h4 class="recurso-header-center" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #1eb9af; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">Documentación</h4>
                 <ul style="list-style: none; padding: 0; display: grid; gap: 12px;">
-                    <li><a href="#" style="text-decoration: none; color: #555; font-size: 0.95rem; display: flex; align-items: center; gap: 10px;"><i data-lucide="file-text" style="width: 18px; color: #1eb9af;"></i> Dossier institucional del proyecto (PDF)</a></li>
-                    <li><a href="#" style="text-decoration: none; color: #555; font-size: 0.95rem; display: flex; align-items: center; gap: 10px;"><i data-lucide="image" style="width: 18px; color: #1eb9af;"></i> Infografía general del enfoque BioDM2</a></li>
-                    <li><span style="color: #aaa; font-size: 0.95rem; display: flex; align-items: center; gap: 10px;"><i data-lucide="lock" style="width: 18px; color: #ddd;"></i> Documentación pública del proyecto</span></li>
+                    <li><a href="#" style="text-decoration: none; color: #555; font-size: 0.95rem; display: flex; align-items: center; gap: 10px;"><i data-lucide="file-text" style="width: 18px; color: #1eb9af; flex-shrink: 0;"></i> Dossier institucional del proyecto (PDF)</a></li>
+                    <li><a href="#" style="text-decoration: none; color: #555; font-size: 0.95rem; display: flex; align-items: center; gap: 10px;"><i data-lucide="image" style="width: 18px; color: #1eb9af; flex-shrink: 0;"></i> Infografía general del enfoque BioDM2</a></li>
+                    <li><span style="color: #aaa; font-size: 0.95rem; display: flex; align-items: center; gap: 10px;"><i data-lucide="lock" style="width: 18px; color: #ddd; flex-shrink: 0;"></i> Documentación pública del proyecto</span></li>
                 </ul>
             </div>
 
             <div>
-                <h4 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #1eb9af; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">Publicaciones y noticias</h4>
+                <h4 class="recurso-header-center" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #1eb9af; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">Publicaciones y noticias</h4>
                 <p style="font-size: 0.9rem; color: #888; line-height: 1.5; margin-bottom: 15px;">Publicaciones científicas, comunicaciones y noticias vinculadas al proyecto.</p>
                 <div style="background: rgba(0,0,0,0.02); padding: 15px; border-radius: 8px; border: 1px dashed #ddd; text-align: center;">
                     <span style="font-size: 0.9rem; color: #aaa; font-style: italic;">Disponible próximamente</span>
@@ -617,6 +638,12 @@
             </div>
         </div>
     </div>
+
+    <div style="text-align: center; margin-top: 80px;">
+        <p style="font-size: 1.1rem; color: #666; margin-bottom: 30px;">Para consultas técnicas, colaboraciones científicas o transferencia de resultados:</p>
+        <a href="#contacto" class="btn btn-secondary" style="padding: 18px 40px; font-weight: 700; letter-spacing: 1px; border: 2px solid #1eb9af; color: #1eb9af; background: transparent;">CONTACTO PARA COLABORACIÓN PROFESIONAL</a>
+    </div>
+</section>
 
     <div style="text-align: center; margin-top: 80px;">
         <p style="font-size: 1.1rem; color: #666; margin-bottom: 30px;">Para consultas técnicas, colaboraciones científicas o transferencia de resultados:</p>
