@@ -254,9 +254,8 @@
             100% { left: 150%; }
         }
 
-        /* Ajuste de Cápsula para integración total */
         .hero-partners-glass {
-            background: rgba(255, 255, 255, 0.4) !important; /* Más transparente */
+            background: rgba(255, 255, 255, 0.4) !important;
             backdrop-filter: blur(12px) saturate(180%);
             -webkit-backdrop-filter: blur(12px) saturate(180%);
             padding: 50px 20px;
@@ -279,6 +278,7 @@
             display: inline-block;
         }
 
+        /* Grid PC: 3 arriba, 2 abajo */
         .partners-custom-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
@@ -289,39 +289,38 @@
         }
 
         .logo-wrapper { grid-column: span 2; display: flex; justify-content: center; }
-        /* Centrado fila 2 en PC */
         .logo-wrapper.row-2:nth-last-child(2) { grid-column: 2 / 4; }
         .logo-wrapper.row-2:nth-last-child(1) { grid-column: 4 / 6; }
 
         .partners-custom-grid img {
             height: 62px;
             width: auto;
+            max-width: 100%;
             object-fit: contain;
             filter: none !important;
-            transition: transform 0.3s ease;
-            background: transparent !important; /* Fuerza fondo transparente en la imagen */
+            background: transparent !important;
         }
-        
-        .logo-wrapper:hover { transform: scale(1.1); }
 
-        /* ARREGLO ESPECÍFICO PARA MÓVIL */
+        /* ARREGLO FINAL MÓVIL: Uno encima de otro */
         @media (max-width: 768px) {
             .hero-partners-glass {
-                padding: 40px 15px;
-                background: rgba(255, 255, 255, 0.2) !important; /* Aún más integrado en móvil */
+                padding: 40px 20px;
+                background: rgba(255, 255, 255, 0.2) !important;
             }
             .partners-custom-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2 logos por fila en móvil para que no se vean pequeños */
-                gap: 30px;
+                display: flex; /* Cambiamos a Flexbox para apilarlos verticalmente */
+                flex-direction: column;
+                gap: 35px;
+                width: 100%;
             }
             .logo-wrapper, .logo-wrapper.row-2 { 
-                grid-column: span 1 !important; 
+                width: 100%;
+                grid-column: auto !important;
             }
-            /* El último logo centrado en su propia fila si son impares, o simplemente 2 y 2 */
-            .logo-wrapper:last-child {
-                grid-column: span 2 !important;
+            .partners-custom-grid img { 
+                height: 50px; 
+                max-width: 220px; /* Evita que logos anchos toquen los bordes */
             }
-            .partners-custom-grid img { height: 48px; }
         }
     </style>
 </header>
