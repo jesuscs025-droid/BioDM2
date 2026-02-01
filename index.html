@@ -321,7 +321,38 @@
             letter-spacing: 2px; 
             text-transform: uppercase; 
             display: inline-block;
-            margin-bottom: 25px;
+           margin-bottom: 25px;
+        }
+
+        .partners-custom-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .logo-wrapper { display: flex; justify-content: center; }
+
+        .hero-logo-clean {
+            height: 50px;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            mix-blend-mode: multiply; /* Quita el fondo blanco */
+            filter: contrast(1.1) brightness(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .partners-custom-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+            }
+            .hero-logo-clean {
+                height: 45px;
+            }
         }
 
  /* Grid PC: Los 4 logos en una sola fila */
