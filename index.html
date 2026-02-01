@@ -334,25 +334,49 @@
 
         .logo-wrapper { display: flex; justify-content: center; }
 
-        .hero-logo-clean {
+.hero-logo-clean {
             height: 55px;
             width: auto;
             max-width: 100%;
             object-fit: contain;
-            /* Fuerza la desaparición del fondo blanco del propio archivo de imagen */
-            mix-blend-mode: darken; 
-            filter: contrast(1.2) brightness(1.1);
-            background-blend-mode: normal;
+            /* Cambiamos a multiply y forzamos escala de grises para eliminar el blanco sólido */
+            mix-blend-mode: multiply; 
+            filter: grayscale(1) contrast(1.2) brightness(0.9);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .hero-logo-clean:hover {
+            filter: grayscale(0) contrast(1) brightness(1);
+            opacity: 1;
         }
 
         @media (max-width: 768px) {
+            /* Solución para que las palabras no se salgan de los cuadros */
+            h1, h2, h3, p, strong, .info-card p {
+                overflow-wrap: break-word !important;
+                word-wrap: break-word !important;
+                hyphens: auto;
+            }
+
             .partners-custom-grid {
                 display: flex;
                 flex-direction: column;
                 gap: 40px;
+                align-items: center;
             }
+
             .hero-logo-clean {
                 height: 50px;
+            }
+
+            /* Forzamos que los cuadros de información no se estrechen en móvil */
+            .biodm2-grid {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+            .info-card {
+                width: 100% !important;
             }
         }
 
