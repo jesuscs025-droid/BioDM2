@@ -114,6 +114,91 @@
         #que-es, #noticias, #participantes, #profesionales, #consorcio, #faq, #contacto {
             scroll-margin-top: 60px;
         }
+
+        /* --- RESTAURACIÓN DEL ESTILO DEL FAQ --- */
+.faq-section { 
+    padding: 80px 20px; 
+    max-width: 900px; 
+    margin: auto; 
+    text-align: center; 
+}
+
+.faq-trigger-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.4); 
+    color: white;
+    border: 2px solid #1eb9af;
+    padding: 18px 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#faq-main-container { 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.8s ease-in-out, opacity 0.3s ease; 
+    text-align: left; 
+    opacity: 0; 
+}
+
+#faq-main-container.show { 
+    max-height: 3000px; 
+    margin-top: 60px; 
+    opacity: 1; 
+}
+
+.faq-item { 
+    background: rgba(255,255,255,0.03); 
+    border-radius: 12px; 
+    margin-bottom: 12px; 
+    border: 1px solid rgba(255,255,255,0.05); 
+    overflow: hidden; 
+}
+
+.faq-question { 
+    padding: 22px; 
+    cursor: pointer; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    font-weight: 600; 
+    color: #333; /* Ajusta a blanco si tu fondo es oscuro */
+}
+
+.faq-answer { 
+    padding: 0 22px; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: all 0.4s ease; 
+    opacity: 0; 
+    color: #666; 
+    line-height: 1.7; 
+}
+
+.faq-item.active .faq-answer { 
+    padding: 22px; 
+    max-height: 600px; 
+    opacity: 1; 
+}
+
+.faq-item.active { 
+    border-color: #1eb9af; 
+}
+
+.faq-group h3 { 
+    color: #1eb9af; 
+    text-transform: uppercase; 
+    margin-bottom: 20px; 
+    font-family: 'Montserrat';
+}
     </style>
 </head>
 <body>
