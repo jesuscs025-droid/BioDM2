@@ -299,20 +299,17 @@
         }
 
         /* 1. Contenedor de logos (El cristal) */
+/* Eliminamos el fondo blanco del contenedor */
         .hero-partners-glass {
-            background: rgba(255, 255, 255, 0.1) !important; 
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 40px 20px;
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: transparent !important; /* Fondo totalmente transparente */
+            padding: 20px;
             margin-top: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: none !important; /* Quitamos bordes que puedan verse blancos */
+            box-shadow: none !important;
         }
 
-        /* 2. Etiquetas de texto */
         .partners-tag-label {
-            background: rgba(255, 255, 255, 0.9); 
+            background: rgba(255, 255, 255, 0.2); 
             color: #000; 
             padding: 6px 15px; 
             border-radius: 6px; 
@@ -321,7 +318,8 @@
             letter-spacing: 2px; 
             text-transform: uppercase; 
             display: inline-block;
-           margin-bottom: 25px;
+            margin-bottom: 35px;
+            backdrop-filter: blur(5px);
         }
 
         .partners-custom-grid {
@@ -336,22 +334,23 @@
         .logo-wrapper { display: flex; justify-content: center; }
 
         .hero-logo-clean {
-            height: 50px;
+            height: 55px;
             width: auto;
             max-width: 100%;
             object-fit: contain;
-            mix-blend-mode: multiply; /* Quita el fondo blanco */
-            filter: contrast(1.1) brightness(1.1);
+            /* Fuerza la desaparición del fondo blanco del propio archivo de imagen */
+            mix-blend-mode: multiply; 
+            filter: contrast(1.2) brightness(1.1);
         }
 
         @media (max-width: 768px) {
             .partners-custom-grid {
                 display: flex;
                 flex-direction: column;
-                gap: 35px;
+                gap: 40px;
             }
             .hero-logo-clean {
-                height: 45px;
+                height: 50px;
             }
         }
 
