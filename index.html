@@ -322,27 +322,23 @@
             display: inline-block;
         }
 
-        /* Grid PC: 3 arriba, 2 abajo */
-        .partners-custom-grid {
+ /* Grid PC: Los 4 logos en una sola fila */
+.partners-custom-grid {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 40px;
-            max-width: 1000px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 900px;
             margin: 0 auto;
             align-items: center;
         }
 
-        .logo-wrapper { grid-column: span 2; display: flex; justify-content: center; }
-        .logo-wrapper.row-2:nth-last-child(2) { grid-column: 2 / 4; }
-        .logo-wrapper.row-2:nth-last-child(1) { grid-column: 4 / 6; }
+        .logo-wrapper { display: flex; justify-content: center; }
 
         .partners-custom-grid img {
-            height: 62px;
+            height: 55px; /* Ajustado para que quepan mejor los 4 */
             width: auto;
             max-width: 100%;
             object-fit: contain;
-            filter: none !important;
-            background: transparent !important;
         }
 
         /* ARREGLO FINAL MÓVIL: Uno encima de otro */
