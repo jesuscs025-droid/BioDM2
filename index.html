@@ -10,7 +10,7 @@
     <style>
         /* Estilos específicos para la sección Consorcio */
         .consorcio-section { padding: 100px 20px; background: rgba(255, 255, 255, 0.02); }
-        .consorcio-intro { max-width: 800px; margin: 0 auto 50px; text-align: center; color: ##777; line-height: 1.6; font-size: 1.1rem; }
+        .consorcio-intro { max-width: 800px; margin: 0 auto 50px; text-align: center; color: #777; line-height: 1.6; font-size: 1.1rem; }
         .consorcio-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
@@ -45,6 +45,138 @@
         }
         
         .partner-card p { font-size: 0.9rem; color: #888; line-height: 1.6; margin: 0; }
+
+        /* --- NUEVOS AJUSTES PROFESIONALES --- */
+
+        /* 4. Barra de menú más estrecha */
+        .navbar {
+            padding: 10px 0 !important; /* Más estrecha */
+            height: auto !important;
+        }
+
+        /* 1. Ajuste Hero para visualización sin scroll */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+                        url('hero-bg.png') no-repeat center center;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px; /* Reducido para evitar scroll */
+            box-sizing: border-box;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1100px;
+            margin-top: 60px; /* Compensación por navbar fija */
+        }
+
+        /* 3. Estilos de texto jerarquizados */
+        .txt-proyecto-mini {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1eb9af;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .txt-h1-ajustado {
+            font-size: clamp(1.4rem, 3vw, 2rem); /* Escala según pantalla */
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.2;
+            margin: 0 auto 20px;
+            max-width: 950px;
+        }
+
+        .txt-h2-ajustado {
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
+            line-height: 1.4;
+            margin: 0 auto 20px;
+            max-width: 850px;
+        }
+
+        .txt-h3-ajustado {
+            font-size: 0.95rem;
+            color: #aaa; /* Gris solicitado */
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        /* 5. Logos en una línea */
+        .hero-partners-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .hero-partners-line img {
+            height: 40px; /* Tamaño controlado para Home */
+            width: auto;
+            filter: brightness(0) invert(1); /* Opcional: logos en blanco para elegancia */
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .hero-partners-line img:hover { opacity: 1; }
+
+        @media (max-width: 768px) {
+            .hero { padding: 80px 15px 40px; }
+            .hero-partners-line { gap: 15px; }
+            .hero-partners-line img { height: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#">
+                <img src="logo.png" alt="BioDM2" class="nav-logo" style="height: 35px;">
+            </a>
+            <div class="nav-links">
+                <a href="#que-es" class="nav-item">PROYECTO</a>
+                <a href="#participantes" class="nav-item">PARTICIPANTES</a>
+                <a href="#profesionales" class="nav-item">PROFESIONALES</a>
+                <a href="#consorcio" class="nav-item">CONSORCIO</a>
+                <a href="#noticias" class="nav-item">NOTICIAS</a>
+                <a href="#faq" class="nav-item">FAQ</a>
+                <a href="#contacto" class="btn-nav">CONTACTO</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="txt-proyecto-mini">PROYECTO BioDM2</span>
+            
+            <h1 class="txt-h1-ajustado">
+                Desarrollo de un prototipo de IA para optimizar la calidad de vida y prevenir la diabetes mellitus tipo 2 mediante la detección precoz, así como el desarrollo de estrategias personalizadas de ejercicio físico y nutrición en poblaciones de riesgo.
+            </h1>
+
+            <h2 class="txt-h2-ajustado">
+                Investigación aplicada para identificar de forma temprana el riesgo de diabetes tipo 2 y mejorar la calidad de vida mediante recomendaciones personalizadas de ejercicio y nutrición.
+            </h2>
+
+            <h3 class="txt-h3-ajustado">
+                Proyecto de I+D+i en consorcio público-privado.
+            </h3>
+
+            <div class="hero-partners-line">
+                <img src="logo-ugr
 
         /* Estilos FAQ */
 .faq-section { 
