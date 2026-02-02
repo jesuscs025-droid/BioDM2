@@ -62,7 +62,6 @@ textarea::placeholder {
 .navbar { 
     background: rgba(247, 249, 250, 0.9); 
     backdrop-filter: blur(10px);
-    padding: 10px 0; 
     position: fixed; 
     width: 100%; 
     z-index: 1000; 
@@ -78,7 +77,7 @@ textarea::placeholder {
     padding: 0 40px; 
 }
 
-.nav-logo { height: 60px; width: auto; transition: var(--transition); }
+.nav-logo { height: 60px; width: auto; transition: var(--transition); padding-top: 5px;}
 .nav-links { display: flex; gap: 15px; align-items: center; }
 
 .nav-item {
@@ -235,3 +234,4 @@ h1 { font-family: 'Montserrat', sans-serif; font-size: 4rem; margin-bottom: 20px
         max-width: calc(100% - 20px) !important;
     }
 }
+
