@@ -335,39 +335,40 @@
         display: flex; 
         justify-content: center;
         align-items: center;
-        /* Blanco puro e iluminación suave */
-        background: #ffffff !important;
+        background: #ffffff !important; /* Blanco puro */
         padding: 15px 25px;
         border-radius: 14px;
-        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.4s ease;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        border: 1px solid #f0f0f0;
         height: 90px;
+        /* ESTA ES LA CLAVE: Aísla el logo del fondo gris del hero */
+        isolation: isolate; 
+        position: relative;
+        overflow: hidden;
     }
 
     .logo-wrapper:hover {
         transform: translateY(-6px);
         box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-        border-color: #ffffff;
     }
 
-    /* Integración perfecta del logo sin fondo gris */
     .hero-logo-clean {
         height: 55px;
         width: auto;
-        max-width: 90%;
+        max-width: 95%;
         object-fit: contain;
-        /* Forzamos color real y eliminamos el fondo del archivo de imagen */
-        filter: grayscale(0%) brightness(100%) contrast(100%) !important;
+        /* Quitamos filtros y usamos multiply para limpiar el fondo del logo */
+        filter: none !important;
         mix-blend-mode: multiply;
-        opacity: 1 !important;
         display: block;
+        position: relative;
+        z-index: 2;
     }
 
     .logo-wrapper:hover .hero-logo-clean {
         transform: scale(1.05);
     }
-
+    
     @media (max-width: 768px) {
         h1, h2, h3, p, strong, .info-card p {
             overflow-wrap: break-word !important;
