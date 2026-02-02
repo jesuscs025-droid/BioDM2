@@ -331,35 +331,38 @@
         align-items: center;
     }
 
-   .logo-wrapper { 
+  .logo-wrapper { 
         display: flex; 
         justify-content: center;
-        /* Eliminamos el fondo blanco y sombras pesadas */
-        background: transparent;
-        padding: 10px;
+        align-items: center;
+        /* Fondo blanco para que el modo multiply funcione perfecto */
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
         transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        height: 100px; /* Altura fija para uniformidad */
     }
 
     .logo-wrapper:hover {
-        transform: translateY(-3px);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
-    /* Logos a TODO COLOR integrados con el fondo */
+    /* Integración total del logo en la caja */
     .hero-logo-clean {
-        height: 55px;
+        height: 100%;
         width: auto;
         max-width: 100%;
         object-fit: contain;
-        filter: none; /* Color original */
-        /* Esta es la clave: elimina el fondo blanco del JPG/PNG */
+        /* Elimina el recuadro blanco del archivo original del logo */
         mix-blend-mode: multiply; 
-        opacity: 0.9;
-        transition: all 0.3s ease;
+        filter: none;
+        opacity: 1;
     }
 
     .hero-logo-clean:hover {
-        opacity: 1;
-        transform: scale(1.05);
+        transform: scale(1.08);
     }
 
     @media (max-width: 768px) {
