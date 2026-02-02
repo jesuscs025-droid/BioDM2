@@ -331,32 +331,35 @@
         align-items: center;
     }
 
-    .logo-wrapper { 
+   .logo-wrapper { 
         display: flex; 
         justify-content: center;
-        /* Fondo blanco suave para cada logo */
-        background: rgba(255, 255, 255, 0.95);
-        padding: 15px 20px;
-        border-radius: 12px;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        align-items: center;
+        /* Fondo blanco sólido y profesional */
+        background: #ffffff;
+        padding: 15px 25px;
+        border-radius: 16px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .logo-wrapper:hover {
-        background: rgba(255, 255, 255, 1);
-        transform: translateY(-3px);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        background: #ffffff;
     }
 
-    /* Logos a TODO COLOR desde el inicio */
+    /* Logos con su color original desde el principio */
     .hero-logo-clean {
-        height: 55px;
+        height: 50px;
         width: auto;
         max-width: 100%;
         object-fit: contain;
-        filter: none; /* Sin filtros, color original */
-        opacity: 1;
-        transition: all 0.3s ease;
+        /* Forzamos que no haya filtros de gris */
+        filter: grayscale(0%) brightness(100%) !important;
+        opacity: 1 !important;
+        transition: transform 0.3s ease;
     }
 
     .hero-logo-clean:hover {
