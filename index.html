@@ -335,38 +335,37 @@
         display: flex; 
         justify-content: center;
         align-items: center;
-        background: #ffffff !important; /* Blanco puro */
+        /* Fondo oscuro profesional para que el logo blanco destaque */
+        background: rgba(0, 0, 0, 0.2) !important; 
         padding: 15px 25px;
-        border-radius: 14px;
-        transition: all 0.4s ease;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        height: 90px;
-        /* ESTA ES LA CLAVE: Aísla el logo del fondo gris del hero */
-        isolation: isolate; 
-        position: relative;
-        overflow: hidden;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        height: 85px;
+        backdrop-filter: blur(5px); /* Efecto cristal */
     }
 
     .logo-wrapper:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+        background: rgba(0, 0, 0, 0.3) !important;
+        border-color: rgba(255, 255, 255, 0.3);
     }
 
+    /* Logos en su estado BLANCO original */
     .hero-logo-clean {
-        height: 55px;
+        height: 45px;
         width: auto;
-        max-width: 95%;
+        max-width: 100%;
         object-fit: contain;
-        /* Quitamos filtros y usamos multiply para limpiar el fondo del logo */
-        filter: none !important;
-        mix-blend-mode: multiply;
+        /* ELIMINAMOS TODOS LOS FILTROS GRISES */
+        filter: grayscale(0%) brightness(1) contrast(1) !important;
+        -webkit-filter: grayscale(0%) !important;
+        opacity: 1 !important;
         display: block;
-        position: relative;
-        z-index: 2;
     }
 
     .logo-wrapper:hover .hero-logo-clean {
-        transform: scale(1.05);
+        transform: scale(1.08);
     }
     
     @media (max-width: 768px) {
