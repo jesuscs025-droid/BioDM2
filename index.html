@@ -334,35 +334,31 @@
    .logo-wrapper { 
         display: flex; 
         justify-content: center;
-        align-items: center;
-        /* Fondo blanco sólido y profesional */
-        background: #ffffff;
-        padding: 15px 25px;
-        border-radius: 16px;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        /* Eliminamos el fondo blanco y sombras pesadas */
+        background: transparent;
+        padding: 10px;
+        transition: all 0.3s ease;
     }
 
     .logo-wrapper:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-        background: #ffffff;
+        transform: translateY(-3px);
     }
 
-    /* Logos con su color original desde el principio */
+    /* Logos a TODO COLOR integrados con el fondo */
     .hero-logo-clean {
-        height: 50px;
+        height: 55px;
         width: auto;
         max-width: 100%;
         object-fit: contain;
-        /* Forzamos que no haya filtros de gris */
-        filter: grayscale(0%) brightness(100%) !important;
-        opacity: 1 !important;
-        transition: transform 0.3s ease;
+        filter: none; /* Color original */
+        /* Esta es la clave: elimina el fondo blanco del JPG/PNG */
+        mix-blend-mode: multiply; 
+        opacity: 0.9;
+        transition: all 0.3s ease;
     }
 
     .hero-logo-clean:hover {
+        opacity: 1;
         transform: scale(1.05);
     }
 
