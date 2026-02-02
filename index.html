@@ -917,7 +917,7 @@
     }
 
     .main-footer * {
-        color: #1a1a1a; /* Color por defecto para todos los elementos */
+        color: #1a1a1a;
     }
 
     .footer-container {
@@ -929,6 +929,10 @@
     .footer-top-info {
         text-align: center;
         margin-bottom: 35px;
+    }
+
+    .footer-top-info p {
+        color: #666 !important;
     }
 
     .footer-tagline {
@@ -993,115 +997,14 @@
         margin: 30px 0;
     }
 
-    .funding-notice {
+    /* TEXTO DE FINANCIACIÓN EN NEGRO */
+    .funding-notice,
+    .funding-notice *,
+    .funding-notice p,
+    .funding-notice b {
         font-size: 0.75rem;
-        color: #666 !important;
-        line-height: 1.6;
-        max-width: 700px;
-        margin: 0 auto 40px;
-        text-align: center;
-    }
-
-    .footer-bottom {
-        background: #f8f8f8;
-        padding: 20px 0;
-        border-top: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .footer-bottom-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .footer-legal-links a {
-        color: #666 !important;
-        text-decoration: none;
-        font-size: 0.75rem;
-        margin-right: 20px;
-        transition: color 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .footer-legal-links a:hover {
-        color: #1eb9af !important;
-    }
-
-    .copyright-text {
-        font-size: 0.75rem;
-        color: #888 !important;
-        text-align: right;
-        line-height: 1.4;
-    }
-
-    /* TEXTO DE PROTECCIÓN DE DATOS EN NEGRO */
-    .privacy-notice-text,
-    .privacy-notice-text * {
         color: #000000 !important;
-    }
-
-    @media (max-width: 768px) {
-        .main-footer { padding-top: 45px !important; }
-        .logo-ministerio img { max-height: 55px; }
-        .logo-cloud { gap: 20px; }
-        .logo-cloud img { max-height: 38px; max-width: 100px; }
-        .footer-bottom-inner { flex-direction: column; text-align: center; }
-        .copyright-text { text-align: center; }
-        .footer-legal-links { margin-bottom: 10px; }
-    }
-</style>
-
-<footer class="main-footer">
-    <div class="footer-container">
-        <div class="footer-top-info">
-            <span class="footer-tagline">Consorcio de Innovación</span>
-            <p style="color: #666;">Colaboración estratégica para el futuro de la salud digital.</p>
-        </div>
-
-        <div class="logo-ministerio">
-            <img src="logo-gobiernoyunioneuropea.png" alt="Gobierno de España y Unión Europea">
-        </div>
-
-        <hr class="footer-divider">
-
-        <div class="logo-cloud">
-            <img src="logo-ugr.png" alt="Universidad de Granada">
-            <img src="logo-vithas.png" alt="Fundación Vithas">
-            <img src="logo-trainingym.png" alt="Trainingym">
-            <img src="logo-sano.png" alt="Sano">
-        </div>
-
-        <div class="funding-notice">
-            <p>Este proyecto está cofinanciado por fondos públicos destinados a la investigación, desarrollo e innovación tecnológica, bajo la coordinación de <b>Intelinova</b>.</p>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <div class="footer-container">
-            <div style="width: 100%; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px; margin-bottom: 20px; text-align: center;">
-                <p class="privacy-notice-text" style="font-style: italic; font-size: 0.75rem; line-height: 1.6; margin: 0; max-width: 900px; margin: 0 auto;">
-                    <strong style="font-style: normal;">Protección de datos:</strong> Los datos personales recogidos a través de esta web serán tratados conforme a la normativa vigente en materia de protección de datos y únicamente con las finalidades descritas en la política de privacidad.
-                </p>
-            </div>
-
-            <div class="footer-bottom-inner">
-                <div class="footer-legal-links">
-                    <a href="#aviso-legal">Aviso Legal</a>
-                    <a href="#privacidad">Privacidad</a>
-                    <a href="#cookies">Cookies</a>
-                    <a href="#accesibilidad">Accesibilidad</a>
-                </div>
-                <div class="copyright-text">
-                    <b>BioDM2</b> © 2024-2026. Todos los derechos reservados.<br>
-                    <span style="opacity: 0.6;">Impulsando la Salud Digital de Precisión.</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+        line-
     
     <script>
         lucide.createIcons();
