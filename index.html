@@ -10,7 +10,7 @@
     <style>
         /* Aquí presento el estilo para la sección Consorcio */
         .consorcio-section { padding: 100px 20px; background: rgba(255, 255, 255, 0.02); }
-        .consorcio-intro { max-width: 800px; margin: 0 auto 50px; text-align: center; color: ##777; line-height: 1.6; font-size: 1.1rem; }
+        .consorcio-intro { max-width: 800px; margin: 0 auto 50px; text-align: center; color: #777; line-height: 1.6; font-size: 1.1rem; }
         .consorcio-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
@@ -909,12 +909,15 @@
 <style>
     /* Estilos encapsulados para el footer */
     .main-footer {
-        background: #ffffff !important; /* Fondo blanco */
-        color: #1a1a1a !important;
-        padding: 60px 0 0 0 !important; /* Reducido de 80px a 60px */
+        background: #ffffff !important;
         font-family: 'Inter', sans-serif;
         border-top: 1px solid rgba(0, 0, 0, 0.08);
         clear: both;
+        padding: 60px 0 0 0 !important;
+    }
+
+    .main-footer * {
+        color: #1a1a1a; /* Color por defecto para todos los elementos */
     }
 
     .footer-container {
@@ -925,28 +928,27 @@
 
     .footer-top-info {
         text-align: center;
-        margin-bottom: 35px; /* Reducido de 50px a 35px */
+        margin-bottom: 35px;
     }
 
     .footer-tagline {
         font-size: 0.8rem;
-        color: #1eb9af;
+        color: #1eb9af !important;
         text-transform: uppercase;
         letter-spacing: 2px;
         font-weight: 700;
-        margin-bottom: 8px; /* Reducido de 10px a 8px */
+        margin-bottom: 8px;
         display: block;
     }
 
-    /* Logo principal (Ministerio/UE) - más grande */
     .logo-ministerio {
         display: flex;
         justify-content: center;
-        margin-bottom: 30px; /* Reducido de 40px a 30px */
+        margin-bottom: 30px;
     }
 
     .logo-ministerio img {
-        height: 70px; /* Reducido de 80px a 70px */
+        height: 70px;
         width: auto;
         max-width: 100%;
         object-fit: contain;
@@ -959,19 +961,18 @@
         transform: scale(1.05);
     }
 
-    /* Logos del consorcio - en línea y más pequeños */
     .logo-cloud {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 35px; /* Reducido de 40px a 35px */
-        margin-bottom: 30px; /* Reducido de 40px a 30px */
+        gap: 35px;
+        margin-bottom: 30px;
     }
 
     .logo-cloud img {
         height: auto;
-        max-height: 45px; /* Reducido de 50px a 45px */
+        max-height: 45px;
         max-width: 140px;
         filter: grayscale(0) contrast(1.1) brightness(1);
         opacity: 0.85;
@@ -989,22 +990,21 @@
         border: 0;
         height: 1px;
         background: linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent);
-        margin: 30px 0; /* Reducido de 40px a 30px */
+        margin: 30px 0;
     }
 
     .funding-notice {
         font-size: 0.75rem;
-        color: #666;
+        color: #666 !important;
         line-height: 1.6;
         max-width: 700px;
-        margin: 0 auto 40px; /* Reducido de 60px a 40px */
+        margin: 0 auto 40px;
         text-align: center;
     }
 
-    /* Barra inferior (Aviso legal) */
     .footer-bottom {
         background: #f8f8f8;
-        padding: 20px 0; /* Reducido de 25px a 20px */
+        padding: 20px 0;
         border-top: 1px solid rgba(0,0,0,0.05);
     }
 
@@ -1032,22 +1032,22 @@
 
     .copyright-text {
         font-size: 0.75rem;
-        color: #888;
+        color: #888 !important;
         text-align: right;
         line-height: 1.4;
     }
 
-    /* Clase específica para el texto de protección de datos */
-    .privacy-notice-text {
+    /* TEXTO DE PROTECCIÓN DE DATOS EN NEGRO */
+    .privacy-notice-text,
+    .privacy-notice-text * {
         color: #000000 !important;
     }
 
-    /* Solución para Móvil */
     @media (max-width: 768px) {
-        .main-footer { padding-top: 45px !important; } /* Reducido de 60px a 45px */
-        .logo-ministerio img { max-height: 55px; } /* Reducido de 60px a 55px */
+        .main-footer { padding-top: 45px !important; }
+        .logo-ministerio img { max-height: 55px; }
         .logo-cloud { gap: 20px; }
-        .logo-cloud img { max-height: 38px; max-width: 100px; } /* Reducido de 40px a 38px */
+        .logo-cloud img { max-height: 38px; max-width: 100px; }
         .footer-bottom-inner { flex-direction: column; text-align: center; }
         .copyright-text { text-align: center; }
         .footer-legal-links { margin-bottom: 10px; }
@@ -1058,17 +1058,15 @@
     <div class="footer-container">
         <div class="footer-top-info">
             <span class="footer-tagline">Consorcio de Innovación</span>
-            <p style="color: #666; font-size: 0.95rem; margin: 0;">Colaboración estratégica para el futuro de la salud digital.</p>
+            <p style="color: #666;">Colaboración estratégica para el futuro de la salud digital.</p>
         </div>
 
-        <!-- Logo principal Ministerio/UE más grande -->
         <div class="logo-ministerio">
             <img src="logo-gobiernoyunioneuropea.png" alt="Gobierno de España y Unión Europea">
         </div>
 
         <hr class="footer-divider">
 
-        <!-- Logos del consorcio en línea -->
         <div class="logo-cloud">
             <img src="logo-ugr.png" alt="Universidad de Granada">
             <img src="logo-vithas.png" alt="Fundación Vithas">
