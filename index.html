@@ -1037,6 +1037,11 @@
         line-height: 1.4;
     }
 
+    /* Clase específica para el texto de protección de datos */
+    .privacy-notice-text {
+        color: #000000 !important;
+    }
+
     /* Solución para Móvil */
     @media (max-width: 768px) {
         .main-footer { padding-top: 45px !important; } /* Reducido de 60px a 45px */
@@ -1079,7 +1084,7 @@
     <div class="footer-bottom">
         <div class="footer-container">
             <div style="width: 100%; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px; margin-bottom: 20px; text-align: center;">
-                <p style="font-style: italic; font-size: 0.75rem; color: #000000; line-height: 1.6; margin: 0; max-width: 900px; margin: 0 auto;">
+                <p class="privacy-notice-text" style="font-style: italic; font-size: 0.75rem; line-height: 1.6; margin: 0; max-width: 900px; margin: 0 auto;">
                     <strong style="font-style: normal;">Protección de datos:</strong> Los datos personales recogidos a través de esta web serán tratados conforme a la normativa vigente en materia de protección de datos y únicamente con las finalidades descritas en la política de privacidad.
                 </p>
             </div>
@@ -1099,7 +1104,7 @@
         </div>
     </div>
 </footer>
-
+    
     <script>
         lucide.createIcons();
         document.addEventListener('DOMContentLoaded', () => {
