@@ -331,38 +331,41 @@
         align-items: center;
     }
 
-  .logo-wrapper { 
+.logo-wrapper { 
         display: flex; 
         justify-content: center;
         align-items: center;
-        /* Fondo blanco para que el modo multiply funcione perfecto */
-        background: #ffffff;
-        padding: 20px;
-        border-radius: 12px;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        height: 100px; /* Altura fija para uniformidad */
+        /* Blanco puro e iluminación suave */
+        background: #ffffff !important;
+        padding: 15px 25px;
+        border-radius: 14px;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #f0f0f0;
+        height: 90px;
     }
 
     .logo-wrapper:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-6px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+        border-color: #ffffff;
     }
 
-    /* Integración total del logo en la caja */
+    /* Integración perfecta del logo sin fondo gris */
     .hero-logo-clean {
-        height: 100%;
+        height: 55px;
         width: auto;
-        max-width: 100%;
+        max-width: 90%;
         object-fit: contain;
-        /* Elimina el recuadro blanco del archivo original del logo */
-        mix-blend-mode: multiply; 
-        filter: none;
-        opacity: 1;
+        /* Forzamos color real y eliminamos el fondo del archivo de imagen */
+        filter: grayscale(0%) brightness(100%) contrast(100%) !important;
+        mix-blend-mode: multiply;
+        opacity: 1 !important;
+        display: block;
     }
 
-    .hero-logo-clean:hover {
-        transform: scale(1.08);
+    .logo-wrapper:hover .hero-logo-clean {
+        transform: scale(1.05);
     }
 
     @media (max-width: 768px) {
