@@ -909,11 +909,11 @@
 <style>
     /* Estilos encapsulados para el footer */
     .main-footer {
-        background: #0d0d0d !important; /* Negro profundo profesional */
-        color: #ffffff !important;
+        background: #ffffff !important; /* Fondo blanco */
+        color: #1a1a1a !important;
         padding: 80px 0 0 0 !important;
         font-family: 'Inter', sans-serif;
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
         clear: both;
     }
 
@@ -938,7 +938,28 @@
         display: block;
     }
 
-    /* Contenedor de logos inteligente */
+    /* Logo principal (Ministerio/UE) - más grande */
+    .logo-ministerio {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .logo-ministerio img {
+        height: 80px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        mix-blend-mode: multiply;
+        filter: grayscale(0) contrast(1.1) brightness(1);
+        transition: all 0.4s ease;
+    }
+
+    .logo-ministerio img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Logos del consorcio - en línea y más pequeños */
     .logo-cloud {
         display: flex;
         flex-wrap: wrap;
@@ -948,18 +969,18 @@
         margin-bottom: 40px;
     }
 
-.logo-cloud img {
+    .logo-cloud img {
         height: auto;
-        max-height: 45px; /* Altura controlada */
-        max-width: 140px; /* Evita que desborden en móvil */
-        filter: none; /* Eliminamos el grayscale para que se vea el color original */
-        opacity: 0.9; /* Un toque de transparencia sutil para elegancia */
+        max-height: 50px;
+        max-width: 140px;
+        filter: grayscale(0) contrast(1.1) brightness(1);
+        opacity: 0.85;
         transition: all 0.4s ease;
         object-fit: contain;
+        mix-blend-mode: multiply;
     }
 
     .logo-cloud img:hover {
-        filter: none;
         opacity: 1;
         transform: scale(1.05);
     }
@@ -967,7 +988,7 @@
     .footer-divider {
         border: 0;
         height: 1px;
-        background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+        background: linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent);
         margin: 40px 0;
     }
 
@@ -982,9 +1003,9 @@
 
     /* Barra inferior (Aviso legal) */
     .footer-bottom {
-        background: #050505;
+        background: #f8f8f8;
         padding: 25px 0;
-        border-top: 1px solid rgba(255,255,255,0.03);
+        border-top: 1px solid rgba(0,0,0,0.05);
     }
 
     .footer-bottom-inner {
@@ -996,7 +1017,7 @@
     }
 
     .footer-legal-links a {
-        color: #888 !important;
+        color: #666 !important;
         text-decoration: none;
         font-size: 0.75rem;
         margin-right: 20px;
@@ -1011,7 +1032,7 @@
 
     .copyright-text {
         font-size: 0.75rem;
-        color: #555;
+        color: #888;
         text-align: right;
         line-height: 1.4;
     }
@@ -1019,8 +1040,9 @@
     /* Solución para Móvil */
     @media (max-width: 768px) {
         .main-footer { padding-top: 60px !important; }
+        .logo-ministerio img { max-height: 60px; }
         .logo-cloud { gap: 20px; }
-        .logo-cloud img { max-height: 35px; max-width: 100px; }
+        .logo-cloud img { max-height: 40px; max-width: 100px; }
         .footer-bottom-inner { flex-direction: column; text-align: center; }
         .copyright-text { text-align: center; }
         .footer-legal-links { margin-bottom: 10px; }
@@ -1031,21 +1053,22 @@
     <div class="footer-container">
         <div class="footer-top-info">
             <span class="footer-tagline">Consorcio de Innovación</span>
-            <p style="color: #888; font-size: 0.95rem; margin: 0;">Colaboración estratégica para el futuro de la salud digital.</p>
+            <p style="color: #666; font-size: 0.95rem; margin: 0;">Colaboración estratégica para el futuro de la salud digital.</p>
         </div>
 
-        <div class="logo-cloud">
-            <img src="logo-ugr.png" alt="Universidad de Granada">
-            <img src="logo-sano.png" alt="Sano">
-            <img src="logo-trainingym.png" alt="Trainingym">
-            <img src="logo-vithas.png" alt="Fundación Vithas">
+        <!-- Logo principal Ministerio/UE más grande -->
+        <div class="logo-ministerio">
+            <img src="logo-gobiernoyunioneuropea.png" alt="Gobierno de España y Unión Europea">
         </div>
 
         <hr class="footer-divider">
 
+        <!-- Logos del consorcio en línea -->
         <div class="logo-cloud">
-            <img src="logo-gobiernoyunioneuropea.png" alt="Gobierno de España y Unión Europea" style="max-height: 55px;">
-            <img src="logo-lidera.png" alt="Programa Lidera">
+            <img src="logo-ugr.png" alt="Universidad de Granada">
+            <img src="logo-vithas.png" alt="Fundación Vithas">
+            <img src="logo-trainingym.png" alt="Trainingym">
+            <img src="logo-sano.png" alt="Sano">
         </div>
 
         <div class="funding-notice">
@@ -1053,10 +1076,10 @@
         </div>
     </div>
 
-<div class="footer-bottom">
+    <div class="footer-bottom">
         <div class="footer-container">
-            <div style="width: 100%; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 20px; margin-bottom: 25px; text-align: center;">
-                <p style="font-style: italic; font-size: 0.75rem; color: #aaa; line-height: 1.6; margin: 0; max-width: 900px; margin: 0 auto;">
+            <div style="width: 100%; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 20px; margin-bottom: 25px; text-align: center;">
+                <p style="font-style: italic; font-size: 0.75rem; color: #888; line-height: 1.6; margin: 0; max-width: 900px; margin: 0 auto;">
                     <strong style="font-style: normal;">Protección de datos:</strong> Los datos personales recogidos a través de esta web serán tratados conforme a la normativa vigente en materia de protección de datos y únicamente con las finalidades descritas en la política de privacidad.
                 </p>
             </div>
