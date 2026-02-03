@@ -142,11 +142,11 @@ textarea::placeholder {
 .btn:hover { transform: scale(1.05); filter: brightness(1.1); }
 
 /* --- SECCIONES --- */
-.hero { 
+/* .hero { 
     padding: 250px 20px 150px; 
     text-align: center;
     background: radial-gradient(circle at top center, #E0E7E9 0%, #F7F9FA 100%);
-}
+} */
 
 h1 { font-family: 'Montserrat', sans-serif; font-size: 4rem; margin-bottom: 20px; color: var(--primary); }
 .highlight { color: var(--accent); }
